@@ -1,13 +1,11 @@
 const createMDX = require("@next/mdx");
 const path = require("path");
 
-// Make GH Pages work for forks as well as the main openfresno.org repo.
+// Make images work with relative GH Pages URLS.
 const isGitHubActions = process.env.GITHUB_ACTIONS === "true";
-const isMainRepo =
-  process.env.GITHUB_REPOSITORY === "openfresno/openfresno.org";
 
-// Only set basePath if it's a fork.
-const basePath = isGitHubActions && !isMainRepo ? "/openfresno.org" : "";
+// Only set basePath if it is on GitHub Pages.
+const basePath = isGitHubActions ? "/fe-openfresno.org-doc" : "";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
