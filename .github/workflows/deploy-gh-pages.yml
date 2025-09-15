@@ -2,7 +2,7 @@
 #
 # To get started with Next.js see: https://nextjs.org/docs/getting-started
 #
-name: Deploy Next.js static site to GitHub Pages
+name: Deploy Storybook Next.js static site to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
@@ -81,7 +81,7 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
 
-      - name: Build with Next.js
+      - name: Build with Storybook
         env:
           GITHUB_ACTIONS: true
           GITHUB_REPOSITORY: ${{ github.repository }}
