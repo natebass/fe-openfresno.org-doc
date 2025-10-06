@@ -1,13 +1,10 @@
-@use "../abstracts/mixins";
-@use "../abstracts/variables";
-
 .instructions-container {
   display: flex;
   flex-direction: column;
   gap: 48px;
 
   a {
-    color: variables.$secondary-500;
+    /* color: variables.$secondary-500; */
     font-weight: 700;
   }
 }
@@ -29,9 +26,9 @@
   flex-direction: row;
   gap: 32px;
 
-  @media (max-width: variables.$screen-xl) {
-    gap: 16px;
-  }
+  /* @media (max-width: variables.$screen-xl) { */
+  /* gap: 16px; */
+  /* } */
 }
 
 .step-container {
@@ -48,24 +45,24 @@
 }
 
 .step-header {
-  @include mixins.h3-bold;
+  /* @include mixins.h3-bold; */
   margin: 0;
-  color: variables.$neutral-50;
+  /* color: variables.$neutral-50; */
 
-  @media (max-width: variables.$screen-sm) {
-    @include mixins.h5-semi-bold;
-    font-weight: 700;
-  }
+  /* @media (max-width: variables.$screen-sm) { */
+  /* @include mixins.h5-semi-bold; */
+  /* font-weight: 700; */
+  /* } */
 }
 
 .step-paragraph {
-  @include mixins.p3-regular;
+  /* @include mixins.p3-regular; */
   margin: 0;
-  color: variables.$neutral-50;
+  /* color: variables.$neutral-50; */
 
-  @media (max-width: variables.$screen-sm) {
-    @include mixins.p2-regular;
-  }
+  /* @media (max-width: variables.$screen-sm) { */
+  /* @include mixins.p2-regular; */
+  /* } */
 }
 
 .sidebar-container {
@@ -73,7 +70,7 @@
   flex-direction: column;
   gap: 40px;
 
-  @media (max-width: variables.$screen-xs) {
-    gap: 0;
-  }
+  /* @media (max-width: variables.$screen-xs) { */
+  /* gap: 0; */
+  /* } */
 }
