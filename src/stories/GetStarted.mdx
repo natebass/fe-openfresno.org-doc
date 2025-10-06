@@ -1,7 +1,7 @@
 import { Meta } from "@storybook/addon-docs/blocks";
-import BasePathImage from "../integrations/gh-pages/BasePathImage";
 import Image from "next/image";
 import Link from "next/link";
+import BasePathImage from "../integrations/gh-pages/BasePathImage";
 
 export const RightArrow = () => (
   <svg
@@ -21,28 +21,28 @@ export const RightArrow = () => (
   </svg>
 );
 
-<Meta title="Configure your project" />
+<Meta title="Get Started" />
 
 <div className="sb-container">
   <div className="sb-section-title">
-    # Configure your project
-    Because Storybook works separately from your app, you'll need to configure it for your specific stack and setup. Below, explore guides for configuring Storybook with popular frameworks and tools. If you get stuck, learn how you can ask for help from our community.
+    # Open Fresno Component Guide
+    Welcome to the Open Fresno website component library documentation. This Storybook showcases the reusable components that power our civic tech platform, helping volunteers and contributors understand how to test, maintain, and extend our design system. Learn how to contribute to our mission of using technology for positive civic change in Fresno.
   </div>
   <div className="sb-section">
     <div className="sb-section-item">
       <BasePathImage
         src="/storybook-assets/styling.png"
-        alt="A wall of logos representing different styling technologies"
+        alt="Open Fresno design system with Tailwind CSS and custom styling"
         width={0}
         height={0}
         style={{ width: "100%", height: "auto" }}
       />
-      <h4 className="sb-section-item-heading">Add styling and CSS</h4>
-      <p className="sb-section-item-paragraph">Like with web applications, there are many ways to include CSS within Storybook. Learn more about setting up styling within Storybook.</p>
+      <h4 className="sb-section-item-heading">Design System & Styling</h4>
+      <p className="sb-section-item-paragraph">Our components use Tailwind CSS with custom design tokens that reflect Open Fresno's brand identity. Learn how to maintain consistency across our civic tech platform.</p>
       <Link
-        href="https://storybook.js.org/docs/configure/styling-and-css/?renderer=react&ref=configure"
+        href="https://openfresno.org/get-started"
         target="_blank"
-      >Learn more<RightArrow /></Link>
+      >Get Started Contributing<RightArrow /></Link>
     </div>
     <div className="sb-section-item">
       <BasePathImage
@@ -50,14 +50,14 @@ export const RightArrow = () => (
         height={0}
         style={{ width: "100%", height: "auto" }}
         src="/storybook-assets/context.png"
-        alt="An abstraction representing the composition of data for a component"
+        alt="Testing civic tech components with proper context and mock data"
       />
-      <h4 className="sb-section-item-heading">Provide context and mocking</h4>
-      <p className="sb-section-item-paragraph">Often when a story doesn't render, it's because your component is expecting a specific environment or context (like a theme provider) to be available.</p>
+      <h4 className="sb-section-item-heading">Component Testing & Mocking</h4>
+      <p className="sb-section-item-paragraph">Our components are designed for civic engagement features like volunteer registration, project listings, and community events. Learn how to test these components with realistic civic data.</p>
       <Link
-        href="https://storybook.js.org/docs/writing-stories/decorators/?renderer=react&ref=configure#context-for-mocking"
+        href="https://github.com/openfresno/fe-openfresno.org-doc"
         target="_blank"
-      >Learn more<RightArrow /></Link>
+      >View Repository<RightArrow /></Link>
     </div>
     <div className="sb-section-item">
       <BasePathImage
@@ -65,23 +65,23 @@ export const RightArrow = () => (
         height={0}
         style={{ width: "100%", height: "auto" }}
         src="/storybook-assets/assets.png"
-        alt="A representation of typography and image assets"
+        alt="Open Fresno brand assets, icons, and civic imagery"
       />
       <div>
-        <h4 className="sb-section-item-heading">Load assets and resources</h4>
-        <p className="sb-section-item-paragraph">To link static files (like fonts) to your projects and stories, use the `staticDirs` configuration option to specify folders to load when starting Storybook.</p>
+        <h4 className="sb-section-item-heading">Brand Assets & Resources</h4>
+        <p className="sb-section-item-paragraph">Access Open Fresno's logos, civic imagery, and brand guidelines. Our assets reflect our mission of civic engagement and community empowerment in Fresno and the Central Valley.</p>
         <Link
-          href="https://storybook.js.org/docs/configure/images-and-assets/?renderer=react&ref=configure"
+          href="https://openfresno.org/about"
           target="_blank"
-        >Learn more<RightArrow /></Link>
+        >About Open Fresno<RightArrow /></Link>
       </div>
     </div>
   </div>
 </div>
 <div className="sb-container">
   <div className="sb-section-title">
-    # Do more with Storybook
-    Now that you know the basics, let's explore other parts of Storybook that will improve your experience. This list is just to get you started. You can customise Storybook in many ways to fit your needs.
+    # Contribute to Open Fresno
+    Ready to make a difference in your community? Here are ways to get involved with Open Fresno's civic tech initiatives. Whether you're a developer, designer, or simply passionate about civic engagement, there's a place for you in our volunteer community.
   </div>
 
   <div className="sb-section">
@@ -92,14 +92,14 @@ export const RightArrow = () => (
           height={0}
           style={{ width: "100%", height: "auto" }}
           src="/storybook-assets/docs.png"
-          alt="A screenshot showing the autodocs tag being set, pointing a docs page being generated"
+          alt="Open Fresno component documentation and development guides"
         />
-        <h4 className="sb-section-item-heading">Autodocs</h4>
-        <p className="sb-section-item-paragraph">Auto-generate living, interactive reference documentation from your components and stories.</p>
+        <h4 className="sb-section-item-heading">Documentation</h4>
+        <p className="sb-section-item-paragraph">Contribute to our living documentation that helps volunteers understand our codebase and civic tech best practices.</p>
         <Link
-          href="https://storybook.js.org/docs/writing-docs/autodocs/?renderer=react&ref=configure"
+          href="https://openfresno.org/projects"
           target="_blank"
-        >Learn more<RightArrow /></Link>
+        >View Projects<RightArrow /></Link>
       </div>
       <div className="sb-grid-item">
         <BasePathImage
@@ -107,14 +107,14 @@ export const RightArrow = () => (
           height={0}
           style={{ width: "100%", height: "auto" }}
           src="/storybook-assets/share.png"
-          alt="A browser window showing a Storybook being published to a chromatic.com URL"
+          alt="Open Fresno volunteers collaborating on civic tech projects"
         />
-        <h4 className="sb-section-item-heading">Publish to Chromatic</h4>
-        <p className="sb-section-item-paragraph">Publish your Storybook to review and collaborate with your entire team.</p>
+        <h4 className="sb-section-item-heading">Weekly Meetups</h4>
+        <p className="sb-section-item-paragraph">Join our weekly Community Action Nights every Wednesday at 6:30 PM PST to collaborate with fellow civic-minded technologists.</p>
         <Link
-          href="https://storybook.js.org/docs/sharing/publish-storybook/?renderer=react&ref=configure#publish-storybook-with-chromatic"
+          href="https://www.meetup.com/openfresno/"
           target="_blank"
-        >Learn more<RightArrow /></Link>
+        >Join Meetup<RightArrow /></Link>
       </div>
       <div className="sb-grid-item">
         <BasePathImage
@@ -122,14 +122,14 @@ export const RightArrow = () => (
           height={0}
           style={{ width: "100%", height: "auto" }}
           src="/storybook-assets/figma-plugin.png"
-          alt="Windows showing the Storybook plugin in Figma"
+          alt="Open Fresno design collaboration and civic tech design systems"
         />
-        <h4 className="sb-section-item-heading">Figma Plugin</h4>
-        <p className="sb-section-item-paragraph">Embed your stories into Figma to cross-reference the design and live implementation in one place.</p>
+        <h4 className="sb-section-item-heading">Design Collaboration</h4>
+        <p className="sb-section-item-paragraph">We welcome designers to help create accessible, user-friendly interfaces for our civic engagement platforms and community tools.</p>
         <Link
-          href="https://storybook.js.org/docs/sharing/design-integrations/?renderer=react&ref=configure#embed-storybook-in-figma-with-the-plugin"
+          href="https://openfresno.org/get-started"
           target="_blank"
-        >Learn more<RightArrow /></Link>
+        >Volunteer as Designer<RightArrow /></Link>
       </div>
       <div className="sb-grid-item">
         <BasePathImage
@@ -137,14 +137,14 @@ export const RightArrow = () => (
           height={0}
           style={{ width: "100%", height: "auto" }}
           src="/storybook-assets/testing.png"
-          alt="Screenshot of tests passing and failing"
+          alt="Testing Open Fresno civic tech components for reliability"
         />
-        <h4 className="sb-section-item-heading">Testing</h4>
-        <p className="sb-section-item-paragraph">Use stories to test a component in all its variations, no matter how complex.</p>
+        <h4 className="sb-section-item-heading">Quality Assurance</h4>
+        <p className="sb-section-item-paragraph">Help ensure our civic tech tools are reliable and accessible by contributing to testing, code reviews, and quality assurance efforts.</p>
         <Link
-          href="https://storybook.js.org/docs/writing-tests/?renderer=react&ref=configure"
+          href="https://github.com/openfresno/fe-openfresno.org-doc/issues"
           target="_blank"
-        >Learn more<RightArrow /></Link>
+        >View Issues<RightArrow /></Link>
       </div>
       <div className="sb-grid-item">
         <BasePathImage
@@ -152,14 +152,14 @@ export const RightArrow = () => (
           height={0}
           style={{ width: "100%", height: "auto" }}
           src="/storybook-assets/accessibility.png"
-          alt="Screenshot of accessibility tests passing and failing"
+          alt="Making civic tech accessible to all community members"
         />
         <h4 className="sb-section-item-heading">Accessibility</h4>
-        <p className="sb-section-item-paragraph">Automatically test your components for a11y issues as you develop.</p>
+        <p className="sb-section-item-paragraph">We're committed to making civic engagement accessible to everyone. Help us ensure our components meet WCAG standards for all community members.</p>
         <Link
-          href="https://storybook.js.org/docs/writing-tests/accessibility-testing/?renderer=react&ref=configure"
+          href="https://openfresno.org/code-of-conduct"
           target="_blank"
-        >Learn more<RightArrow /></Link>
+        >Code of Conduct<RightArrow /></Link>
       </div>
       <div className="sb-grid-item">
         <BasePathImage
@@ -167,33 +167,33 @@ export const RightArrow = () => (
           height={0}
           style={{ width: "100%", height: "auto" }}
           src="/storybook-assets/theming.png"
-          alt="Screenshot of Storybook in light and dark mode"
+          alt="Open Fresno brand themes and civic tech styling"
         />
-        <h4 className="sb-section-item-heading">Theming</h4>
-        <p className="sb-section-item-paragraph">Theme Storybook's UI to personalize it to your project.</p>
+        <h4 className="sb-section-item-heading">Brand & Theming</h4>
+        <p className="sb-section-item-paragraph">Our design system reflects Open Fresno's commitment to transparency, community engagement, and accessible civic technology.</p>
         <Link
-          href="https://storybook.js.org/docs/configure/theming/?renderer=react&ref=configure"
+          href="https://openfresno.org/about"
           target="_blank"
-        >Learn more<RightArrow /></Link>
+        >Our Mission<RightArrow /></Link>
       </div>
     </div>
   </div>
 </div>
 <div className="sb-addon">
   <div className="sb-addon-text">
-    <h4>Addons</h4>
-    <p className="sb-section-item-paragraph">Integrate your tools with Storybook to connect workflows.</p>
+    <h4>Civic Tech Projects</h4>
+    <p className="sb-section-item-paragraph">Explore our active projects like Learning Blocks, TrashAI, and Open Budget Sac that address real civic challenges in Fresno and the Central Valley.</p>
     <Link
-      href="https://storybook.js.org/addons/?ref=configure"
+      href="https://openfresno.org/projects"
       target="_blank"
-    >Discover all addons<RightArrow /></Link>
+    >Explore Projects<RightArrow /></Link>
   </div>
   <div className="sb-addon-img">
     <BasePathImage
       width={650}
       height={347}
       src="/storybook-assets/addon-library.png"
-      alt="Integrate your tools with Storybook to connect workflows."
+      alt="Open Fresno civic tech projects making a difference in the community."
     />
   </div>
 </div>
@@ -208,9 +208,9 @@ export const RightArrow = () => (
       alt="Github logo"
       className="sb-explore-image"
     />
-    Join our contributors building the future of UI development.
+    Contribute to open-source civic tech projects that make a difference.
 
-    <Link href="https://github.com/storybookjs/storybook" target="_blank">Star on GitHub<RightArrow /></Link>
+    <Link href="https://github.com/openfresno" target="_blank">Star on GitHub<RightArrow /></Link>
 
   </div>
   <div className="sb-section-item">
@@ -219,13 +219,13 @@ export const RightArrow = () => (
       height={32}
       layout="fixed"
       src="/storybook-assets/discord.svg"
-      alt="Discord logo"
+      alt="Slack logo"
       className="sb-explore-image"
     />
     <div>
-      Get support and chat with frontend developers.
+      Connect with our community of civic-minded technologists.
 
-      <Link href="https://discord.gg/storybook" target="_blank">Join Discord server<RightArrow /></Link>
+      <Link href="https://forms.gle/JA3jAV9wE1645i9LA" target="_blank">Join Our Slack<RightArrow /></Link>
     </div>
 
   </div>
@@ -239,9 +239,9 @@ export const RightArrow = () => (
       className="sb-explore-image"
     />
     <div>
-      Watch tutorials, feature previews and interviews.
+      Watch our community events and civic tech presentations.
 
-      <Link href="https://www.youtube.com/@chromaticui" target="_blank">Watch on YouTube<RightArrow /></Link>
+      <Link href="https://www.youtube.com/@openfresno" target="_blank">Watch on YouTube<RightArrow /></Link>
     </div>
 
   </div>
@@ -251,15 +251,15 @@ export const RightArrow = () => (
       height={32}
       layout="fixed"
       src="/storybook-assets/tutorials.svg"
-      alt="A book"
+      alt="FAQ icon"
       className="sb-explore-image"
     />
-    <p>Follow guided walkthroughs on for key workflows.</p>
+    <p>Find answers to common questions about volunteering and contributing.</p>
     
     <Link
-      href="https://storybook.js.org/tutorials/?ref=configure"
+      href="https://openfresno.org/faq"
       target="_blank"
-    >Discover tutorials<RightArrow /></Link>
+    >View FAQ<RightArrow /></Link>
   </div>
 </div>
 

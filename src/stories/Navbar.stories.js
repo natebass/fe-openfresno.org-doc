@@ -25,11 +25,13 @@ export const ToggleMenu = {
     await expect(toggleButton).toBeInTheDocument();
 
     await userEvent.click(toggleButton);
-    await expect(canvas.getByRole("link", { name: /Donate/i }))
-      .toBeInTheDocument();
+    await expect(
+      canvas.getByRole("link", { name: /Donate/i }),
+    ).toBeInTheDocument();
 
     await userEvent.click(toggleButton);
-    await expect(canvas.queryByRole("link", { name: /Donate/i }))
-      .not.toBeInTheDocument();
+    await expect(
+      canvas.queryByRole("link", { name: /Donate/i }),
+    ).not.toBeInTheDocument();
   },
 };
