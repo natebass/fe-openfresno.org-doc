@@ -1,6 +1,5 @@
 import { expect, userEvent, within } from "storybook/test";
-import "../app/-styles/main.css";
-import NavbarE7e from "../components/layout/NavbarE7e";
+import NavbarE7e from "../../components/layout/NavbarE7e";
 
 export default {
   title: "Components/Navigation Bar",
@@ -99,6 +98,26 @@ export const Default = {
 
 export const WithFade = {
   args: { fade: true },
+  parameters: {
+    docs: {
+      description: {
+        story: `
+This story demonstrates the modern CSS scroll-driven animation feature used in the navbar fade effect.
+
+**Browser Compatibility:**
+- ✅ Chrome/Edge 115+ (Full support)
+- ✅ Safari 26.0+ (Recently added)
+- ❌ Firefox (Behind flag)
+- ❌ Internet Explorer (Not supported)
+
+**CSS Implementation:**
+The fade effect uses \`animation-timeline: scroll()\` to tie the opacity animation to scroll progress rather than time.
+
+Scroll up and down in this story to see the effect in action (Chrome/Edge only).
+        `,
+      },
+    },
+  },
   decorators: [
     (Story) => (
       <div>
@@ -119,12 +138,57 @@ export const WithFade = {
               Fade-effect navigation bar
             </h2>
             <p>Scroll up and down to see the navbar fade in/out.</p>
-            <p style={{ marginTop: "2rem", opacity: 0.7, fontSize: "1rem" }}>
-              ⚠️ Fade effect only works in Chrome/Edge 115+ browsers
-            </p>
-            <p style={{ opacity: 0.7, fontSize: "0.9rem" }}>
-              Uses modern CSS \`animation-timeline: scroll()\`
-            </p>
+            <div
+              style={{ maxWidth: "600px", margin: "0 auto", lineHeight: 1.6 }}
+            >
+              <p
+                style={{
+                  marginBottom: "2rem",
+                  marginTop: "2rem",
+                  opacity: 0.8,
+                }}
+              >
+                This uses modern CSS \`animation-timeline: scroll()\` - no
+                JavaScript required!
+              </p>
+              <div
+                style={{
+                  background: "rgba(122,122,255,0.1)",
+                  padding: "1.5rem",
+                  borderRadius: "8px",
+                  marginBottom: "2rem",
+                }}
+              >
+                <h3 style={{ marginBottom: "1rem" }}>
+                  Browser Support Status:
+                </h3>
+                <p>✅ Chrome/Edge 115+</p>
+                <p>✅ Safari 26.0+</p>
+                <p>❌ Firefox (flag required)</p>
+                <p>❌ Internet Explorer</p>
+              </div>
+
+              <p style={{ fontSize: "0.9rem", opacity: 0.7 }}>
+                Learn more:
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations"
+                  style={{ color: "#4fc3f7" }}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  MDN Documentation
+                </a>{" "}
+                |
+                <a
+                  href="https://caniuse.com/mdn-css_properties_animation-timeline_scroll"
+                  style={{ color: "#4fc3f7" }}
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Browser Support
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -174,109 +238,6 @@ export const ToggleMenu = {
             <p style={{ marginTop: "2rem", opacity: 0.7, fontSize: "1rem" }}>
               Resize window to mobile size to see hamburger menu
             </p>
-          </div>
-        </div>
-      </div>
-    ),
-  ],
-};
-
-// Additional story specifically for demonstrating scroll-driven animations
-export const ScrollAnimationDemo = {
-  args: { fade: true },
-  parameters: {
-    docs: {
-      description: {
-        story: `
-This story demonstrates the modern CSS scroll-driven animation feature used in the navbar fade effect.
-
-**Browser Compatibility:**
-- ✅ Chrome/Edge 115+ (Full support)
-- ✅ Safari 26.0+ (Recently added)
-- ❌ Firefox (Behind flag)
-- ❌ Internet Explorer (Not supported)
-
-**CSS Implementation:**
-The fade effect uses \`animation-timeline: scroll()\` to tie the opacity animation to scroll progress rather than time.
-
-Scroll up and down in this story to see the effect in action (Chrome/Edge only).
-        `,
-      },
-    },
-  },
-  decorators: [
-    (Story) => (
-      <div>
-        <Story />
-        <div
-          style={{
-            height: "300vh", // Extra tall for more scroll testing
-            background: "linear-gradient(to bottom, #000000, #1a1a1a, #333333)",
-            position: "relative",
-          }}
-        >
-          <div
-            style={{
-              position: "sticky",
-              top: "50%",
-              transform: "translateY(-50%)",
-              textAlign: "center",
-              color: "white",
-              padding: "2rem",
-            }}
-          >
-            <h2 style={{ marginBottom: "2rem", fontSize: "2rem" }}>
-              CSS Scroll-Driven Animations Demo
-            </h2>
-            <div
-              style={{ maxWidth: "600px", margin: "0 auto", lineHeight: 1.6 }}
-            >
-              <p style={{ marginBottom: "1rem" }}>
-                Scroll up and down to see the navbar fade effect.
-              </p>
-              <p style={{ marginBottom: "2rem", opacity: 0.8 }}>
-                This uses modern CSS \`animation-timeline: scroll()\` - no
-                JavaScript required!
-              </p>
-
-              <div
-                style={{
-                  background: "rgba(255,255,255,0.1)",
-                  padding: "1.5rem",
-                  borderRadius: "8px",
-                  marginBottom: "2rem",
-                }}
-              >
-                <h3 style={{ marginBottom: "1rem" }}>
-                  Browser Support Status:
-                </h3>
-                <p>✅ Chrome/Edge 115+</p>
-                <p>✅ Safari 26.0+</p>
-                <p>❌ Firefox (flag required)</p>
-                <p>❌ Internet Explorer</p>
-              </div>
-
-              <p style={{ fontSize: "0.9rem", opacity: 0.7 }}>
-                Learn more:
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_scroll-driven_animations"
-                  style={{ color: "#4fc3f7" }}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  MDN Documentation
-                </a>{" "}
-                |
-                <a
-                  href="https://caniuse.com/mdn-css_properties_animation-timeline_scroll"
-                  style={{ color: "#4fc3f7" }}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Browser Support
-                </a>
-              </p>
-            </div>
           </div>
         </div>
       </div>
