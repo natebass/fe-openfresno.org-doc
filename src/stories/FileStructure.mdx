@@ -1,0 +1,54 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="File Structure" />
+
+## 📂 Open Fresno website project structure
+
+- public/ — Shared UI components
+- src/app/ — Next.js pages (for integration testing)
+- src/components/layout — Layout components (base layout, navbar, footer).
+- src/components/ui — Custom UI components.
+  - src/components/index.js — All UI components are available through this index.js. Example: import \{ thing \} from "@/components/ui"
+  - src/components/ui/icon — Custom-made icons (put third-party in integrations).
+  - src/components/ui/timeline —
+- src/integrations/ — Integration with external services
+- src/utility/ — Utility functions and helpers
+- styles/ — **DEPRECATED**: SCSS styles. Use src/app/-styles/main.css.
+- tests/ — Playwright tests.
+- eslint.config.mjs — Eslint
+- jsconfig.json — Enable "@/" mapping to "src/" if you want to use it.
+- LICENSE — MIT
+- meta.yml — Open Sacramento meta file for use with the projects page.
+- next.config.js — Next.js
+- openfresno.png — Screenshot of the homepage.
+- package.json — Basic lint, build, test, and run scripts.
+- package-lock.json — NPM
+- playwright.config.ts — Use only Playwright for tests in the main repository.
+- postcss.config.mjs — PostCSS and Tailwind for CSS
+- README — A file that provides an overview of the project, including its purpose, how to install it, how to use it, and other important information for users and contributors.
+
+### Build folders (ignored)
+
+- node_modules — ~675MB
+- out — Next.js build output.
+- test-results — Storybook test results.
+- .git — Simple git
+- .next — Next.js
+
+### Settings
+
+- .vscode —  VSCode is the supported editor for this project.
+
+
+## 📂 Open Fresno documentation project structure
+
+- .storybook/ — Storybook configuration
+- **public**/ — Same as website.
+- src/**app**/ — Same as website.
+- src/**components**/ — Same as website.
+- src/**integrations**/ — Same as website.
+- src/stories/ — Component stories and MDX documentation files.
+- src/**utility**/ — Same as website.
+
+> [!NOTE]
+> Copy all of the folders in **bold** when updating the code from the main project.
