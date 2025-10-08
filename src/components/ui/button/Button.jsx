@@ -1,11 +1,11 @@
-import { HamburgerStaggered, IconX } from "../../../components/icon";
+import Link from "next/link";
 import {
   ChevronDown,
   ChevronLeft,
   ChevronRight,
   ChevronUp,
 } from "../../../integrations/tabler-icon";
-import Link from "next/link";
+import { HamburgerStaggered, IconX } from "../icon";
 
 /**
  * A flexible, multi-purpose component for rendering a styled button or link.
@@ -121,4 +121,4 @@ const NavExtendedToggle = ({ toggleMobileNavPosition, mobileNavPosition }) => {
   }
 };
 
-export { NavExtendedToggle, NavToggle, BaseButton };
+export { BaseButton, NavExtendedToggle, NavToggle };
