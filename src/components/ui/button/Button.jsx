@@ -1,11 +1,6 @@
 import Link from "next/link";
-import {
-  ChevronDown,
-  ChevronLeft,
-  ChevronRight,
-  ChevronUp,
-} from "../../../integrations/tabler-icon";
-import { HamburgerStaggered, IconX } from "../icon";
+import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp, } from "../../../integrations/tabler-icon";
+import { HamburgerStaggered, IconX } from "..";
 
 /**
  * A flexible, multi-purpose component for rendering a styled button or link.

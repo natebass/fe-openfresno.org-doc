@@ -1,4 +1,4 @@
-import { Button, NavExtendedToggle } from "../../components/ui";
+import { Button, NavExtendedToggle, NavToggle } from "../../components/ui";
 
 export default {
   title: "Components/Button",
@@ -11,17 +11,15 @@ export const Default = {
     (Story) => (
       <div>
         <Story />
-        <div className="grid">
+        <div className="grid gap-y-4">
           <Button className="btn">Primary Button</Button>
-          <br />
           <Button className="btn btn--grow">Grow Button</Button>
-          <br />
           <Button className="btn-small">Small Button</Button>
-          <br />
           <Button className="btn btn-alt btn-alt--transition">
             Fill Button
           </Button>
           <NavExtendedToggle />
+          <NavToggle/>
         </div>
       </div>
     ),
