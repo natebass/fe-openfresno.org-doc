@@ -1,7 +1,8 @@
-import { Button, Slider, Timeline } from "../../components/ui";
+import { Button, Slider } from "../../components/ui";
 import Link from "next/link";
 import BasePathImage from "../../integrations/gh-pages/BasePathImage";
 import LayoutE53 from "../../components/layout/LayoutE53";
+import Timeline3 from "@/components/ui/timeline3/Timeline3";
 
 export default function HomePage() {
   return (
@@ -110,7 +111,7 @@ export default function HomePage() {
             <h1 className="heading-main app-color--dark">Opportunities</h1>
             <h2 className="sub-heading-main">Explore Our Volunteer Options</h2>
           </div>
-          <Timeline />
+          <Timeline3/>
         </section>
         <section className="app-color--dark py-12 lg:py-24">
           <div className="page-split">
