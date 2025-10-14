@@ -36,6 +36,7 @@ jobs:
       - name: Detect package manager
         id: detect-package-manager
         run: |
+          # Use npm as the default runner if yarn is not present
           if [ -f "${{ github.workspace }}/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
@@ -55,8 +56,9 @@ jobs:
         uses: actions/setup-node@v6
         with:
           node-version: 24
+          # Enable caching for the detected package manager
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-
+      
       # This is removed due to the MDX configuration failing in next.config.js. It can be renabled if MDX support is removed. This would simplify alot of the custom basepath logic.
       # - name: Setup Pages
       #   uses: actions/configure-pages@v5
@@ -67,19 +69,22 @@ jobs:
       # You may remove this line if you want to manage the configuration yourself.
       # static_site_generator: next
 
-      - name: Restore cache
+      - name: Restore/Save Dependencies Cache
         uses: actions/cache@v4
         with:
+          # Use the default cache path for the detected package manager
           path: |
-            .next/cache
-          # Generate a new cache whenever packages or source files change.
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          # If source files changed but packages didn't, rebuild from a prior cache.
+            ${{ steps.detect-package-manager.outputs.manager == 'npm' && '~/.npm' || steps.detect-package-manager.outputs.manager == 'yarn' && '**/node_modules' }}
+          key: ${{ runner.os }}-deps-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
+            ${{ runner.os }}-deps-
 
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      
+      # --- FIX for EEXIST error: Clean the build directory ---
+      - name: Clean Storybook Artifact Directory
+        run: rm -rf ./storybook-static
 
       - name: Build with Storybook
         env:
