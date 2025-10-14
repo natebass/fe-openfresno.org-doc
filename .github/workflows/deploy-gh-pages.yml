@@ -29,16 +29,25 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [24]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
+
+      # Use PNPM. Only npm and yarn are supported by default in actions/setup-node.
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
 
       - name: Detect package manager
         id: detect-package-manager
         run: |
           if [ -f "${{ github.workspace }}/pnpm-lock.yaml" ]; then
             echo "manager=pnpm" >> $GITHUB_OUTPUT
-            echo "command=install" >> $GITHUB_OUTPUT
+            echo "command=install --frozen-lockfile" >> $GITHUB_OUTPUT
             echo "runner=pnpm exec" >> $GITHUB_OUTPUT
             exit 0
           elif [ -f "${{ github.workspace }}/yarn.lock" ]; then
@@ -59,10 +68,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 24
+          node-version: ${{ matrix.node-version }}
           # Enable caching for the detected package manager
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-      
+
       # This is removed due to the MDX configuration failing in next.config.js. It can be renabled if MDX support is removed. This would simplify alot of the custom basepath logic.
       # - name: Setup Pages
       #   uses: actions/configure-pages@v5
@@ -81,13 +90,13 @@ jobs:
             ${{ steps.detect-package-manager.outputs.manager == 'pnpm' && '**/node_modules' }}
             ${{ steps.detect-package-manager.outputs.manager == 'yarn' && '**/node_modules' }}
             ${{ steps.detect-package-manager.outputs.manager == 'npm' && '~/.npm' }}
-          key: ${{ runner.os }}-deps-${{ hashFiles('**/package-lock.json', '**/yarn.lock', '**/pnpm-lock.yaml') }}
+          key: ${{ runner.os }}-${{ matrix.node-version }}-deps-${{ hashFiles('**/package-lock.json', '**/yarn.lock', '**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-deps-
+            ${{ runner.os }}-${{ matrix.node-version }}-deps-
 
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-      
+
       # --- FIX for EEXIST error: Clean the build directory ---
       - name: Clean Storybook Artifact Directory
         run: rm -rf ./storybook-static
