@@ -52,7 +52,7 @@ jobs:
           fi
 
       - name: Setup Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: 24
           cache: ${{ steps.detect-package-manager.outputs.manager }}
@@ -89,7 +89,7 @@ jobs:
           ${{ steps.detect-package-manager.outputs.runner }} storybook build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./storybook-static
 
