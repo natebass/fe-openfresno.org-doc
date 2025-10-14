@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { Button, NavExtendedToggle } from "../ui";
+import { Button, NavExtendedToggle } from "../ui/button/Button";
 
 /**
  * Extend a navbar menu below the main application navbar.

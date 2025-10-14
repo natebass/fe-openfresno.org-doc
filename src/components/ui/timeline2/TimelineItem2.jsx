@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useRef } from "react";
-import { Button } from "..";
+import { Button } from "../button/Button";
 
 export class SimpleButton {
   constructor(text = "", href = "") {

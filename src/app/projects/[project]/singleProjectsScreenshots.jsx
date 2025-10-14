@@ -1,4 +1,4 @@
-import { Slider } from "@/components/ui";
+import Slider from "../../../components/ui/slider/Slider";
 
 export default function SingleProjectsScreenshots({ data }) {
   let shownImages = data.meta.screenshots.map((screenshot) => (

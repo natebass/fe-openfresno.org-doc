@@ -5,7 +5,7 @@ import NavbarMenuE87 from "./NavbarMenuE87";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import BasePathImage from "../../integrations/gh-pages/BasePathImage";
-import { NavToggle } from "../ui";
+import {NavToggle} from "../ui/button/Button";
 
 /**
  * The default navigation bar for the application.

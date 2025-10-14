@@ -1,8 +1,9 @@
-import { Button, Slider } from "../../components/ui";
 import Link from "next/link";
 import BasePathImage from "../../integrations/gh-pages/BasePathImage";
 import LayoutE53 from "../../components/layout/LayoutE53";
-import Timeline3 from "@/components/ui/timeline3/Timeline3";
+import Timeline3 from "../../components/ui/timeline3/Timeline3";
+import {Button} from "../../components/ui/button/Button";
+import Slider from "../../components/ui/slider/Slider";
 
 export default function HomePage() {
   return (

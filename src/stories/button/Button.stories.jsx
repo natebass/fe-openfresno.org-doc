@@ -1,4 +1,4 @@
-import { Button, NavExtendedToggle, NavToggle } from "../../components/ui";
+import { Button, NavExtendedToggle, NavToggle } from "../../components/ui/button/Button";
 
 export default {
   title: "Components/Button",
