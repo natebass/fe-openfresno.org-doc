@@ -7,6 +7,7 @@ This repository hosts the **Storybook + Next.js testing environment** for Open F
 ### Prerequisites
 
 - Node.js
+- PNPM
 
 ### Installation
 
@@ -15,7 +16,7 @@ Clone the repo and install dependencies:
 ```
 git clone [https://github.com/openfresno/fe-openfresno-doc.git](https://github.com/openfresno/fe-openfresno-doc.git)
 cd fe-openfresno-doc
-npm install
+pnpm i
 ```
 
 ### Running Storybook
@@ -23,9 +24,7 @@ npm install
 Start the Storybook development server:
 
 ```
-npm run storybook
-# or
-yarn storybook
+pnpm run storybook
 ```
 
 Storybook will be available at **http://localhost:6006**.
@@ -35,7 +34,7 @@ Storybook will be available at **http://localhost:6006**.
 If you want to preview components inside a Next.js app shell:
 
 ```
-npm run dev
+pnpm run dev
 ```
 
 ## Testing
@@ -43,14 +42,8 @@ npm run dev
 This repo is designed for component-driven development. We use:
 
 - **Storybook** for isolated UI development
-- **Jest + React Testing Library** for unit tests
-- **Playwright** (optional) for visual regression and interaction tests
-
-Run tests with:
-
-```
-npm test
-```
+- **Vitest** for unit tests
+- **Playwright** for visual regression and interaction tests
 
 ## Contribute
 
