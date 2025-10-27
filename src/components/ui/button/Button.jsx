@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp, } from "../../../integrations/tabler-icon";
-import { HamburgerStaggered} from "../icon/HamburgerStaggered";
-import { IconX } from "../icon/IconX";
+import { ChevronDown, ChevronLeft, ChevronRight, ChevronUp } from "../../../integrations/tabler-icon";
+import { HamburgerStaggered, IconX } from "..";
 
 /**
- * A flexible, multipurpose component for rendering a styled button or link.
+ * A flexible, multi-purpose component for rendering a styled button or link.
  *
  * This component acts as a smart wrapper, rendering either a Next.js `<Link>`
  * or a native `<button>` element based on whether the `href` prop is provided.
@@ -117,4 +116,4 @@ const NavExtendedToggle = ({ toggleMobileNavPosition, mobileNavPosition }) => {
   }
 };
 
-export { BaseButton as Button, NavExtendedToggle, NavToggle };
+export { BaseButton, NavExtendedToggle, NavToggle };
