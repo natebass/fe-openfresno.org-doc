@@ -1,5 +1,5 @@
-const createMDX = require("@next/mdx");
-const path = require("path");
+const createMDX = require("@next/mdx")
+const path = require("path")
 
 /**
  * Get a relative base path for the website assets when using GitHub Pages.  By default when using GitHub Pages, this appends the repo name. This is an empty string for local development and when the main repository has a custom domain.
@@ -15,27 +15,24 @@ function getBasePath(
   mainRepoCustomDomain = false,
   mainRepoName = "openfresno/fe-openfresno.org-doc",
 ) {
-  const isGitHubActions = process.env.GITHUB_ACTIONS === "true";
-  const isMainRepo = process.env.GITHUB_REPOSITORY === mainRepoName;
+  const isGitHubActions = process.env.GITHUB_ACTIONS === "true"
+  const isMainRepo = process.env.GITHUB_REPOSITORY === mainRepoName
   if (isGitHubActions) {
     if (isMainRepo && mainRepoCustomDomain) {
-      return "";
+      return ""
     } else {
-      return `/${mainRepoName.split("/")[1]}`;
+      return `/${mainRepoName.split("/")[1]}`
     }
   } else {
-    return "";
+    return ""
   }
 }
 
-const basePath = getBasePath();
+const basePath = getBasePath()
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   basePath,
   assetPrefix: basePath,
   images: {
@@ -48,10 +45,10 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
   },
-};
+}
 
 const withMDX = createMDX({
   extension: /\.(md|mdx)$/,
-});
+})
 
-module.exports = withMDX(nextConfig);
+module.exports = withMDX(nextConfig)
