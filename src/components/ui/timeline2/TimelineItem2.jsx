@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useEffect, useRef } from "react";
 import { Button } from "../button/Button";
 
@@ -29,47 +29,54 @@ export class SimpleButton {
  *        Inserted using <TimelineItem ...props> ...children</TimelineItem>
  */
 export function TimelineItem2({
-                                number = 0,
-                                heading,
-                                buttons = [],
-                                updateTimelineNumbers,
-                                children = (<></>)
-                              }) {
+  number = 0,
+  heading,
+  buttons = [],
+  updateTimelineNumbers,
+  children = <></>,
+}) {
   const refContainer = useRef();
   useEffect(() => {
     if (refContainer.current) {
-      updateTimelineNumbers(number, refContainer.current.getBoundingClientRect());
+      updateTimelineNumbers(
+        number,
+        refContainer.current.getBoundingClientRect(),
+      );
     }
   }, []);
   return (
     <div className="timeline-item">
-      <div className="timeline-number" ref={refContainer}>{number}</div>
+      <div className="timeline-number" ref={refContainer}>
+        {number}
+      </div>
       <div className="timeline-item-content">
         <h2 className="heading-small">{heading}</h2>
-        <p>
-          {children}
-        </p>
-        {
-          buttons.length === 0 ? (
-            <Button
-              className="btn btn--grow mx-auto mt-2 lg:mx-0" href={buttons[0].href}
-            >
-              {buttons[0].text}
-            </Button>
-          ) : buttons.length >= 1 ? (
-            <div className="mt-2 flex flex-wrap justify-center gap-4 lg:justify-start">
-              {
-                buttons.map((button, index) => {
-                  return (<Button className="btn btn--grow" href={button.href} key={index}>
-                    {button.text}
-                  </Button>)
-                })
-              }
-            </div>
-
-          ) : ""
-        }
+        <p>{children}</p>
+        {buttons.length === 0 ? (
+          <Button
+            className="btn btn--grow mx-auto mt-2 lg:mx-0"
+            href={buttons[0].href}
+          >
+            {buttons[0].text}
+          </Button>
+        ) : buttons.length >= 1 ? (
+          <div className="mt-2 flex flex-wrap justify-center gap-4 lg:justify-start">
+            {buttons.map((button, index) => {
+              return (
+                <Button
+                  className="btn btn--grow"
+                  href={button.href}
+                  key={index}
+                >
+                  {button.text}
+                </Button>
+              );
+            })}
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </div>
-  )
+  );
 }

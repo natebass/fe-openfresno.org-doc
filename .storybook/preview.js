@@ -5,11 +5,11 @@ const preview = {
   parameters: {
     options: {
       storySort: {
-        order: ['Introduction', 'Get Started', '*'],
+        order: ["Introduction", "Get Started", "*"],
       },
     },
     controls: {
-      sort: 'alpha', // or 'requiredFirst', or 'none'
+      sort: "alpha", // or 'requiredFirst', or 'none'
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,

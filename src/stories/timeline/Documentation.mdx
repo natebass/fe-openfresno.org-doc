@@ -11,9 +11,9 @@ This component renders a **vertical timeline** that transitions from a single-co
 
 > ⚠️ Warning: This is experimental. The documentation below is mostly from the comments of the timeline CSS and JS.
 
-|Prop Name|Type|Description|
-|---|---|---|
-|`className`|`string`|**Optional** CSS classes to apply to the root `div` element.|
+| Prop Name   | Type     | Description                                                  |
+| ----------- | -------- | ------------------------------------------------------------ |
+| `className` | `string` | **Optional** CSS classes to apply to the root `div` element. |
 
 ### **TimelineItem** (Single Opportunity)
 
@@ -21,14 +21,13 @@ A responsive component for displaying a single opportunity.
 
 This component renders a **single slice** of a vertical timeline that transitions from a single-column layout on mobile to an alternating two-column layout on desktop. The styling and layout logic are fully described in the associated CSS file's comments. It is inserted using `<TimelineItem ...props> ...children</TimelineItem>`.
 
-|Prop Name|Type|Description|
-|---|---|---|
-|`number`|`integer`|The number to display in the timeline marker.|
-|`heading`|`string`|The heading text to display.|
-|`button`|`SimpleButton[]`|A list of buttons to display, with adaptive rendering for single buttons and pairs of buttons.|
-|`updateTimelineNumbers`|`(integer, DOMRect)=>null`|A callback function from the parent to get the position of the timeline number for animation purposes.|
-|`children`|`React.JSX.Element`|The text/content to display within the timeline column.|
-
+| Prop Name               | Type                       | Description                                                                                            |
+| ----------------------- | -------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `number`                | `integer`                  | The number to display in the timeline marker.                                                          |
+| `heading`               | `string`                   | The heading text to display.                                                                           |
+| `button`                | `SimpleButton[]`           | A list of buttons to display, with adaptive rendering for single buttons and pairs of buttons.         |
+| `updateTimelineNumbers` | `(integer, DOMRect)=>null` | A callback function from the parent to get the position of the timeline number for animation purposes. |
+| `children`              | `React.JSX.Element`        | The text/content to display within the timeline column.                                                |
 
 # Responsive Timeline Layout Specification
 
@@ -40,12 +39,12 @@ On mobile devices, the timeline collapses into a single-column stack. All conten
 
 ### Layout Structure
 
-|Element|Description|Styling Notes|
-|---|---|---|
-|**Line**|Vertical timeline connector (via `.timeline::before`).|Positioned at **20px** from the left edge; width is $\mathbf{1}$px.|
-|**Top Circle**|Start point indicator (via `.timeline::after`).|Small circle ($\mathbf{12}$px diameter).|
-|**Item Number (**#n**)**|The numbered circle (`.timeline-number`).|$\mathbf{5}$rem diameter, positioned near the vertical line.|
-|**Content**|Title and body text (`.timeline-item-content`).|**Full width** containment with **centered** text.|
+| Element                  | Description                                            | Styling Notes                                                       |
+| ------------------------ | ------------------------------------------------------ | ------------------------------------------------------------------- |
+| **Line**                 | Vertical timeline connector (via `.timeline::before`). | Positioned at **20px** from the left edge; width is $\mathbf{1}$px. |
+| **Top Circle**           | Start point indicator (via `.timeline::after`).        | Small circle ($\mathbf{12}$px diameter).                            |
+| **Item Number (**#n**)** | The numbered circle (`.timeline-number`).              | $\mathbf{5}$rem diameter, positioned near the vertical line.        |
+| **Content**              | Title and body text (`.timeline-item-content`).        | **Full width** containment with **centered** text.                  |
 
 ### CSS Flex Orientation
 
@@ -53,18 +52,17 @@ On mobile devices, the timeline collapses into a single-column stack. All conten
 
 - All items stack vertically, and the alternating (odd/even) alignment is not applicable.
 
-
 ## Desktop Layout (≥768px)
 
 On desktop viewports, the vertical line moves to the center, and content alternates between the left and right sides, creating a two-column effect.
 
 ### Layout Structure
 
-|Element|Description|Styling Notes|
-|---|---|---|
-|**Line**|Vertical timeline connector (via `.timeline::before`).|Positioned at **50%** width (center); thickness is $\mathbf{1.5}$px.|
-|**Top Circle**|Start point indicator (via `.timeline::after`).|Large circle ($\mathbf{36}$px diameter), centered at **50%**.|
-|**Content Width**|The width of the text block (`.timeline-item-content`).|Calculated width: `width: calc(50\% - 128px)` to allow space for the numbered circle near the center line. Text is **left-aligned**.|
+| Element           | Description                                             | Styling Notes                                                                                                                        |
+| ----------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| **Line**          | Vertical timeline connector (via `.timeline::before`).  | Positioned at **50%** width (center); thickness is $\mathbf{1.5}$px.                                                                 |
+| **Top Circle**    | Start point indicator (via `.timeline::after`).         | Large circle ($\mathbf{36}$px diameter), centered at **50%**.                                                                        |
+| **Content Width** | The width of the text block (`.timeline-item-content`). | Calculated width: `width: calc(50\% - 128px)` to allow space for the numbered circle near the center line. Text is **left-aligned**. |
 
 ### Item Alternation Logic
 
@@ -76,18 +74,17 @@ The `.timeline-item` container is **row-oriented** and uses flex justification t
 
 - The `.timeline-number` ($\mathbf{5}$rem circle) sits near the center line, using margins to align correctly on both sides.
 
-
 ## Key CSS Selectors and Counter Logic
 
 ### Core Selectors
 
-|Selector|Role|Description|
-|---|---|---|
-|**`.timeline::before`**|Vertical Line|Responsible for the main vertical divider.|
-|**`.timeline::after`**|Top Circle|Acts as the visual starting point for the timeline.|
-|**`.timeline-item`**|Item Container|The flex container that manages the column (mobile) or row (desktop) orientation.|
-|**`.timeline-item-content`**|Text Block|Contains the title and body text; its width is responsive.|
-|**`.timeline-number`**|Numbered Circle|Displays the CSS-generated counter value for the event.|
+| Selector                     | Role            | Description                                                                       |
+| ---------------------------- | --------------- | --------------------------------------------------------------------------------- |
+| **`.timeline::before`**      | Vertical Line   | Responsible for the main vertical divider.                                        |
+| **`.timeline::after`**       | Top Circle      | Acts as the visual starting point for the timeline.                               |
+| **`.timeline-item`**         | Item Container  | The flex container that manages the column (mobile) or row (desktop) orientation. |
+| **`.timeline-item-content`** | Text Block      | Contains the title and body text; its width is responsive.                        |
+| **`.timeline-number`**       | Numbered Circle | Displays the CSS-generated counter value for the event.                           |
 
 ### CSS Counter Implementation
 
@@ -95,24 +92,24 @@ The item numbering (#1,#2,…) is handled using CSS counters:
 
 1. **Initialize the Counter (on the parent container):**
 
-    ```
-    .timeline {
-      counter-reset: timeline-counter;
-    }
-    ```
+   ```
+   .timeline {
+     counter-reset: timeline-counter;
+   }
+   ```
 
 2. **Increment the Counter (on each item):**
 
-    ```
-    .timeline-item {
-      counter-increment: timeline-counter;
-    }
-    ```
+   ```
+   .timeline-item {
+     counter-increment: timeline-counter;
+   }
+   ```
 
 3. **Apply Content Width Calculation (Desktop):**
 
-    ```
-    .timeline-item-content {
-      width: calc(50\% - 128px); /* 128px leaves room for the number circle + margins */
-    }
-    ```
+   ```
+   .timeline-item-content {
+     width: calc(50\% - 128px); /* 128px leaves room for the number circle + margins */
+   }
+   ```

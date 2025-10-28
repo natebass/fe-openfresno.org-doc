@@ -1,4 +1,12 @@
-import {InputLabel, Select, MenuItem, OutlinedInput, InputAdornment, IconButton, TextField} from "@mui/material";
+import {
+  InputLabel,
+  Select,
+  MenuItem,
+  OutlinedInput,
+  InputAdornment,
+  IconButton,
+  TextField,
+} from "@mui/material";
 import Link from "next/link";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
@@ -10,7 +18,7 @@ import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 const ProjectSearch = ({ data, setProjectsData }) => {
   const search = (formData) => {
     console.log(formData);
-    if(!data || !setProjectsData) return;
+    if (!data || !setProjectsData) return;
     const projectSearch = formData.get("project-search").toLowerCase();
     const projectFilter = formData.get("project-filter");
     const projectSortBy = formData.get("project-sort-by");
@@ -40,8 +48,13 @@ const ProjectSearch = ({ data, setProjectsData }) => {
   };
 
   return (
-    <section className={`mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] mb-8 px-4 lg:px-8`}>
-      <form className={`w-full flex flex-col lg:flex-row gap-4 lg:gap-8 items-end`} action={search}>
+    <section
+      className={`mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] mb-8 px-4 lg:px-8`}
+    >
+      <form
+        className={`w-full flex flex-col lg:flex-row gap-4 lg:gap-8 items-end`}
+        action={search}
+      >
         <div className={`max-lg:w-full grow-3 basis-0`}>
           <OutlinedInput
             className={`w-full`}
@@ -57,19 +70,14 @@ const ProjectSearch = ({ data, setProjectsData }) => {
                   onClick={() => {}}
                 >
                   <BasePathImage
-                    src="/img/form-element/search.svg" alt="Search icon."
+                    src="/img/form-element/search.svg"
+                    alt="Search icon."
                   />
-
                 </IconButton>
-
               </InputAdornment>
             }
           />
-          <Link
-            href=""
-            className="relative inline-block -left-7"
-          >
-          </Link>
+          <Link href="" className="relative inline-block -left-7"></Link>
         </div>
         <div className={`max-lg:w-full form-row grow-1 basis-0`}>
           <InputLabel id="project-filter-label">Filter</InputLabel>

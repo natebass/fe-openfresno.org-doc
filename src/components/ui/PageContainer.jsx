@@ -12,15 +12,19 @@ export default function PageContainer({
   className = "",
   divClassName = "",
   sectionType = SectionType.light,
-  children = (<></>),
+  children = <></>,
   noFlex,
-  noPadding
+  noPadding,
 }) {
-  return(
-    <section className={`${noPadding ? "" : "py-6 lg:py-12"} app-color--${sectionType} ${className}`}>
-      <div className={`page-container ${noFlex ? "" : "flex flex-col lg:flex-row"} ${divClassName}`}>
+  return (
+    <section
+      className={`${noPadding ? "" : "py-6 lg:py-12"} app-color--${sectionType} ${className}`}
+    >
+      <div
+        className={`page-container ${noFlex ? "" : "flex flex-col lg:flex-row"} ${divClassName}`}
+      >
         {children}
       </div>
     </section>
-  )
+  );
 }

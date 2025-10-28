@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useEffect, useRef, useState } from "react";
 import { SimpleButton, TimelineItem2 } from "./TimelineItem2";
 
@@ -14,7 +14,7 @@ import { SimpleButton, TimelineItem2 } from "./TimelineItem2";
  * @param {string} [props.className] Optional CSS classes to apply to the root div element.
  */
 
-export default function Timeline2({className}) {
+export default function Timeline2({ className }) {
   const refContainer = useRef();
   const [timelineNumbers, setTimelineNumbers] = useState([]);
   const [clientRect, setClientRect] = useState();
@@ -30,7 +30,7 @@ export default function Timeline2({className}) {
       setTimelineNumbers((previousTimelineNumbers) => {
         previousTimelineNumbers.map((_, i) => {
           if (i === timelineNumber) return bounds;
-        })
+        });
       });
     } else {
       setTimelineNumbers((previousTimelineNumbers) => {
@@ -40,7 +40,6 @@ export default function Timeline2({className}) {
       });
     }
   }
-
 
   return (
     <div className={`timeline ${className}`} ref={refContainer}>
@@ -54,74 +53,62 @@ export default function Timeline2({className}) {
         number="1"
         heading="Engage with Our Community"
         buttons={[
-          new SimpleButton(
-            "Visit Meetup",
-            "https://www.meetup.com/openfresno",
-          )]}
+          new SimpleButton("Visit Meetup", "https://www.meetup.com/openfresno"),
+        ]}
         updateTimelineNumbers={updateTimelineNumbers}
       >
-        Connect with like-minded individuals, share ideas, and collaborate
-        on projects at our meetups.
-        <br/>
-        Join us to be a part of a vibrant community dedicated to positive
-        change through technology.
+        Connect with like-minded individuals, share ideas, and collaborate on
+        projects at our meetups.
+        <br />
+        Join us to be a part of a vibrant community dedicated to positive change
+        through technology.
       </TimelineItem2>
       <TimelineItem2
         number="2"
         heading="Drive Innovation with Projects"
-        buttons={[
-          new SimpleButton(
-            "See Our Project"
-          )]}
+        buttons={[new SimpleButton("See Our Project")]}
         updateTimelineNumbers={updateTimelineNumbers}
       >
         Discover how you can contribute your skills to projects that address
-        real challenges and enhance our city. Be part of a dynamic team
-        working on solutions that make a difference.
+        real challenges and enhance our city. Be part of a dynamic team working
+        on solutions that make a difference.
       </TimelineItem2>
       <TimelineItem2
         number="3"
         heading="Pitch Your Vision"
-        buttons={[
-          new SimpleButton(
-            "Pitch a Project"
-          )]}
+        buttons={[new SimpleButton("Pitch a Project")]}
         updateTimelineNumbers={updateTimelineNumbers}
       >
-        Have a project idea that can benefit the community? Pitch it to us
-        and join forces with our community of innovators to bring your
-        vision to life, driving positive change in Central California.
+        Have a project idea that can benefit the community? Pitch it to us and
+        join forces with our community of innovators to bring your vision to
+        life, driving positive change in Central California.
       </TimelineItem2>
       <TimelineItem2
         number="4"
         heading="Explore On-Site Opportunities with Root Access"
         buttons={[
-          new SimpleButton(
-            "Check it Out"
-          ),
-          new SimpleButton(
-            "Explore Calendar"
-          ),
+          new SimpleButton("Check it Out"),
+          new SimpleButton("Explore Calendar"),
         ]}
         updateTimelineNumbers={updateTimelineNumbers}
       >
-        Have a project idea that can benefit the community? Pitch it to us
-        and join forces with our community of innovators to bring your
-        vision to life, driving positive change in Central California.
+        Have a project idea that can benefit the community? Pitch it to us and
+        join forces with our community of innovators to bring your vision to
+        life, driving positive change in Central California.
       </TimelineItem2>
       <style>
         {(() => {
           //the array is 1 indexed;
           let itemCount = timelineNumbers.length;
           let stepSize = 100 / (itemCount - 1);
-          let styleText = `@keyframes timeline-animation{\n`
+          let styleText = `@keyframes timeline-animation{\n`;
           timelineNumbers.forEach((bounds, i) => {
             if (bounds != null) {
               // animates with the progress of viewing the timeline at equal intervals
               // i-1 is because the array is 1 indexed (timelineNumbers[0] === null)
               let percentageValue = Math.round((i - 1) * stepSize);
               // as a pixel value
-              let topValue = bounds.y - clientRect.y + (bounds.height / 4);
+              let topValue = bounds.y - clientRect.y + bounds.height / 4;
               styleText += `\t${percentageValue}% {\n
                           \t\ttop: ${topValue}px;\n
                           \t}\n`;
@@ -129,7 +116,9 @@ export default function Timeline2({className}) {
           });
           // This is cursed, but animation styles have to be declared here
           // because will not work if it is loaded first in the stylesheet.
-          let animationStyle = "}\n" + `
+          let animationStyle =
+            "}\n" +
+            `
             .timeline {\n
             \tview-timeline: --timelineAnimation block -20% 20%;\n
             \t&::after {\n

@@ -11,16 +11,16 @@ export const SectionType = {
    * @param {toInvert: string}
    * @returns {string}
    */
-  invert: (toInvert)=> {
-    if(toInvert === "light") return "dark";
+  invert: (toInvert) => {
+    if (toInvert === "light") return "dark";
     //if(toInvert === "grey") return "gray";
     //if(toInvert === "gray") return "grey";
-    if(toInvert === "grey") return "grey";
-    if(toInvert === "dark") return "light";
+    if (toInvert === "grey") return "grey";
+    if (toInvert === "dark") return "light";
   },
   toColor: (toConvert) => {
-    if(toConvert === "light") return "primary";
-    if(toConvert === "grey") return "secondary";
-    if(toConvert === "dark") return "secondary";
-  }
+    if (toConvert === "light") return "primary";
+    if (toConvert === "grey") return "secondary";
+    if (toConvert === "dark") return "secondary";
+  },
 };

@@ -1,4 +1,8 @@
-import { Button, NavExtendedToggle, NavToggle } from "../../components/ui/button/Button";
+import {
+  Button,
+  NavExtendedToggle,
+  NavToggle,
+} from "../../components/ui/button/Button";
 
 export default {
   title: "Components/Button",
@@ -19,7 +23,7 @@ export const Default = {
             Fill Button
           </Button>
           <NavExtendedToggle />
-          <NavToggle/>
+          <NavToggle />
         </div>
       </div>
     ),

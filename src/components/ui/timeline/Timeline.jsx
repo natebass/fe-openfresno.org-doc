@@ -2,7 +2,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { SimpleButton, TimelineItem } from "./TimelineItem";
 
-
 /**
  * a responsive, multi-step timeline component for displaying a list of opportunities.
  *
@@ -25,12 +24,12 @@ export default function Timeline({ className }) {
       if (refContainer.current) {
         setClientRect(refContainer.current.getBoundingClientRect());
       }
-    }
-    updateClientRect()
+    };
+    updateClientRect();
     window.addEventListener("resize", updateClientRect);
-    return () =>{
+    return () => {
       window.removeEventListener("resize", updateClientRect);
-    }
+    };
   }, []);
 
   function updateTimelineNumbers(timelineNumber, bounds) {
@@ -108,7 +107,7 @@ export default function Timeline({ className }) {
           let itemCount = _timelineNumbers.length;
           let stepSize = 100 / (itemCount - 1);
           let keyframeStyle = `@keyframes timeline-animation\{\n`;
-          if(_timelineNumbers.length > 0) {
+          if (_timelineNumbers.length > 0) {
             _timelineNumbers.forEach((bounds, i) => {
               if (bounds != null) {
                 // animates with the progress of viewing the timeline at equal intervals
@@ -142,8 +141,7 @@ export default function Timeline({ className }) {
           `;
             return keyframeStyle + animationStyle;
           }
-        })(timelineNumbers, clientRect)
-        }
+        })(timelineNumbers, clientRect)}
       </style>
     </div>
   );

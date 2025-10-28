@@ -24,18 +24,27 @@ import Image from "next/image";
 <BasePathImage src="/logo.png" alt="Logo" />
 // Resolves to: "/my-repo/logo.png"
  */
-export default function BasePathImage({ src, className="", imgClassName="", ...props }) {
+export default function BasePathImage({
+  src,
+  className = "",
+  imgClassName = "",
+  ...props
+}) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const finalSrc =
     typeof src === "string" && !src.startsWith("http")
       ? `${basePath}${src}`
       : src;
 
-  console.log("basePath: ", basePath)
+  console.log("basePath: ", basePath);
   // eslint-disable-next-line jsx-a11y/alt-text
   return (
     <div className={className}>
-      <img className={`object-cover ${imgClassName}${props.width===undefined&&" w-full"}`} src={finalSrc} {...props} />
+      <img
+        className={`object-cover ${imgClassName}${props.width === undefined && " w-full"}`}
+        src={finalSrc}
+        {...props}
+      />
     </div>
   );
 }
