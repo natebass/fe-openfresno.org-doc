@@ -11,7 +11,7 @@ import { Button } from "../button/Button";
  * @param {object} props
  * @param {string} [props.className] Optional CSS classes to apply to the root div element.
  */
-export default function Timeline3({ className }) {
+export default function TimelineDeprecated({ className }) {
   return (
     <div className={`timeline ${className}`}>
       <div className="mt-10 ps-8 pb-10 md:hidden">

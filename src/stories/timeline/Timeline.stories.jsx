@@ -1,4 +1,4 @@
-import Timeline from "@/components/ui/timeline/Timeline";
+import Timeline from "../../components/ui/timeline/Timeline";
 
 export default {
   title: "Components/Timeline",

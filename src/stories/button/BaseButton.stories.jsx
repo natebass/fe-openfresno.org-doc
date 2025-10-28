@@ -1,12 +1,12 @@
 import {
-  Button,
+  BaseButton,
   NavExtendedToggle,
   NavToggle,
 } from "../../components/ui/button/Button";
 
 export default {
   title: "Components/Button",
-  component: Button,
+  component: BaseButton,
 };
 
 export const Default = {
@@ -16,12 +16,12 @@ export const Default = {
       <div>
         <Story />
         <div className="grid gap-y-4">
-          <Button className="btn">Primary Button</Button>
-          <Button className="btn btn--grow">Grow Button</Button>
-          <Button className="btn-small">Small Button</Button>
-          <Button className="btn btn-alt btn-alt--transition">
+          <BaseButton className="btn">Primary Button</BaseButton>
+          <BaseButton className="btn btn--grow">Grow Button</BaseButton>
+          <BaseButton className="btn-small">Small Button</BaseButton>
+          <BaseButton className="btn btn-alt btn-alt--transition">
             Fill Button
-          </Button>
+          </BaseButton>
           <NavExtendedToggle />
           <NavToggle />
         </div>
