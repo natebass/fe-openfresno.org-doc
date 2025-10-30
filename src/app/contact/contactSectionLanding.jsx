@@ -1,5 +1,6 @@
 import { SectionType } from "./contact";
 import GeneralSection from "@/components/ui/GeneralSection";
+
 /**
  * contact landing section.
  * @returns {JSX.Element}
@@ -7,6 +8,7 @@ import GeneralSection from "@/components/ui/GeneralSection";
 export default function ContactSectionLanding({ sectionType }) {
   return (
     <GeneralSection
+      sectionType={sectionType}
       heading="Contact Us"
       subHeading={
         <>

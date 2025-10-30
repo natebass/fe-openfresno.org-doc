@@ -1,11 +1,10 @@
 import {
+  IconButton,
+  InputAdornment,
   InputLabel,
-  Select,
   MenuItem,
   OutlinedInput,
-  InputAdornment,
-  IconButton,
-  TextField,
+  Select,
 } from "@mui/material";
 import Link from "next/link";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
@@ -17,7 +16,6 @@ import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
 const ProjectSearch = ({ data, setProjectsData }) => {
   const search = (formData) => {
-    console.log(formData);
     if (!data || !setProjectsData) return;
     const projectSearch = formData.get("project-search").toLowerCase();
     const projectFilter = formData.get("project-filter");
@@ -82,6 +80,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
         <div className={`max-lg:w-full form-row grow-1 basis-0`}>
           <InputLabel id="project-filter-label">Filter</InputLabel>
           <Select
+            variant="outlined"
             className="w-full"
             id="project-filter"
             label="Filter"
@@ -96,6 +95,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
         <div className={`max-lg:w-full form-row grow-1 basis-0`}>
           <InputLabel id="project-sort-by-label">Sort By</InputLabel>
           <Select
+            variant="outlined"
             className="w-full"
             id="project-sort-by"
             label={"Sort By"}

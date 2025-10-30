@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 /**
  * BasePathImage is a wrapper around Next.js's `Image` component that ensures
  * image paths resolve correctly when the app is deployed under a subpath—
@@ -36,7 +34,6 @@ export default function BasePathImage({
       ? `${basePath}${src}`
       : src;
 
-  console.log("basePath: ", basePath);
   // eslint-disable-next-line jsx-a11y/alt-text
   return (
     <div className={className}>

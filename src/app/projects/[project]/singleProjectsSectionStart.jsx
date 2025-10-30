@@ -24,7 +24,7 @@ export default function SingleProjectsSectionStart({
         <div className={`w-fit rounded-lg lg:ml-8 lg:min-w-[60%] border`}>
           <BasePathImage
             alt={data.meta.title}
-            imgClassName={`aspect-2/1 object-cover rounded-xl w-full`}
+            imgClassName={`object-cover rounded-xl w-full`}
             src={`https://raw.githubusercontent.com/${data.full_name}/main/${data.meta.image_url}`}
           />
         </div>
@@ -38,7 +38,7 @@ export default function SingleProjectsSectionStart({
             Project Status: {titleCase(data.meta.project_status)}
           </div>
           <p className={`project-paragraph`}>{data.meta.description}</p>
-          <p className={`project-paragraph app-text--grey my-4`}>
+          <p className={`project-paragraph app-text--gray my-4`}>
             Last Updated:{" "}
             {`${moment(data.updated_at).format("ddd MMM D, H:mma")}`}
           </p>
