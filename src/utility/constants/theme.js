@@ -21,15 +21,23 @@ export const SectionType = {
   invert: (toInvert) => {
     switch (toInvert) {
       case SectionType.light:
-      case SectionType.lightSplit: return SectionType.dark;
-      case SectionType.gray: return SectionType.grayAlt;
-      case SectionType.grayAlt: return SectionType.gray;
+      case SectionType.lightSplit:
+        return SectionType.dark;
+      case SectionType.gray:
+        return SectionType.grayAlt;
+      case SectionType.grayAlt:
+        return SectionType.gray;
       case SectionType.dark:
-      case SectionType.darkSplit: return SectionType.light;
-      case SectionType.primary: return SectionType.primaryAlt;
-      case SectionType.primaryAlt: return SectionType.primary;
-      case SectionType.secondary:  return SectionType.secondaryAlt;
-      case SectionType.secondaryAlt:  return SectionType.secondary;
+      case SectionType.darkSplit:
+        return SectionType.light;
+      case SectionType.primary:
+        return SectionType.primaryAlt;
+      case SectionType.primaryAlt:
+        return SectionType.primary;
+      case SectionType.secondary:
+        return SectionType.secondaryAlt;
+      case SectionType.secondaryAlt:
+        return SectionType.secondary;
     }
   },
   /**
@@ -42,13 +50,15 @@ export const SectionType = {
       case SectionType.light:
       case SectionType.lightSplit:
       case SectionType.primary:
-      case SectionType.primaryAlt: return SectionType.primary;
+      case SectionType.primaryAlt:
+        return SectionType.primary;
       case SectionType.gray:
       case SectionType.grayAlt:
       case SectionType.dark:
       case SectionType.darkSplit:
       case SectionType.secondary:
-      case SectionType.secondaryAlt:  return SectionType.secondary;
+      case SectionType.secondaryAlt:
+        return SectionType.secondary;
     }
   },
 };
