@@ -131,7 +131,7 @@ export default function Timeline2({className}) {
           // because will not work if it is loaded first in the stylesheet.
           let animationStyle = "}\n" + `
             .timeline {\n
-            \tview-timeline: --timelineAnimation block -20% 20%;\n
+            \tview-timeline: --timelineAnimation block 20% -20%;\n
             \t&::after {\n
             \t\tanimation-timeline: --timelineAnimation;\n
             \t\tanimation-timing-function: ease-in-out;\n
