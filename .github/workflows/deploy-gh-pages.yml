@@ -29,14 +29,26 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [24]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
 
+      # Use PNPM. Only npm and yarn are supported by default in actions/setup-node.
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          if [ -f "${{ github.workspace }}/yarn.lock" ]; then
+          if [ -f "${{ github.workspace }}/pnpm-lock.yaml" ]; then
+            echo "manager=pnpm" >> $GITHUB_OUTPUT
+            echo "command=install --frozen-lockfile" >> $GITHUB_OUTPUT
+            echo "runner=pnpm exec" >> $GITHUB_OUTPUT
+            exit 0
+          elif [ -f "${{ github.workspace }}/yarn.lock" ]; then
             echo "manager=yarn" >> $GITHUB_OUTPUT
             echo "command=install" >> $GITHUB_OUTPUT
             echo "runner=yarn" >> $GITHUB_OUTPUT
@@ -52,9 +64,10 @@ jobs:
           fi
 
       - name: Setup Node.js
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
-          node-version: 24
+          node-version: ${{ matrix.node-version }}
+          # Enable caching for the detected package manager
           cache: ${{ steps.detect-package-manager.outputs.manager }}
 
       # This is removed due to the MDX configuration failing in next.config.js. It can be renabled if MDX support is removed. This would simplify alot of the custom basepath logic.
@@ -67,19 +80,24 @@ jobs:
       # You may remove this line if you want to manage the configuration yourself.
       # static_site_generator: next
 
-      - name: Restore cache
+      - name: Restore/Save Dependencies Cache
         uses: actions/cache@v4
         with:
+          # Use the default cache path for the detected package manager
           path: |
-            .next/cache
-          # Generate a new cache whenever packages or source files change.
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          # If source files changed but packages didn't, rebuild from a prior cache.
+            ${{ steps.detect-package-manager.outputs.manager == 'pnpm' && '**/node_modules' }}
+            ${{ steps.detect-package-manager.outputs.manager == 'yarn' && '**/node_modules' }}
+            ${{ steps.detect-package-manager.outputs.manager == 'npm' && '~/.npm' }}
+          key: ${{ runner.os }}-${{ matrix.node-version }}-deps-${{ hashFiles('**/package-lock.json', '**/yarn.lock', '**/pnpm-lock.yaml') }}
           restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
+            ${{ runner.os }}-${{ matrix.node-version }}-deps-
 
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+
+      # --- FIX for EEXIST error: Clean the build directory ---
+      - name: Clean Storybook Artifact Directory
+        run: rm -rf ./storybook-static
 
       - name: Build with Storybook
         env:
@@ -89,7 +107,7 @@ jobs:
           ${{ steps.detect-package-manager.outputs.runner }} storybook build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./storybook-static
 

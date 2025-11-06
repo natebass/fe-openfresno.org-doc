@@ -1,4 +1,4 @@
-import Timeline from "@/components/ui/timeline/Timeline";
+import Timeline from "../../components/ui/timeline/Timeline";
 
 export default {
   title: "Components/Timeline",
@@ -15,14 +15,14 @@ The Timeline component for the Open Fresno website features an optional fade eff
       },
     },
   },
-}
+};
 
 export const Default = {
   decorators: [
     (Story) => (
       <div>
-        <Story/>
+        <Story />
       </div>
     ),
   ],
-}
+};

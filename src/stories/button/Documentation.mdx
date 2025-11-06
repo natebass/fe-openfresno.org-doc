@@ -1,7 +1,7 @@
 import { Meta } from "@storybook/addon-docs/blocks";
-import * as ButtonStories from "./Button.stories";
+import * as BaseButtonStories from "./BaseButton.stories";
 
-<Meta of={ButtonStories} />
+<Meta of={BaseButtonStories} />
 
 # Button
 
@@ -13,12 +13,12 @@ This ensures consistent styling and behavior for all interactive elements while 
 
 ## Props
 
-- className - The CSS class names to apply for styling (e.g., 'btn', 'btn-small', 'btn-alt--transition').
-- href \{string\} - If provided, the component renders a `<Link>` with this URL.
-- target \{string = "\_self"\} - Specifies where to open the linked document (e.g., `_blank` for a new tab). Only applies when `href` is set.
-- onClick \{function\} - Click handler function. Only applies when the component renders as a `<button>`.
-- children \{React.ReactNode\} - The content to be rendered inside the button or link (e.g., text, icons, other components).
-- textContent \{string|React.ReactNode\} - DEPRECATED: Use children instead. The text or content displayed inside the button or link.
+- **className** - The CSS class names to apply for styling (e.g., 'btn', 'btn-small', 'btn-alt--transition').
+- **href \{string\}** - If provided, the component renders a `<Link>` with this URL.
+- **target \{string = "\_self"\}** - Specifies where to open the linked document (e.g., `_blank` for a new tab). Only applies when `href` is set.
+- **onClick \{function\}** - Click handler function. Only applies when the component renders as a `<button>`.
+- **children \{React.ReactNode\}** - The content to be rendered inside the button or link (e.g., text, icons, other components).
+- **textContent \{string|React.ReactNode\}** - DEPRECATED: Use children instead. The text or content displayed inside the button or link.
 
 ## Examples
 
