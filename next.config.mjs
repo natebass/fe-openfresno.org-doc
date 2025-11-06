@@ -1,5 +1,9 @@
-const createMDX = require("@next/mdx");
-const path = require("path");
+import createMDX from "@next/mdx";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /**
  * Get a relative base path for the website assets when using GitHub Pages.  By default when using GitHub Pages, this appends the repo name. This is an empty string for local development and when the main repository has a custom domain.
@@ -45,10 +49,11 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
   },
+  reactCompiler: true,
 };
 
 const withMDX = createMDX({
   extension: /\.(md|mdx)$/,
 });
 
-module.exports = withMDX(nextConfig);
+export default withMDX(nextConfig);
