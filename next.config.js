@@ -33,9 +33,6 @@ const basePath = getBasePath();
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   basePath,
   assetPrefix: basePath,
   images: {

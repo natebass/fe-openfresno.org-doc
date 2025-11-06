@@ -1,4 +1,4 @@
-import { Button } from "..";
+import { Button } from "../button/Button";
 
 /**
  * A responsive, multi-step timeline component for displaying a list of opportunities.
@@ -11,7 +11,7 @@ import { Button } from "..";
  * @param {object} props
  * @param {string} [props.className] Optional CSS classes to apply to the root div element.
  */
-export default function Timeline3({className}) {
+export default function TimelineDeprecated({ className }) {
   return (
     <div className={`timeline ${className}`}>
       <div className="mt-10 ps-8 pb-10 md:hidden">
@@ -27,7 +27,7 @@ export default function Timeline3({className}) {
           <p>
             Connect with like-minded individuals, share ideas, and collaborate
             on projects at our meetups.
-            <br/>
+            <br />
             Join us to be a part of a vibrant community dedicated to positive
             change through technology.
           </p>
