@@ -15,7 +15,7 @@ export function SectionLine({ title = "", children = <></> }) {
 
 /**
  *
- * @param sectionType
+ * @component
  * @param {Object} [props]
  * @param {string} [props.title]
  * @param {JSX.Element} [props.children]

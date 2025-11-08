@@ -1,0 +1,30 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import * as HeadingPairStories from "./HeadingPair.stories";
+
+<Meta of={HeadingPairStories} />
+
+# Heading Pair
+
+A simple reusable element, for displaying a heading, subheading pair
+
+## Props
+
+- heading \{string\} - The heading to display.
+- subHeading \{JSX.Element\} - The sub heading to display.
+- subHeadingWidth \{CSS.width\} - The maximum width of the displayed sub heading to display. Defaults to `70%`.
+- className \{string\} - The CSS class names to apply for styling.
+- sectionType \{string\} - The SectionType to color the element. Default values is `SectionType.light`.
+
+## Examples
+
+A heading pair with a light color pallet.
+
+```
+<HeadingPair heading="Heading" subHeading="Sub Heading"/>
+```
+
+A heading pair with a dark color pallet.
+
+```
+<HeadingPair heading="Heading" subHeading="Sub Heading" sectionType={SectionType.dark}/>
+```
