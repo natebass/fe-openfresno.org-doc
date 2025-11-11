@@ -14,7 +14,7 @@ export const upperFirst = (s, splitter = " ") =>
  * @param {string|regex} [splitter] A string or regex expression to split the given string by; " " by default
  * @returns string
  */
-export function titleCase(toTitleCase, splitter = " ")  {
+export function titleCase(toTitleCase, splitter = " ") {
   if (
     !toTitleCase ||
     !(typeof toTitleCase === "string" || toTitleCase instanceof String)
@@ -29,9 +29,9 @@ export function titleCase(toTitleCase, splitter = " ")  {
         .map((word) => {
           switch (word) {
             case "html":
-              return "HTML"
+              return "HTML";
             case "nodejs":
-              return "Node.js"
+              return "Node.js";
             case "javascript":
               return "JavaScript";
             case "css":
