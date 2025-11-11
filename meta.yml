@@ -18,3 +18,10 @@ contributing:
     version_control: Github
     repo: /openfresno
     ways_to_contribute: Bug fixing, testing, maintenance; see issues on github
+screenshots:
+  - get-started.png
+  - file-structure.png
+  - button-documentation.png
+  - button-storybook.png
+  - generalsection-documentation.png
+  - generalsection-storybook.png
