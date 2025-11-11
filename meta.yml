@@ -1,0 +1,20 @@
+title: Open Fresno Storybook
+project_type: documentation
+project_status: active
+description: This repository hosts the Storybook + Next.js testing environment for Open Fresno. It provides a sandbox for building, documenting, and testing UI components in isolation before they are integrated into the main site.
+communications: Slack
+channels: "#proj-openfresnoorg"
+image_url: openfresno.png
+technical_lead: Nate Bass
+tags: react,github,figma,storybook,vitest,playwright
+contributing:
+  developer:
+    title: Developer
+    description: Developers can actively contribute to the project by submitting pull requests with code enhancements or bug fixes via the project's GitHub repository.
+    difficulty: Medium
+    frontend: HTML, CSS, JavaScript, React,
+    testing: Playwright, Vitest, Storybook
+    backend: N/A
+    version_control: Github
+    repo: /openfresno
+    ways_to_contribute: Bug fixing, testing, maintenance; see issues on github
