@@ -4,9 +4,7 @@
  */
 export const SectionType = {
   light: "light",
-  lightSplit: "light-split",
   dark: "dark",
-  darkSplit: "dark-split",
   gray: "gray",
   grayAlt: "gray-alt",
   primary: "primary",
@@ -21,15 +19,13 @@ export const SectionType = {
   invert: (toInvert) => {
     switch (toInvert) {
       case SectionType.light:
-      case SectionType.lightSplit:
         return SectionType.dark;
+      case SectionType.dark:
+        return SectionType.light;
       case SectionType.gray:
         return SectionType.grayAlt;
       case SectionType.grayAlt:
         return SectionType.gray;
-      case SectionType.dark:
-      case SectionType.darkSplit:
-        return SectionType.light;
       case SectionType.primary:
         return SectionType.primaryAlt;
       case SectionType.primaryAlt:
@@ -48,14 +44,12 @@ export const SectionType = {
   toColor: (toConvert) => {
     switch (toConvert) {
       case SectionType.light:
-      case SectionType.lightSplit:
       case SectionType.primary:
       case SectionType.primaryAlt:
         return SectionType.primary;
       case SectionType.gray:
       case SectionType.grayAlt:
       case SectionType.dark:
-      case SectionType.darkSplit:
       case SectionType.secondary:
       case SectionType.secondaryAlt:
         return SectionType.secondary;
