@@ -1,65 +1,60 @@
-# Open Fresno Storybook (Next.js)
+# Open Fresno website documentation
 
-This repository hosts the **Storybook + Next.js testing environment** for Open Fresno. It provides a sandbox for building, documenting, and testing UI components in isolation before they are integrated into the main site. The main repository is https://github.com/openfresno/openfresno.org.
+This repository hosts the **Storybook + Next.js testing environment** for the Open Fresno website. It provides a sandbox
+for building, documenting, and testing UI components in isolation before they are integrated into the main site.
+
+> [!NOTE]
+> The Open Fresno website repository
+> is [github.com/openfresno/openfresno.org](https://github.com/openfresno/openfresno.org).
+
+> [!WARNING]
+> The code should be periodically kept up to date with the main repository by manually copy/pasting the `src/` folder.
+
+## Prerequisites
+
+- PNPM. Get help installing
+  PNPM [here](https://openfresno.github.io/fe-openfresno.org-doc/?path=/docs/developer-guide--docs#install-pnpm)
+  or https://pnpm.io/installation.
 
 ## Get Started
 
-### Prerequisites
+1. Install the Node.js dependencies.
 
-- Node.js
-- PNPM
+   ```
+   pnpm i
+   ```
 
-### Installation
+2. Start the Storybook development server.
 
-Clone the repo and install dependencies:
+   ```
+   pnpm storybook
+   ```
 
-```
-git clone https://github.com/openfresno/fe-openfresno-doc
-cd fe-openfresno-doc
-pnpm i
-```
+3. (Optional) Preview the regular Next.js website.
 
-### Running Storybook
-
-Start the Storybook development server:
-
-```
-pnpm run storybook
-```
-
-Storybook will be available at **http://localhost:6006**.
-
-### Running Next.js
-
-The regular website can be previewed as well.
-
-> [!NOTE]
-> The code should be periodically kept up to date with the main repository by manually copy/pasting the `src/` folder.
-
-```
-pnpm run dev
-```
+   ```
+   pnpm dev
+   ```
 
 ## Testing
 
-This repo is designed for component-driven development. We use:
+### Storybook
 
-- **Storybook** for isolated UI development
-- **Vitest** for unit tests
-- **Playwright** for visual regression and interaction tests
+The public Storybook is deployed to GitHub Pages at https://openfresno.github.io/fe-openfresno.org-doc/. You can learn
+about the components and also run tests.
 
-## Contribute
+### Playwright
 
-We welcome contributions! Here are a few ways to help:
+Visual regression and interaction tests. These tests also contain critical tests that should be included in the main
+website repository for use in CI/CD pipelines.
 
-1. Look for Issues tagged `help wanted` or `good first issue`.
-2. Add or improve component stories to increase coverage.
-3. Write tests for new components or edge cases.
-4. Submit a pull request with clear commit messages.
+### Vitest
+
+Unit tests and coverage.
 
 ## Resources
 
-- [Storybook Docs](https://storybook.js.org/docs/ "null")
-- [Next.js Docs](https://nextjs.org/docs "null")
-- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/ "null")
-- [Code of Conduct](https://www.google.com/search?q=https://github.com/openfresno/fe-openfresno-doc/blob/main/CODE_OF_CONDUCT.md "null")
+- [Contributing guide](https://github.com/openfresno/openfresno.org/blob/main/CONTRIBUTING.md)
+- [Open Fresno's Code of Conduct](https://www.google.com/search?q=https://github.com/openfresno/fe-openfresno-doc/blob/main/CODE_OF_CONDUCT.md)
+- [Storybook documentation](https://storybook.js.org/docs)
+- [Next.js documentation](https://nextjs.org/docs)
