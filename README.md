@@ -6,8 +6,6 @@ for building, documenting, and testing UI components in isolation before they ar
 > [!NOTE]
 > The Open Fresno website repository
 > is [github.com/openfresno/openfresno.org](https://github.com/openfresno/openfresno.org).
-
-> [!WARNING]
 > The code should be periodically kept up to date with the main repository by manually copy/pasting the `src/` folder.
 
 ## Prerequisites
@@ -45,8 +43,11 @@ about the components and also run tests.
 
 ### Playwright
 
-Visual regression and interaction tests. These tests also contain critical tests that should be included in the main
-website repository for use in CI/CD pipelines.
+Visual regression and interaction tests. 
+
+
+> [!WARNING]
+> Critical tests should be included in the main website repository for use in CI/CD pipelines.
 
 ### Vitest
 
