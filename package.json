@@ -12,11 +12,24 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/openfresno/fe-openfresno.org-doc.git"
   },
-  "keywords": [],
+  "keywords": [
+    "documentation",
+    "nextjs",
+    "storybook",
+    "tailwind",
+    "playwright",
+    "vitest",
+    "meetup",
+    "civic",
+    "nextjs",
+    "california",
+    "fresno"
+  ],
   "author": {
     "name": "Open Fresno",
     "email": "hello@openfresno.org",
@@ -46,21 +59,21 @@
     "yaml": "^2.8.1"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^4.1.2",
+    "@chromatic-com/storybook": "^4.1.3",
     "@playwright/test": "^1.56.1",
-    "@storybook/addon-a11y": "^10.0.7",
-    "@storybook/addon-docs": "^10.0.7",
-    "@storybook/addon-vitest": "^10.0.7",
-    "@storybook/nextjs-vite": "^10.0.7",
+    "@storybook/addon-a11y": "^10.0.8",
+    "@storybook/addon-docs": "^10.0.8",
+    "@storybook/addon-vitest": "^10.0.8",
+    "@storybook/nextjs-vite": "^10.0.8",
     "@tailwindcss/postcss": "^4.1.17",
     "@tailwindcss/typography": "^0.5.19",
-    "@vitest/browser-playwright": "^4.0.8",
-    "@vitest/coverage-v8": "^4.0.8",
+    "@vitest/browser-playwright": "^4.0.10",
+    "@vitest/coverage-v8": "^4.0.10",
     "babel-plugin-react-compiler": "1.0.0",
     "playwright": "^1.56.1",
-    "storybook": "^10.0.7",
+    "storybook": "^10.0.8",
     "tailwindcss": "^4.1.17",
-    "vitest": "^4.0.8"
+    "vitest": "^4.0.10"
   },
-  "packageManager": "pnpm@10.22.0"
+  "packageManager": "pnpm@10.22.0+sha512.bf049efe995b28f527fd2b41ae0474ce29186f7edcb3bf545087bd61fbbebb2bf75362d1307fda09c2d288e1e499787ac12d4fcb617a974718a6051f2eee741c"
 }
