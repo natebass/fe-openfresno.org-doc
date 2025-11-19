@@ -42,7 +42,7 @@ The Storybook website serves as the public documentation, and is deployed to Git
 
 ### Playwright
 
-Visual regression and interaction tests. 
+Visual regression and interaction tests.
 
 > [!WARNING]
 > Critical tests should be included in the main website repository for use in CI/CD pipelines.

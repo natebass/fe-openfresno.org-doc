@@ -1,24 +1,7 @@
 import { Meta } from "@storybook/addon-docs/blocks";
 import Link from "next/link";
 import BasePathImage from "../integrations/gh-pages/BasePathImage";
-
-export const RightArrow = () => (
-  <svg
-    viewBox="0 0 14 14"
-    width="8px"
-    height="14px"
-    style={{
-      marginLeft: "4px",
-      display: "inline-block",
-      shapeRendering: "inherit",
-      verticalAlign: "middle",
-      fill: "currentColor",
-      "path fill": "currentColor",
-    }}
-  >
-    <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
-  </svg>
-);
+import { StorybookArrow } from "../integrations/storybook/StorybookArrow.jsx";
 
 <Meta title="Style Guide" />
 
@@ -30,7 +13,7 @@ export const RightArrow = () => (
   <div className="sb-section">
     <div className="sb-section-item">
       <BasePathImage
-        src="/storybook-assets/styling.png"
+		  src="/storybook-default/styling.png"
         alt="Open Fresno design system with Tailwind CSS and custom styling"
         width={0}
         height={0}
@@ -42,14 +25,14 @@ export const RightArrow = () => (
       <Link
         href="https://openfresno.org/get-started"
         target="_blank"
-      >Style Guide Contributing<RightArrow/></Link>
+	  >Style Guide Contributing<StorybookArrow/></Link>
     </div>
     <div className="sb-section-item">
       <BasePathImage
         width={0}
         height={0}
         style={{width: "100%", height: "auto"}}
-        src="/storybook-assets/context.png"
+		src="/storybook-default/context.png"
         alt="Testing civic tech components with proper context and mock data"
       />
       <h4 className="sb-section-item-heading">Component Testing & Mocking</h4>
@@ -59,14 +42,14 @@ export const RightArrow = () => (
       <Link
         href="https://github.com/openfresno/fe-openfresno.org-doc"
         target="_blank"
-      >View Repository<RightArrow/></Link>
+	  >View Repository<StorybookArrow/></Link>
     </div>
     <div className="sb-section-item">
       <BasePathImage
         width={0}
         height={0}
         style={{width: "100%", height: "auto"}}
-        src="/storybook-assets/assets.png"
+		src="/storybook-default/assets.png"
         alt="Open Fresno brand assets, icons, and civic imagery"
       />
       <div>
@@ -76,7 +59,7 @@ export const RightArrow = () => (
         <Link
           href="https://openfresno.org/about"
           target="_blank"
-        >About Open Fresno<RightArrow/></Link>
+		>About Open Fresno<StorybookArrow/></Link>
       </div>
     </div>
   </div>
@@ -96,7 +79,7 @@ export const RightArrow = () => (
           width={0}
           height={0}
           style={{width: "100%", height: "auto"}}
-          src="/storybook-assets/docs.png"
+		  src="/storybook-default/docs.png"
           alt="Open Fresno component documentation and development guides"
         />
         <h4 className="sb-section-item-heading">Documentation</h4>
@@ -105,14 +88,14 @@ export const RightArrow = () => (
         <Link
           href="https://openfresno.org/projects"
           target="_blank"
-        >View Projects<RightArrow/></Link>
+		>View Projects<StorybookArrow/></Link>
       </div>
       <div className="sb-grid-item">
         <BasePathImage
           width={0}
           height={0}
           style={{width: "100%", height: "auto"}}
-          src="/storybook-assets/share.png"
+		  src="/storybook-default/share.png"
           alt="Open Fresno volunteers collaborating on civic tech projects"
         />
         <h4 className="sb-section-item-heading">Weekly Meetups</h4>
@@ -121,14 +104,14 @@ export const RightArrow = () => (
         <Link
           href="https://www.meetup.com/openfresno/"
           target="_blank"
-        >Join Meetup<RightArrow/></Link>
+		>Join Meetup<StorybookArrow/></Link>
       </div>
       <div className="sb-grid-item">
         <BasePathImage
           width={0}
           height={0}
           style={{width: "100%", height: "auto"}}
-          src="/storybook-assets/figma-plugin.png"
+		  src="/storybook-default/figma-plugin.png"
           alt="Open Fresno design collaboration and civic tech design systems"
         />
         <h4 className="sb-section-item-heading">Design Collaboration</h4>
@@ -137,14 +120,14 @@ export const RightArrow = () => (
         <Link
           href="https://openfresno.org/get-started"
           target="_blank"
-        >Volunteer as Designer<RightArrow/></Link>
+		>Volunteer as Designer<StorybookArrow/></Link>
       </div>
       <div className="sb-grid-item">
         <BasePathImage
           width={0}
           height={0}
           style={{width: "100%", height: "auto"}}
-          src="/storybook-assets/testing.png"
+		  src="/storybook-default/testing.png"
           alt="Testing Open Fresno civic tech components for reliability"
         />
         <h4 className="sb-section-item-heading">Quality Assurance</h4>
@@ -153,14 +136,14 @@ export const RightArrow = () => (
         <Link
           href="https://github.com/openfresno/fe-openfresno.org-doc/issues"
           target="_blank"
-        >View Issues<RightArrow/></Link>
+		>View Issues<StorybookArrow/></Link>
       </div>
       <div className="sb-grid-item">
         <BasePathImage
           width={0}
           height={0}
           style={{width: "100%", height: "auto"}}
-          src="/storybook-assets/accessibility.png"
+		  src="/storybook-default/accessibility.png"
           alt="Making civic tech accessible to all community members"
         />
         <h4 className="sb-section-item-heading">Accessibility</h4>
@@ -169,14 +152,14 @@ export const RightArrow = () => (
         <Link
           href="https://openfresno.org/code-of-conduct"
           target="_blank"
-        >Code of Conduct<RightArrow/></Link>
+		>Code of Conduct<StorybookArrow/></Link>
       </div>
       <div className="sb-grid-item">
         <BasePathImage
           width={0}
           height={0}
           style={{width: "100%", height: "auto"}}
-          src="/storybook-assets/theming.png"
+		  src="/storybook-default/theming.png"
           alt="Open Fresno brand themes and civic tech styling"
         />
         <h4 className="sb-section-item-heading">Brand & Theming</h4>
@@ -185,7 +168,7 @@ export const RightArrow = () => (
         <Link
           href="https://openfresno.org/about"
           target="_blank"
-        >Our Mission<RightArrow/></Link>
+		>Our Mission<StorybookArrow/></Link>
       </div>
     </div>
   </div>
@@ -198,13 +181,13 @@ export const RightArrow = () => (
     <Link
       href="https://openfresno.org/projects"
       target="_blank"
-    >Explore Projects<RightArrow/></Link>
+	>Explore Projects<StorybookArrow/></Link>
   </div>
   <div className="sb-addon-img">
     <BasePathImage
       width={650}
       height={347}
-      src="/storybook-assets/addon-library.png"
+	  src="/storybook-default/addon-library.png"
       alt="Open Fresno civic tech projects making a difference in the community."
     />
   </div>
@@ -216,13 +199,13 @@ export const RightArrow = () => (
       width={32}
       height={32}
       layout="fixed"
-      src="/storybook-assets/github.svg"
+	  src="/storybook-default/github.svg"
       alt="Github logo"
       className="sb-explore-image"
     />
     Contribute to open-source civic tech projects that make a difference.
 
-    <Link href="https://github.com/openfresno" target="_blank">Star on GitHub<RightArrow/></Link>
+      <Link href="https://github.com/openfresno" target="_blank">Star on GitHub<StorybookArrow/></Link>
 
   </div>
   <div className="sb-section-item">
@@ -230,14 +213,14 @@ export const RightArrow = () => (
       width={33}
       height={32}
       layout="fixed"
-      src="/storybook-assets/discord.svg"
+	  src="/storybook-default/discord.svg"
       alt="Slack logo"
       className="sb-explore-image"
     />
     <div>
       Connect with our community of civic-minded technologists.
 
-      <Link href="https://forms.gle/JA3jAV9wE1645i9LA" target="_blank">Join Our Slack<RightArrow/></Link>
+    	<Link href="https://forms.gle/JA3jAV9wE1645i9LA" target="_blank">Join Our Slack<StorybookArrow/></Link>
     </div>
 
   </div>
@@ -246,14 +229,14 @@ export const RightArrow = () => (
       width={32}
       height={32}
       layout="fixed"
-      src="/storybook-assets/youtube.svg"
+	  src="/storybook-default/youtube.svg"
       alt="Youtube logo"
       className="sb-explore-image"
     />
     <div>
       Watch our community events and civic tech presentations.
 
-      <Link href="https://www.youtube.com/@openfresno" target="_blank">Watch on YouTube<RightArrow/></Link>
+    	<Link href="https://www.youtube.com/@openfresno" target="_blank">Watch on YouTube<StorybookArrow/></Link>
     </div>
 
   </div>
@@ -262,7 +245,7 @@ export const RightArrow = () => (
       width={33}
       height={32}
       layout="fixed"
-      src="/storybook-assets/tutorials.svg"
+	  src="/storybook-default/tutorials.svg"
       alt="FAQ icon"
       className="sb-explore-image"
     />
@@ -271,7 +254,7 @@ export const RightArrow = () => (
     <Link
       href="https://openfresno.org/faq"
       target="_blank"
-    >View FAQ<RightArrow/></Link>
+    >View FAQ<StorybookArrow/></Link>
 
   </div>
 </div>
