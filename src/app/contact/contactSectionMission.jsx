@@ -1,9 +1,9 @@
+import { SectionType } from "./contact";
+import { HeaderUnderline } from "@/components/ui";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Link from "next/link";
 import { useState } from "react";
-import { SectionType } from "./contact";
-import { HeaderUnderline } from "@/components/ui";
 
 /**
  * contact mission section.
@@ -26,7 +26,7 @@ export default function ContactSectionMission({ sectionType }) {
     // <section className={`contact-section-${sectionType} contact-section-mission`}>
     <section className={`split-page max-lg:py-12`}>
       <div
-        className={`grow-1 basis-0 lg:mr-8 app-color--${sectionType} max-lg:px-6 pt-12 pb-18 lg:py-24`}
+        className={`grow-1 basis-0 lg:mr-8 app-color--${sectionType} pt-12 pb-18 max-lg:px-6 lg:py-24`}
       >
         <HeaderUnderline
           title="Contact Form"
@@ -61,7 +61,7 @@ export default function ContactSectionMission({ sectionType }) {
         </HeaderUnderline>
       </div>
       <div
-        className={`grow-1 basis-0 lg:ml-8 app-color--${sectionType}-split max-lg:px-8 py-12 lg:py-24`}
+        className={`grow-1 basis-0 lg:ml-8 app-color--${sectionType}-split py-12 max-lg:px-8 lg:py-24`}
       >
         <form>
           <div className="form-input">
@@ -218,7 +218,7 @@ export default function ContactSectionMission({ sectionType }) {
               focused
             />
           </div>
-          <div className="pt-11 flex lg:justify-end">
+          <div className="flex pt-11 lg:justify-end">
             <Button
               href={mailtoUri}
               variant="contained"

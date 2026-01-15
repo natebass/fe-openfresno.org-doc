@@ -1,5 +1,7 @@
 "use client";
-import { useKeenSlider } from "keen-slider/react"; // import from 'keen-slider/react.es' for to get an ES module
+import { useKeenSlider } from "keen-slider/react";
+
+// import from 'keen-slider/react.es' for to get an ES module
 
 export default function KeenSlider({
   className,
@@ -24,7 +26,7 @@ export default function KeenSlider({
         {children}
       </div>
       {loaded && instanceRef.current && (
-        <div className="dots p-4 flex flex-row gap-4 mx-auto justify-center">
+        <div className="dots mx-auto flex flex-row justify-center gap-4 p-4">
           {[
             ...Array(instanceRef.current.track.details.slides.length).keys(),
           ].map((idx) => {
@@ -34,7 +36,7 @@ export default function KeenSlider({
                 onClick={() => {
                   instanceRef.current?.moveToIdx(idx);
                 }}
-                className={`w-4 h-4 rounded-[2rem] cursor-pointer ${currentSlide === idx ? "bg-(--primary-400)" : "bg-(--primary-600)"}`}
+                className={`h-4 w-4 cursor-pointer rounded-[2rem] ${currentSlide === idx ? "bg-(--primary-400)" : "bg-(--primary-600)"}`}
               ></button>
             );
           })}

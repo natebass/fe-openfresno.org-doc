@@ -1,6 +1,6 @@
-import { expect, test } from "vitest";
-import { render, screen } from "@testing-library/react";
 import AppNavbar from "@/components/layout/navbar/AppNavbar";
+import { render, screen } from "@testing-library/react";
+import { expect, test } from "vitest";
 
 render(<AppNavbar />);
 

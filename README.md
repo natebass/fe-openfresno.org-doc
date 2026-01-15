@@ -34,11 +34,13 @@ for building, documenting, and testing UI components in isolation before they ar
    pnpm dev
    ```
 
-## Testing
+## Test
 
 ### Storybook
 
-The Storybook website serves as the public documentation, and is deployed to GitHub Pages at https://openfresno.github.io/fe-openfresno.org-doc/. It is intented to provide general documentation, preview the components, and run tests.
+The Storybook website serves as the public documentation and is deployed to GitHub Pages
+at https://openfresno.github.io/fe-openfresno.org-doc/. It is intented to provide general documentation, preview the
+components, and run tests.
 
 ### Playwright
 

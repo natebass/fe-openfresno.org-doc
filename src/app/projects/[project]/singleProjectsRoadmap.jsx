@@ -1,6 +1,6 @@
-import moment from "moment";
 import SingleProjectsRoadmapMilestone from "./singleProjectsRoadmapMilestone.jsx";
 import { SectionType } from "@/utility/constants/theme";
+import moment from "moment";
 
 export default function SingleProjectsRoadmap({ data, sectionType }) {
   const milestones = parseRoadmapMilestones(data.meta.roadmap);
@@ -43,7 +43,7 @@ export default function SingleProjectsRoadmap({ data, sectionType }) {
         <p className={`paragraph-large project-paragraph-large mb-8 lg:mb-18`}>
           Know about the current progress, scope, and stage of project
         </p>
-        <div className={`flex flex-col lg:flex-row lg:gap-70 lg:my-6`}>
+        <div className={`flex flex-col lg:my-6 lg:flex-row lg:gap-70`}>
           <div className={`grow-1 basis-0`}>
             <div className={`lg:ml-[15%]`}>
               {milestones.map((milestone, index) => {

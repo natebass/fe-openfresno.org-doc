@@ -1,3 +1,4 @@
+import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import {
   FormHelperText,
   IconButton,
@@ -7,9 +8,7 @@ import {
   OutlinedInput,
   Select,
 } from "@mui/material";
-
 import Link from "next/link";
-import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { useState } from "react";
 
 /**
@@ -108,16 +107,16 @@ const ProjectSearch = ({ data, setProjectsData }) => {
 
   return (
     <section
-      className={`mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] mb-8 px-4 lg:px-8`}
+      className={`mx-auto mb-8 max-w-[calc(var(--screen-xxl)_+_80px)] px-4 lg:px-8`}
     >
       <form
-        className={`w-full flex flex-col lg:flex-row gap-4 lg:gap-8`}
+        className={`flex w-full flex-col gap-4 lg:flex-row lg:gap-8`}
         action={() => {}}
       >
-        <div className={`max-lg:w-full grow-3 basis-0`}>
+        <div className={`grow-3 basis-0 max-lg:w-full`}>
           <InputLabel
             id="project-search-label"
-            className="min-w-px min-h-[1.4375em]"
+            className="min-h-[1.4375em] min-w-px"
           >
             {" "}
           </InputLabel>
@@ -143,9 +142,9 @@ const ProjectSearch = ({ data, setProjectsData }) => {
               </InputAdornment>
             }
           />
-          <Link href="" className="relative inline-block -left-7"></Link>
+          <Link href="" className="relative -left-7 inline-block"></Link>
         </div>
-        <div className={`max-lg:w-full form-row grow-1 basis-0`}>
+        <div className={`form-row grow-1 basis-0 max-lg:w-full`}>
           <InputLabel id="project-filter-label">Filter</InputLabel>
           <Select
             variant="outlined"
@@ -160,7 +159,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
             <MenuItem value="active">Active</MenuItem>
           </Select>
         </div>
-        <div className={`max-lg:w-full form-row grow-1 basis-0`}>
+        <div className={`form-row grow-1 basis-0 max-lg:w-full`}>
           <InputLabel id="project-sort-by-label">Sort By</InputLabel>
           <Select
             variant="outlined"

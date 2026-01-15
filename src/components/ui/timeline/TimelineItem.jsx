@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useRef } from "react";
 import { Button } from "../../ui";
 import { SectionType } from "@/utility/constants/theme";
+import React, { useEffect, useRef } from "react";
 
 export class SimpleButton {
   constructor(text = "", href = "") {

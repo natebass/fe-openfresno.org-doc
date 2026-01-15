@@ -1,5 +1,5 @@
-import Link from "next/link";
 import "./home-numbered2.css";
+import Link from "next/link";
 
 export default function HomeNumbered2(className) {
   return (

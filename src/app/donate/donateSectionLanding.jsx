@@ -1,6 +1,6 @@
 import GeneralSection from "@/components/ui/GeneralSection";
-import { SectionType } from "@/utility/constants/theme";
 import PageContainer from "@/components/ui/PageContainer";
+import { SectionType } from "@/utility/constants/theme";
 
 /**
  * Donate landing section.

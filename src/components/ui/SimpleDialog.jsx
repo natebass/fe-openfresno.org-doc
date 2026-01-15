@@ -1,12 +1,12 @@
-import * as React from "react";
-import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
-import DialogContent from "@mui/material/DialogContent";
-import IconButton from "@mui/material/IconButton";
-import { SectionType } from "@/utility/constants/theme";
 import { themes } from "@/components/ui/MaterialTheme";
-import { ThemeProvider } from "@mui/material";
 import { IconX } from "@/components/ui/icon/IconX";
+import { SectionType } from "@/utility/constants/theme";
+import { ThemeProvider } from "@mui/material";
+import Dialog from "@mui/material/Dialog";
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import IconButton from "@mui/material/IconButton";
+import * as React from "react";
 
 /**
  * @component

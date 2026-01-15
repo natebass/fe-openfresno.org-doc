@@ -1,7 +1,6 @@
-import { SectionType } from "@/utility/constants/theme";
-
-import { titleCase } from "@/utility/string";
 import FormattedObject from "@/components/ui/FormattedObject";
+import { SectionType } from "@/utility/constants/theme";
+import { titleCase } from "@/utility/string";
 
 export default function SingleProjectsBrief({
   data,

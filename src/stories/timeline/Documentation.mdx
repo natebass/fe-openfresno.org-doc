@@ -1,5 +1,5 @@
-import { Meta } from "@storybook/addon-docs/blocks";
 import * as TimelineStories from "./Timeline.stories";
+import { Meta } from "@storybook/addon-docs/blocks";
 
 <Meta of={TimelineStories} />
 
@@ -247,24 +247,24 @@ The item numbering (#1,#2,…) is handled using CSS counters:
 
 1. **Initialize the Counter (on the parent container):**
 
-   ```
-   .timeline {
-     counter-reset: timeline-counter;
-   }
-   ```
+```
+.timeline {
+  counter-reset: timeline-counter;
+}
+```
 
 2. **Increment the Counter (on each item):**
 
-   ```
-   .timeline-item {
-     counter-increment: timeline-counter;
-   }
-   ```
+```
+.timeline-item {
+  counter-increment: timeline-counter;
+}
+```
 
 3. **Apply Content Width Calculation (Desktop):**
 
-   ```
-   .timeline-item-content {
-     width: calc(50\% - 128px); /* 128px leaves room for the number circle + margins */
-   }
-   ```
+```
+.timeline-item-content {
+  width: calc(50\% - 128px); /* 128px leaves room for the number circle + margins */
+}
+```

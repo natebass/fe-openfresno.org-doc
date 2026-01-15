@@ -1,5 +1,5 @@
-import { SectionType } from "@/utility/constants/theme";
 import HeadingPair from "@/components/ui/HeadingPair";
+import { SectionType } from "@/utility/constants/theme";
 
 /**
  * A general section, with a heading and sub heading pair on the left, and a child section on the right.

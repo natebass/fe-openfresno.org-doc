@@ -1,5 +1,5 @@
-import { SectionType } from "@/utility/constants/theme";
 import HeadingPair from "@/components/ui/HeadingPair";
+import { SectionType } from "@/utility/constants/theme";
 
 /**
  *  `HeaderUnderline` renders a header that introduces a major section of a page or layout.

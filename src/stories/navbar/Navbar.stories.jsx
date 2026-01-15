@@ -1,5 +1,5 @@
-import { expect, userEvent, within } from "storybook/test";
 import NavbarE7e from "../../components/layout/NavbarE7e";
+import { expect, userEvent, within } from "storybook/test";
 
 export default {
   title: "Components/Navigation Bar",

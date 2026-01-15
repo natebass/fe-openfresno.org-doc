@@ -1,6 +1,6 @@
+import HeadingPair from "@/components/ui/HeadingPair";
 import PageContainer from "@/components/ui/PageContainer";
 import { titleCase } from "@/utility/string";
-import HeadingPair from "@/components/ui/HeadingPair";
 
 export default {
   title: "Components/HeadingPair",

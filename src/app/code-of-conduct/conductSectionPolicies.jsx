@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { SectionType } from "@/utility/constants/theme";
 import { HeaderUnderline } from "@/components/ui";
+import { SectionType } from "@/utility/constants/theme";
+import Link from "next/link";
 
 export default function conductSectionPolicies({
   sectionType = SectionType.dark,

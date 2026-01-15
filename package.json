@@ -13,7 +13,6 @@
     "no-open-storybook": "storybook dev --no-open -p 6006",
     "build-storybook": "storybook build"
   },
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/openfresno/fe-openfresno.org-doc.git"
@@ -46,35 +45,35 @@
     "@emotion/styled": "^11.14.1",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
-    "@mui/material": "^7.3.5",
-    "@next/mdx": "^16.0.3",
+    "@mui/material": "^7.3.7",
+    "@next/mdx": "^16.1.2",
     "@types/mdx": "^2.0.13",
     "keen-slider": "^6.8.6",
     "moment": "^2.30.1",
-    "next": "^16.0.3",
+    "next": "^16.1.2",
     "next-mdx-remote": "^5.0.0",
     "prop-types": "^15.8.1",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "swr": "^2.3.6",
-    "yaml": "^2.8.1"
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "swr": "^2.3.8",
+    "yaml": "^2.8.2"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.3",
-    "@playwright/test": "^1.56.1",
-    "@storybook/addon-a11y": "^10.0.8",
-    "@storybook/addon-docs": "^10.0.8",
-    "@storybook/addon-vitest": "^10.0.8",
-    "@storybook/nextjs-vite": "^10.0.8",
-    "@tailwindcss/postcss": "^4.1.17",
+    "@playwright/test": "^1.57.0",
+    "@storybook/addon-a11y": "^10.1.11",
+    "@storybook/addon-docs": "^10.1.11",
+    "@storybook/addon-vitest": "^10.1.11",
+    "@storybook/nextjs-vite": "^10.1.11",
+    "@tailwindcss/postcss": "^4.1.18",
     "@tailwindcss/typography": "^0.5.19",
-    "@vitest/browser-playwright": "^4.0.10",
-    "@vitest/coverage-v8": "^4.0.10",
+    "@vitest/browser-playwright": "^4.0.17",
+    "@vitest/coverage-v8": "^4.0.17",
     "babel-plugin-react-compiler": "1.0.0",
-    "playwright": "^1.56.1",
-    "storybook": "^10.0.8",
-    "tailwindcss": "^4.1.17",
-    "vitest": "^4.0.10"
+    "playwright": "^1.57.0",
+    "storybook": "^10.1.11",
+    "tailwindcss": "^4.1.18",
+    "vitest": "^4.0.17"
   },
-  "packageManager": "pnpm@10.22.0+sha512.bf049efe995b28f527fd2b41ae0474ce29186f7edcb3bf545087bd61fbbebb2bf75362d1307fda09c2d288e1e499787ac12d4fcb617a974718a6051f2eee741c"
+  "packageManager": "pnpm@10.28.0"
 }

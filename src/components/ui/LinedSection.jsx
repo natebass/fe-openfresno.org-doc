@@ -5,9 +5,9 @@ import { titleCase } from "@/utility/string";
 export function SectionLine({ title = <></>, children = <></> }) {
   return (
     <>
-      <hr className={`mt-6 mb-2 lg:my-6 border-0 h-px bg-neutral-500`} />
+      <hr className={`mt-6 mb-2 h-px border-0 bg-neutral-500 lg:my-6`} />
       <div className={`flex flex-col lg:flex-row`}>
-        <div className={`grow-1 font-bold max-lg:mb-2 basis-0`}>{title}</div>
+        <div className={`grow-1 basis-0 font-bold max-lg:mb-2`}>{title}</div>
         <div className={`grow-2 basis-0`}>{children}</div>
       </div>
     </>

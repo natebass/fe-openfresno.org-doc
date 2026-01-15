@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import useBanner from "../../utility/hooks/useBanner";
+import { useEffect, useState } from "react";
 
 /**
  * A banner at the top of the page

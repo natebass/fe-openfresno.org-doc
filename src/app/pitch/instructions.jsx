@@ -7,7 +7,7 @@ const instructions = [
         Before presenting your project idea, it's crucial to verify its
         alignment with our mission and principles. Please review the following
         conditions to ensure your project falls within our scope:
-        <ol className={"list-inside list-decimal my-4"}>
+        <ol className={"my-4 list-inside list-decimal"}>
           <li>Open Source</li>
           <li>Free to Distribute</li>
           <li>Non-Profit</li>

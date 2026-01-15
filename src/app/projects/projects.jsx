@@ -1,12 +1,12 @@
 "use client";
-import { useEffect, useState } from "react";
+import { fetchGithubProjectData } from "./github";
+import ProjectSearch from "@/app/projects/projectSearch";
 import ProjectsCardsContainer from "@/app/projects/projectsCardsContainer";
 import ProjectsSectionStart from "@/app/projects/projectsSectionStart";
-import ProjectSearch from "@/app/projects/projectSearch";
-import { jsonResponse } from "@/utility/response";
-import useSWR from "swr";
-import { fetchGithubProjectData } from "./github";
 import { SectionType } from "@/utility/constants/theme";
+import { jsonResponse } from "@/utility/response";
+import { useEffect, useState } from "react";
+import useSWR from "swr";
 
 const fetcher = (...args) =>
   fetch(...args)

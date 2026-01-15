@@ -1,6 +1,6 @@
-import { expect, test } from "vitest";
-import { render, screen } from "@testing-library/react";
 import AppFooter from "../../../openfresno.org/src/components/layout/footer/AppFooter";
+import { render, screen } from "@testing-library/react";
+import { expect, test } from "vitest";
 
 render(<AppFooter />);
 

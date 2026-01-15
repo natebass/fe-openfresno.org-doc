@@ -7,7 +7,7 @@ export default function AboutSectionTeamMember({
 }) {
   return (
     <div
-      className={`flex flex-col gap-2 border border-[#eaecf0] w-full mb-6 max-lg:mx-auto `}
+      className={`mb-6 flex w-full flex-col gap-2 border border-[#eaecf0] max-lg:mx-auto`}
     >
       <BasePathImage
         className={`aspect-1/1`}

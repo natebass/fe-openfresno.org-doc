@@ -1,6 +1,6 @@
 import LinedSection from "@/components/ui/LinedSection";
-import { titleCase } from "@/utility/string";
 import { SectionType } from "@/utility/constants/theme";
+import { titleCase } from "@/utility/string";
 
 /**
  *

@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
 import { SimpleButton, TimelineItem } from "./TimelineItem";
+import React, { useEffect, useRef, useState } from "react";
 
 /**
  * a responsive, multi-step timeline component for displaying a list of opportunities.

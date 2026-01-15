@@ -1,6 +1,6 @@
-import React from "react";
 import CircledNumber from "@/components/ui/CircledNumber";
 import { SectionType } from "@/utility/constants/theme";
+import React from "react";
 
 /**
  * `Steps` is a presentational component that displays a sequence of numbered
