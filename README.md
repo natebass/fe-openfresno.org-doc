@@ -36,22 +36,10 @@ for building, documenting, and testing UI components in isolation before they ar
 
 ## Test
 
-### Storybook
-
-The Storybook website serves as the public documentation and is deployed to GitHub Pages
-at https://openfresno.github.io/fe-openfresno.org-doc/. It is intented to provide general documentation, preview the
-components, and run tests.
-
-### Playwright
-
-Visual regression and interaction tests.
+Learn about testing https://openfresno.github.io/fe-openfresno.org-doc/.
 
 > [!WARNING]
 > Critical tests should be included in the main website repository for use in CI/CD pipelines.
-
-### Vitest
-
-Unit tests and coverage.
 
 ## Resources
 

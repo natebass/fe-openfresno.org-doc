@@ -1,0 +1,21 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Project/Test" />
+
+## Overview
+
+## Testing strategy
+
+The documentation repository is intended for testing in the broadest sense of the term. We can check accessibility and experiment with new features.
+
+### Playwright
+
+[Playwright](https://playwright.dev/) tests are used for visual regression and interaction tests. Essentially, these are to check if something breaks on the website. We should make sure to add tests for critical functionality. They should be included in the main repository and run as part of the CI pipeline.
+
+### Storybook
+
+The Storybook website serves as the public documentation and is deployed to GitHub Pages.
+
+### Vitest
+
+Unit tests and coverage. These are optional and not included yet.
