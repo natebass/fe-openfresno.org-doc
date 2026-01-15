@@ -1,4 +1,4 @@
-import { Button } from "../button/Button";
+import { Button } from "../../components/ui/button/Button";
 
 /**
  * A responsive, multi-step timeline component for displaying a list of opportunities.

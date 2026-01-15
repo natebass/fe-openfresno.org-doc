@@ -1,4 +1,4 @@
-import { Button } from "../../components/ui";
+import { Button } from "@/components/ui";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";
 import { titleCase } from "@/utility/string";
@@ -59,7 +59,7 @@ export default function ProjectCard({
       >
         Last Updated: {lastUpdatedTimestamp.format("ddd MMM D, Y, h:mma")}
       </div>
-      <div className={`flex flex-row gap-2`}>
+      <div className={`flex flex-row flex-wrap gap-2`}>
         <Button
           className={`btn btn-blue ${isLoading && "project-card-loading"}`}
           href={pageUrl}

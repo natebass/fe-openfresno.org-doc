@@ -9,7 +9,7 @@ export default function SingleProjectsScreenshots({
   sectionType = SectionType.light,
 }) {
   const [showDialog, setShowDialog] = useState(false);
-  const [sliderState, setSliderState] = useState(0);
+  const [startingSlide, setStartingSlide] = useState(0);
   const [windowState, setWindowState] = useState(window);
   useEffect(() => {
     setWindowState(window);
@@ -20,7 +20,7 @@ export default function SingleProjectsScreenshots({
       onClick={() => {
         if (windowState && windowState.innerWidth > 992 && !showDialog) {
           setShowDialog(true);
-          setSliderState(i);
+          setStartingSlide(i);
         }
       }}
       className={`keen-slider__slide sharpen @container aspect-7/4 ${showDialog ? "" : "lg:cursor-pointer"}`}
@@ -66,10 +66,7 @@ export default function SingleProjectsScreenshots({
           fullWidth={true}
           maxWidth={"lg"}
         >
-          <Slider
-            className={"aspect-7/4 w-full"}
-            sliderState={[sliderState, setSliderState]}
-          >
+          <Slider className={"aspect-7/4 w-full"} startingSlide={startingSlide}>
             {shownImages}
           </Slider>
         </SimpleDialog>

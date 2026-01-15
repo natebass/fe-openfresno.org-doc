@@ -15,14 +15,15 @@ export function SectionLine({ title = <></>, children = <></> }) {
 }
 
 /**
- *
- * @component
+ * Lined section component.
+ * @param sectionType
  * @param {Object} [props]
  * @param {JSX.Element} [props.title]
  * @param {JSX.Element} [props.children]
  * @param {[string,string][]} [props.lines]
  * @param {SectionType} [props.sectionType] The SectionType to modify display styling
  * @returns {JSX.Element}
+ * @component
  * @constructor
  */
 export default function LinedSection({
