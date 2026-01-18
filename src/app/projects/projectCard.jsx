@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui";
+import Button from "@/components/ui/button/Button";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";
 import { titleCase } from "@/utility/string";
@@ -24,10 +24,12 @@ export default function ProjectCard({
           {titleCase(projectStatus)}
         </div>
         <BasePathImage
-          className={`aspect-7/4 w-full`}
-          imgClassName={"rounded-xl"}
+          className="aspect-7/4 w-full"
+          className={"rounded-xl"}
           src={imgUrl}
-          alt={"Default project image"}
+          alt={projectTitle || "Project image"}
+          width={350}
+          height={200}
         />
       </div>
       <ul

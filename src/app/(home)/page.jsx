@@ -1,5 +1,7 @@
+import Slider from "../../components/Slider";
 import LayoutE53 from "../../components/layout/LayoutE53";
-import { Button, Slider, Timeline } from "../../components/ui";
+import Button from "../../components/ui/button/Button";
+import Timeline from "../../components/ui/timeline/Timeline";
 import BasePathImage from "../../integrations/gh-pages/BasePathImage";
 import GeneralSection from "@/components/ui/GeneralSection";
 import ImageSection from "@/components/ui/ImageSection";
@@ -73,7 +75,13 @@ export default function HomePage() {
         <ImageSection
           src={"/img/home/home3.png"}
           heading="What we do"
-          subHeading="Building a Better Future For Fresno and the Central Valley Area"
+          subHeading={
+            <>
+              Building a Better Future
+              <br />
+              For Fresno and the Central Valley Area
+            </>
+          }
         >
           <b>
             Our mission is done by uniting programmers, designers, and other
@@ -88,7 +96,7 @@ export default function HomePage() {
             empowering our community!
           </b>
         </ImageSection>
-        <section className="mx-auto mb-10 max-w-[calc(var(--screen-xxl)_+_80px)]">
+        <section className="mx-auto mb-18 max-w-[calc(var(--screen-xxl)+80px)]">
           <div className="home-timeline-header">
             <h1 className="heading-main app-color--dark">Opportunities</h1>
             <h2 className="sub-heading-main">Explore Our Volunteer Options</h2>
@@ -254,7 +262,7 @@ export default function HomePage() {
               <div className="mt-10 space-x-5">
                 <Button
                   href="/get-started"
-                  className="btn btn-alt btn-alt--transition"
+                  className="btn btn-alt-white btn-alt--transition"
                   textContent="Get Started"
                 />
                 <Button

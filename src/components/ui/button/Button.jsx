@@ -1,4 +1,5 @@
-import { HamburgerStaggered, IconX } from "..";
+import { HamburgerStaggered } from "@/components/ui/icon/HamburgerStaggered";
+import { IconX } from "@/components/ui/icon/IconX";
 import {
   ChevronDown,
   ChevronLeft,
@@ -72,7 +73,7 @@ const NavToggle = ({ mobile, extendedMenuVisible, showExtendedMenu }) => {
   if (mobile) {
     return (
       <BaseButton
-        className="navbar-toggle-button--desktop"
+        className="navbar-toggle-button navbar-toggle-button--desktop"
         onClick={() => showExtendedMenu(!extendedMenuVisible)}
       >
         Get Involved
@@ -121,4 +122,4 @@ const NavExtendedToggle = ({ toggleMobileNavPosition, mobileNavPosition }) => {
   }
 };
 
-export { BaseButton, NavExtendedToggle, NavToggle };
+export { BaseButton as default, BaseButton, NavExtendedToggle, NavToggle };

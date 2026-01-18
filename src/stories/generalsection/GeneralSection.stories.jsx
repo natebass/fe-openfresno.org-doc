@@ -1,12 +1,15 @@
+import preview from "#.storybook/preview";
 import GeneralSection from "@/components/ui/GeneralSection";
 import { titleCase } from "@/utility/string";
 
-export default {
+const meta = preview.meta({
   title: "Components/GeneralSection",
   component: GeneralSection,
-};
+});
 
-export const Default = {
+export default meta;
+
+export const Default = meta.story({
   args: {
     sectionType: "dark",
     children: "[Displayed Elements Here]",
@@ -41,4 +44,4 @@ export const Default = {
       </div>
     ),
   ],
-};
+});

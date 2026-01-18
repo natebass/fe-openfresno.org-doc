@@ -1,5 +1,5 @@
 import HeaderUnderline from "../../components/ui/HeaderUnderline";
-import SidebarSection from "../../components/ui/SidebarSection";
+import SidebarSection from "../../components/ui/steps/SidebarSection";
 import LayoutE53 from "@/components/layout/LayoutE53";
 import { SectionType } from "@/utility/constants/theme";
 import Link from "next/link";
@@ -12,7 +12,7 @@ export default function CommunitySupportStatementPage() {
   return (
     <LayoutE53>
       <SidebarSection sectionType={SectionType.light}>
-        <div className={`sidebar-info-container`}>
+        <div className="flex flex-col gap-6">
           <HeaderUnderline
             sectionType={SectionType.light}
             title="Announcement"

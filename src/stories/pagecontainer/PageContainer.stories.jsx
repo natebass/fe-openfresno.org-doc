@@ -1,12 +1,15 @@
+import preview from "#.storybook/preview";
 import PageContainer from "@/components/ui/PageContainer";
 import { titleCase } from "@/utility/string";
 
-export default {
+const meta = preview.meta({
   title: "Components/PageContainer",
   component: PageContainer,
-};
+});
 
-export const Default = {
+export default meta;
+
+export const Default = meta.story({
   name: "PageContainer",
   decorators: [
     (Story) => (
@@ -23,4 +26,4 @@ export const Default = {
       </div>
     ),
   ],
-};
+});

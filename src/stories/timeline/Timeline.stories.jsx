@@ -1,6 +1,7 @@
+import preview from "#.storybook/preview";
 import Timeline from "../../components/ui/timeline/Timeline";
 
-export default {
+const meta = preview.meta({
   title: "Components/Timeline",
   component: Timeline,
   parameters: {
@@ -15,9 +16,11 @@ The Timeline component for the Open Fresno website features an optional fade eff
       },
     },
   },
-};
+});
 
-export const Default = {
+export default meta;
+
+export const Default = meta.story({
   decorators: [
     (Story) => (
       <div>
@@ -25,4 +28,4 @@ export const Default = {
       </div>
     ),
   ],
-};
+});

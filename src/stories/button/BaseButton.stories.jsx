@@ -1,15 +1,18 @@
+import preview from "#.storybook/preview";
 import {
   BaseButton,
   NavExtendedToggle,
   NavToggle,
 } from "../../components/ui/button/Button";
 
-export default {
+const meta = preview.meta({
   title: "Components/Button",
   component: BaseButton,
-};
+});
 
-export const Default = {
+export default meta;
+
+export const Default = meta.story({
   name: "Buttons",
   decorators: [
     (Story) => (
@@ -28,4 +31,4 @@ export const Default = {
       </div>
     ),
   ],
-};
+});

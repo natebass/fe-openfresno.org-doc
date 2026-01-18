@@ -1,7 +1,8 @@
+import preview from "#.storybook/preview";
 import NavbarE7e from "../../components/layout/NavbarE7e";
 import { expect, userEvent, within } from "storybook/test";
 
-export default {
+const meta = preview.meta({
   title: "Components/Navigation Bar",
   component: NavbarE7e,
   parameters: {
@@ -22,7 +23,7 @@ The navbar fade effect is implemented using **CSS Scroll-Driven Animations**, a 
 **Currently only works reliably in Chrome/Edge browsers.** Other browsers have limited or no support:
 
 - ✅ **Chrome/Edge 115+**: Full support
-- ⚠️ **Safari 26.0+**: Recently added support 
+- ⚠️ **Safari 26.0+**: Recently added support
 - ❌ **Firefox**: Still behind a flag (as of v146)
 - ❌ **Older browsers**: No support
 
@@ -33,7 +34,7 @@ For the latest browser support, see [Can I Use](https://caniuse.com/mdn-css_prop
 The CSS Scroll-Driven Animations Module lets you tie animations directly to scroll progress instead of time. Key properties:
 
 - **\`animation-timeline\`** → lets you bind an animation to a scroll timeline
-- **\`scroll-timeline\`** → defines a named scroll progress timeline  
+- **\`scroll-timeline\`** → defines a named scroll progress timeline
 - **\`view-timeline\`** → defines a timeline based on when an element enters/exits the viewport
 - **\`animation-range\`** → controls where along the scroll the animation starts/ends
 
@@ -66,9 +67,11 @@ The stories below include a tall black background (200% viewport height) to allo
       },
     },
   },
-};
+});
 
-export const Default = {
+export default meta;
+
+export const Default = meta.story({
   args: { fade: false },
   decorators: [
     (Story) => (
@@ -94,9 +97,9 @@ export const Default = {
       </div>
     ),
   ],
-};
+});
 
-export const WithFade = {
+export const WithFade = meta.story({
   args: { fade: true },
   parameters: {
     docs: {
@@ -194,9 +197,9 @@ Scroll up and down in this story to see the effect in action (Chrome/Edge only).
       </div>
     ),
   ],
-};
+});
 
-export const ToggleMenu = {
+export const ToggleMenu = meta.story({
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const toggleButton = canvas.getAllByRole("button")[0];
@@ -243,4 +246,4 @@ export const ToggleMenu = {
       </div>
     ),
   ],
-};
+});

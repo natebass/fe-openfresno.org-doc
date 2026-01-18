@@ -12,6 +12,8 @@ The documentation repository is intended for testing in the broadest sense of th
 
 [Playwright](https://playwright.dev/) tests are used for visual regression and interaction tests. Essentially, these are to check if something breaks on the website. We should make sure to add tests for critical functionality. They should be included in the main repository and run as part of the CI pipeline.
 
+"debug:chromium": "playwright test --project=chromium --headed --debug"
+
 ### Storybook
 
 The Storybook website serves as the public documentation and is deployed to GitHub Pages.

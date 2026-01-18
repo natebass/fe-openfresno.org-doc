@@ -1,4 +1,4 @@
-import { HeaderUnderline } from "@/components/ui";
+import HeaderUnderline from "@/components/ui/HeaderUnderline";
 import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { SectionType } from "@/utility/constants/theme";
 import { getWednesday } from "@/utility/get-wednesday";
@@ -14,7 +14,7 @@ export default function ProjectsSectionStart({
   return (
     // TODO fix styling classes to represent the projects page?
     <section
-      className={`mx-auto flex max-w-[calc(var(--screen-xxl)_+_80px)] py-12 max-lg:flex-col lg:px-6 lg:py-24 app-color--${sectionType}`}
+      className={`mx-auto flex max-w-[calc(var(--screen-xxl)+80px)] py-12 max-lg:flex-col lg:px-6 lg:py-24 app-color--${sectionType}`}
     >
       <div
         className={`projects-section-text-container w-full grow-3 basis-0 max-lg:px-6`}
@@ -53,6 +53,8 @@ export default function ProjectsSectionStart({
                 className="mr-4 inline-block"
                 src="/img/meeting-card/calender.svg"
                 alt="Calendar"
+                width={24}
+                height={24}
               />
               <span className={`meeting-card-list-item-text`}>
                 {getWednesday()}
@@ -63,6 +65,8 @@ export default function ProjectsSectionStart({
                 className="mr-4 inline-block"
                 src="/img/meeting-card/clock.svg"
                 alt="Clock"
+                width={24}
+                height={24}
               />
               <span className={`meeting-card-list-item-text`}>6:30pm PST</span>
             </div>
@@ -71,6 +75,8 @@ export default function ProjectsSectionStart({
                 className="mr-4 inline-block"
                 src="/img/meeting-card/document-txt.svg"
                 alt="Document"
+                width={24}
+                height={24}
               />
               <span className={`meeting-card-list-item-text`}>
                 Community Action Night (Virtual)
@@ -91,7 +97,9 @@ export default function ProjectsSectionStart({
               <BasePathImage
                 className="-mt-0.5 ml-2 inline-block"
                 src="/img/meeting-card/arrow-right.svg"
-                alt="Arrow right."
+                alt="Arrow right"
+                width={16}
+                height={16}
               />
             </Link>
           </div>

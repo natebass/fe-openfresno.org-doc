@@ -10,12 +10,8 @@ const config = {
     "@storybook/addon-a11y",
     "@storybook/addon-vitest",
   ],
-  docs: {
-    autodocs: true,
-  },
   framework: {
     name: "@storybook/nextjs-vite",
-    options: {},
   },
   staticDirs: ["../public"],
 };

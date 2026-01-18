@@ -1,13 +1,16 @@
+import preview from "#.storybook/preview";
 import HeadingPair from "@/components/ui/HeadingPair";
 import PageContainer from "@/components/ui/PageContainer";
 import { titleCase } from "@/utility/string";
 
-export default {
+const meta = preview.meta({
   title: "Components/HeadingPair",
   component: HeadingPair,
-};
+});
 
-export const Default = {
+export default meta;
+
+export const Default = meta.story({
   args: {
     sectionType: "light",
     heading: "Heading",
@@ -32,4 +35,4 @@ export const Default = {
       </div>
     ),
   ],
-};
+});
