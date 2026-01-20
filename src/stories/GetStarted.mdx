@@ -1,8 +1,20 @@
-import BasePathImage from "../integrations/gh-pages/BasePathImage";
+import Image from "next/image";
 import { StorybookArrow } from "./components/StorybookArrow";
 import { Meta } from "@storybook/addon-docs/blocks";
 
 import Link from "next/link";
+
+import meetupImg from "../../public/storybook-extra/meetup.png";
+import openWebsiteImg from "../../public/storybook-extra/open-website.png";
+import githubExtraImg from "../../public/storybook-extra/github.png";
+import homeImg from "../../public/screenshots/home.png";
+import accessibilityExtraImg from "../../public/storybook-extra/accessibility.png";
+import designImg from "../../public/storybook-extra/design.png";
+import projectImg from "../../public/storybook-extra/project.png";
+import githubSvg from "../../public/storybook-default/github.svg";
+import slackSvg from "../../public/storybook-extra/slack.svg";
+import youtubeSvg from "../../public/storybook-default/youtube.svg";
+import tutorialsSvg from "../../public/storybook-default/tutorials.svg";
 
 <Meta title="Get Started" />
 
@@ -20,10 +32,8 @@ import Link from "next/link";
   <div className="sb-section">
     <div className="sb-features-grid">
       <div className="sb-grid-item">
-        <BasePathImage
-          width={1616}
-          height={979}
-          src="/storybook-extra/meetup.png"
+        <Image
+          src={meetupImg}
           alt="Open Fresno volunteers collaborating on civic tech projects"
         />
         <h4 className="sb-section-item-heading">Community Action Nights</h4>
@@ -34,10 +44,8 @@ import Link from "next/link";
         >Join Meetup<StorybookArrow /></Link>
       </div>
       <div className="sb-grid-item">
-        <BasePathImage
-          width={714}
-          height={460}
-          src="/storybook-extra/open-website.png"
+        <Image
+          src={openWebsiteImg}
           alt="Open Fresno design collaboration and civic tech design systems"
         />
         <h4 className="sb-section-item-heading">Design Collaboration</h4>
@@ -49,10 +57,8 @@ import Link from "next/link";
         >Volunteer as Designer<StorybookArrow /></Link>
       </div>
       <div className="sb-grid-item">
-        <BasePathImage
-          width={1076}
-          height={720}
-          src="/storybook-extra/github.png"
+        <Image
+          src={githubExtraImg}
           alt="Testing Open Fresno civic tech components for reliability"
         />
         <h4 className="sb-section-item-heading">Quality Assurance</h4>
@@ -74,10 +80,8 @@ import Link from "next/link";
   <div className="sb-section">
     <div className="sb-features-grid">
       <div className="sb-grid-item">
-        <BasePathImage
-          width={1840}
-          height={1051}
-          src="/screenshots/home.png"
+        <Image
+          src={homeImg}
           alt="Open Fresno component documentation and development guides"
         />
         <h4 className="sb-section-item-heading">Develop features for the website</h4>
@@ -88,10 +92,8 @@ import Link from "next/link";
         >View the website<StorybookArrow /></Link>
       </div>
       <div className="sb-grid-item">
-        <BasePathImage
-          width={1176}
-          height={785}
-          src="/storybook-extra/accessibility.png"
+        <Image
+          src={accessibilityExtraImg}
           alt="Making civic tech accessible to all community members"
         />
         <h4 className="sb-section-item-heading">Accessibility</h4>
@@ -104,10 +106,8 @@ import Link from "next/link";
         >Test a button<StorybookArrow /></Link>
       </div>
       <div className="sb-grid-item">
-        <BasePathImage
-          src="/storybook-extra/design.png"
-          width={1076}
-		  height={720}
+        <Image
+          src={designImg}
           alt="Open Fresno brand themes and civic tech styling"
         />
         <h4 className="sb-section-item-heading">Brand & Theming</h4>
@@ -132,10 +132,8 @@ import Link from "next/link";
     >Explore Projects<StorybookArrow /></Link>
   </div>
   <div className="sb-addon-img">
-    <BasePathImage
-          width={1174}
-          height={697}
-          src="/storybook-extra/project.png"
+    <Image
+      src={projectImg}
       alt="Open Fresno civic tech projects making a difference in the community."
     />
   </div>
@@ -143,11 +141,8 @@ import Link from "next/link";
 
 <div className="sb-section sb-socials">
   <div className="sb-section-item">
-    <BasePathImage
-      width={32}
-      height={32}
-      layout="fixed"
-      src="/storybook-default/github.svg"
+    <Image
+      src={githubSvg}
       alt="Github logo"
       className="sb-explore-image"
     />
@@ -157,11 +152,8 @@ import Link from "next/link";
 
   </div>
   <div className="sb-section-item">
-    <BasePathImage
-      width={33}
-      height={32}
-      layout="fixed"
-      src="/storybook-extra/slack.svg"
+    <Image
+      src={slackSvg}
       alt="Slack logo"
     />
     <div>
@@ -172,11 +164,8 @@ import Link from "next/link";
 
   </div>
   <div className="sb-section-item">
-    <BasePathImage
-      width={32}
-      height={32}
-      layout="fixed"
-      src="/storybook-default/youtube.svg"
+    <Image
+      src={youtubeSvg}
       alt="Youtube logo"
       className="sb-explore-image"
     />
@@ -188,11 +177,8 @@ import Link from "next/link";
 
   </div>
   <div className="sb-section-item">
-    <BasePathImage
-      width={33}
-      height={32}
-      layout="fixed"
-      src="/storybook-default/tutorials.svg"
+    <Image
+      src={tutorialsSvg}
       alt="FAQ icon"
       className="sb-explore-image"
     />

@@ -1,8 +1,12 @@
-import BasePathImage from "../integrations/gh-pages/BasePathImage";
+import Image from "next/image";
 import { StorybookArrow } from "./components/StorybookArrow.jsx";
 import { Meta } from "@storybook/addon-docs/blocks";
 
 import Link from "next/link";
+
+import stylingImg from "../../public/storybook-default/styling.png";
+import contextImg from "../../public/storybook-default/context.png";
+import assetsImg from "../../public/storybook-default/assets.png";
 
 <Meta title="Project/Development/Developer Guide" />
 
@@ -10,11 +14,9 @@ import Link from "next/link";
   <div className="sb-section-title"># Developer Guide</div>
   <div className="sb-section">
     <div className="sb-section-item">
-      <BasePathImage
-        src="/storybook-default/styling.png"
+      <Image
+        src={stylingImg}
         alt="Open Fresno design system with Tailwind CSS and custom styling"
-        width={0}
-        height={0}
         style={{ width: "100%", height: "auto" }}
       />
       <h4 className="sb-section-item-heading">Design System & Styling</h4>
@@ -29,12 +31,10 @@ import Link from "next/link";
       </Link>
     </div>
     <div className="sb-section-item">
-      <BasePathImage
-        width={0}
-        height={0}
-        style={{ width: "100%", height: "auto" }}
-        src="/storybook-default/context.png"
+      <Image
+        src={contextImg}
         alt="Testing civic tech components with proper context and mock data"
+        style={{ width: "100%", height: "auto" }}
       />
       <h4 className="sb-section-item-heading">Component Testing & Mocking</h4>
       <p className="sb-section-item-paragraph">
@@ -50,12 +50,10 @@ import Link from "next/link";
       </Link>
     </div>
     <div className="sb-section-item">
-      <BasePathImage
-        width={0}
-        height={0}
-        style={{ width: "100%", height: "auto" }}
-        src="/storybook-default/assets.png"
+      <Image
+        src={assetsImg}
         alt="Open Fresno brand assets, icons, and civic imagery"
+        style={{ width: "100%", height: "auto" }}
       />
       <div>
         <h4 className="sb-section-item-heading">Brand Assets & Resources</h4>
@@ -121,6 +119,15 @@ import Link from "next/link";
 
 > [!NOTE]
 > Copy all of the folders in **bold** when updating the code from the main project.
+
+## Format
+
+npm i -D prettier prettier-plugin-tailwindcss prettier-plugin-css-order @trivago/prettier-plugin-sort-imports
+
+"format": "prettier --write .",
+
+```json
+{plugins: ["prettier-plugin-tailwindcss", "prettier-plugin-css-order", "@trivago/prettier-plugin-sort-imports"]}
 
 <style>
   {`

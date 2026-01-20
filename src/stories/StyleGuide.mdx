@@ -1,8 +1,23 @@
-import BasePathImage from "../integrations/gh-pages/BasePathImage";
+import Image from "next/image";
 import { StorybookArrow } from "./components/StorybookArrow.jsx";
 import { Meta } from "@storybook/addon-docs/blocks";
 
 import Link from "next/link";
+
+import stylingImg from "../../public/storybook-default/styling.png";
+import contextImg from "../../public/storybook-default/context.png";
+import assetsImg from "../../public/storybook-default/assets.png";
+import docsImg from "../../public/storybook-default/docs.png";
+import shareImg from "../../public/storybook-default/share.png";
+import figmaPluginImg from "../../public/storybook-default/figma-plugin.png";
+import testingImg from "../../public/storybook-default/testing.png";
+import accessibilityImg from "../../public/storybook-default/accessibility.png";
+import themingImg from "../../public/storybook-default/theming.png";
+import addonLibraryImg from "../../public/storybook-default/addon-library.png";
+import githubSvg from "../../public/storybook-default/github.svg";
+import discordSvg from "../../public/storybook-default/discord.svg";
+import youtubeSvg from "../../public/storybook-default/youtube.svg";
+import tutorialsSvg from "../../public/storybook-default/tutorials.svg";
 
 <Meta title="Project/Design/Style Guide" />
 
@@ -13,11 +28,9 @@ import Link from "next/link";
   </div>
   <div className="sb-section">
     <div className="sb-section-item">
-      <BasePathImage
-        src="/storybook-default/styling.png"
+      <Image
+        src={stylingImg}
         alt="Open Fresno design system with Tailwind CSS and custom styling"
-        width={0}
-        height={0}
         style={{ width: "100%", height: "auto" }}
       />
       <h4 className="sb-section-item-heading">Design System & Styling</h4>
@@ -29,12 +42,10 @@ import Link from "next/link";
       >Style Guide Contributing<StorybookArrow /></Link>
     </div>
     <div className="sb-section-item">
-      <BasePathImage
-        width={0}
-        height={0}
-        style={{ width: "100%", height: "auto" }}
-        src="/storybook-default/context.png"
+      <Image
+        src={contextImg}
         alt="Testing civic tech components with proper context and mock data"
+        style={{ width: "100%", height: "auto" }}
       />
       <h4 className="sb-section-item-heading">Component Testing & Mocking</h4>
       <p className="sb-section-item-paragraph">Our components are designed for civic engagement features like volunteer
@@ -46,12 +57,10 @@ import Link from "next/link";
       >View Repository<StorybookArrow /></Link>
     </div>
     <div className="sb-section-item">
-      <BasePathImage
-        width={0}
-        height={0}
-        style={{ width: "100%", height: "auto" }}
-        src="/storybook-default/assets.png"
+      <Image
+        src={assetsImg}
         alt="Open Fresno brand assets, icons, and civic imagery"
+        style={{ width: "100%", height: "auto" }}
       />
       <div>
         <h4 className="sb-section-item-heading">Brand Assets & Resources</h4>
@@ -76,12 +85,10 @@ import Link from "next/link";
   <div className="sb-section">
     <div className="sb-features-grid">
       <div className="sb-grid-item">
-        <BasePathImage
-          width={0}
-          height={0}
-          style={{ width: "100%", height: "auto" }}
-          src="/storybook-default/docs.png"
+        <Image
+          src={docsImg}
           alt="Open Fresno component documentation and development guides"
+          style={{ width: "100%", height: "auto" }}
         />
         <h4 className="sb-section-item-heading">Documentation</h4>
         <p className="sb-section-item-paragraph">Contribute to our living documentation that helps volunteers understand
@@ -92,12 +99,10 @@ import Link from "next/link";
         >View Projects<StorybookArrow /></Link>
       </div>
       <div className="sb-grid-item">
-        <BasePathImage
-          width={0}
-          height={0}
-          style={{ width: "100%", height: "auto" }}
-          src="/storybook-default/share.png"
+        <Image
+          src={shareImg}
           alt="Open Fresno volunteers collaborating on civic tech projects"
+          style={{ width: "100%", height: "auto" }}
         />
         <h4 className="sb-section-item-heading">Weekly Meetups</h4>
         <p className="sb-section-item-paragraph">Join our weekly Community Action Nights every Wednesday at 6:30 PM PST
@@ -108,12 +113,10 @@ import Link from "next/link";
         >Join Meetup<StorybookArrow /></Link>
       </div>
       <div className="sb-grid-item">
-        <BasePathImage
-          width={0}
-          height={0}
-          style={{ width: "100%", height: "auto" }}
-          src="/storybook-default/figma-plugin.png"
+        <Image
+          src={figmaPluginImg}
           alt="Open Fresno design collaboration and civic tech design systems"
+          style={{ width: "100%", height: "auto" }}
         />
         <h4 className="sb-section-item-heading">Design Collaboration</h4>
         <p className="sb-section-item-paragraph">We welcome designers to help create accessible, user-friendly
@@ -124,12 +127,10 @@ import Link from "next/link";
         >Volunteer as Designer<StorybookArrow /></Link>
       </div>
       <div className="sb-grid-item">
-        <BasePathImage
-          width={0}
-          height={0}
-          style={{ width: "100%", height: "auto" }}
-          src="/storybook-default/testing.png"
+        <Image
+          src={testingImg}
           alt="Testing Open Fresno civic tech components for reliability"
+          style={{ width: "100%", height: "auto" }}
         />
         <h4 className="sb-section-item-heading">Quality Assurance</h4>
         <p className="sb-section-item-paragraph">Help ensure our civic tech tools are reliable and accessible by
@@ -140,12 +141,10 @@ import Link from "next/link";
         >View Issues<StorybookArrow /></Link>
       </div>
       <div className="sb-grid-item">
-        <BasePathImage
-          width={0}
-          height={0}
-          style={{ width: "100%", height: "auto" }}
-          src="/storybook-default/accessibility.png"
+        <Image
+          src={accessibilityImg}
           alt="Making civic tech accessible to all community members"
+          style={{ width: "100%", height: "auto" }}
         />
         <h4 className="sb-section-item-heading">Accessibility</h4>
         <p className="sb-section-item-paragraph">We're committed to making civic engagement accessible to everyone. Help
@@ -156,12 +155,10 @@ import Link from "next/link";
         >Code of Conduct<StorybookArrow /></Link>
       </div>
       <div className="sb-grid-item">
-        <BasePathImage
-          width={0}
-          height={0}
-          style={{ width: "100%", height: "auto" }}
-          src="/storybook-default/theming.png"
+        <Image
+          src={themingImg}
           alt="Open Fresno brand themes and civic tech styling"
+          style={{ width: "100%", height: "auto" }}
         />
         <h4 className="sb-section-item-heading">Brand & Theming</h4>
         <p className="sb-section-item-paragraph">Our design system reflects Open Fresno's commitment to transparency,
@@ -185,10 +182,8 @@ import Link from "next/link";
     >Explore Projects<StorybookArrow /></Link>
   </div>
   <div className="sb-addon-img">
-    <BasePathImage
-      width={650}
-      height={347}
-      src="/storybook-default/addon-library.png"
+    <Image
+      src={addonLibraryImg}
       alt="Open Fresno civic tech projects making a difference in the community."
     />
   </div>
@@ -196,11 +191,8 @@ import Link from "next/link";
 
 <div className="sb-section sb-socials">
   <div className="sb-section-item">
-    <BasePathImage
-      width={32}
-      height={32}
-      layout="fixed"
-      src="/storybook-default/github.svg"
+    <Image
+      src={githubSvg}
       alt="Github logo"
       className="sb-explore-image"
     />
@@ -210,11 +202,8 @@ import Link from "next/link";
 
   </div>
   <div className="sb-section-item">
-    <BasePathImage
-      width={33}
-      height={32}
-      layout="fixed"
-      src="/storybook-default/discord.svg"
+    <Image
+      src={discordSvg}
       alt="Slack logo"
       className="sb-explore-image"
     />
@@ -226,11 +215,8 @@ import Link from "next/link";
 
   </div>
   <div className="sb-section-item">
-    <BasePathImage
-      width={32}
-      height={32}
-      layout="fixed"
-      src="/storybook-default/youtube.svg"
+    <Image
+      src={youtubeSvg}
       alt="Youtube logo"
       className="sb-explore-image"
     />
@@ -242,11 +228,8 @@ import Link from "next/link";
 
   </div>
   <div className="sb-section-item">
-    <BasePathImage
-      width={33}
-      height={32}
-      layout="fixed"
-      src="/storybook-default/tutorials.svg"
+    <Image
+      src={tutorialsSvg}
       alt="FAQ icon"
       className="sb-explore-image"
     />
