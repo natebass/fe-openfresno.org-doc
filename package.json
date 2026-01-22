@@ -6,16 +6,17 @@
   "private": false,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "compile": "tsc",
     "start": "next start",
-    "lint": "eslint .",
+    "build": "next build",
+    "build:storybook": "storybook build",
     "test": "vitest",
+    "test:unit": "vitest --project=unit",
+    "test:sb": "vitest --project=storybook",
+    "test:ui": "vitest --ui",
+    "test:debug": "playwright test --project=chromium --headed --debug",
     "storybook": "storybook dev -p 6006",
-    "no-open-storybook": "storybook dev --no-open -p 6006",
-    "build-storybook": "storybook build",
-    "doctor": "storybook doctor --package-manager pnpm",
-    "debug:chromium": "playwright test --project=chromium --headed --debug"
+    "storybook:ci": "storybook dev --no-open -p 6006",
+    "storybook:doctor": "storybook doctor --package-manager pnpm"
   },
   "repository": {
     "type": "git",
@@ -61,21 +62,25 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^5.0.0",
     "@playwright/test": "^1.57.0",
-    "@storybook/addon-a11y": "^10.1.11",
-    "@storybook/addon-docs": "^10.1.11",
-    "@storybook/addon-vitest": "^10.1.11",
-    "@storybook/nextjs-vite": "^10.1.11",
+    "@storybook/addon-a11y": "^10.2.0",
+    "@storybook/addon-docs": "^10.2.0",
+    "@storybook/addon-vitest": "^10.2.0",
+    "@storybook/nextjs-vite": "^10.2.0",
     "@tailwindcss/postcss": "^4.1.18",
     "@tailwindcss/typography": "^0.5.19",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
     "@vitest/browser-playwright": "^4.0.17",
     "@vitest/coverage-v8": "^4.0.17",
     "babel-plugin-react-compiler": "1.0.0",
+    "jsdom": "^27.4.0",
     "playwright": "^1.57.0",
-    "storybook": "^10.1.11",
+    "storybook": "^10.2.0",
     "tailwindcss": "^4.1.18",
     "vitest": "^4.0.17"
   },
-  "packageManager": "pnpm@10.28.0+sha512.05df71d1421f21399e053fde567cea34d446fa02c76571441bfc1c7956e98e363088982d940465fd34480d4d90a0668bc12362f8aa88000a64e83d0b0e47be48",
+  "packageManager": "pnpm@10.28.1+sha512.7d7dbbca9e99447b7c3bf7a73286afaaf6be99251eb9498baefa7d406892f67b879adb3a1d7e687fc4ccc1a388c7175fbaae567a26ab44d1067b54fcb0d6a316",
   "imports": {
     "#.storybook/*": "./.storybook/*"
   }

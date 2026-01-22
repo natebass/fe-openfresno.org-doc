@@ -1,6 +1,9 @@
+ 
 import preview from "#.storybook/preview";
 import NavbarE7e from "../../components/layout/NavbarE7e";
-import { expect, userEvent, within } from "storybook/test";
+import { within } from "@testing-library/dom";
+import userEvent from "@testing-library/user-event";
+import { expect } from "vitest";
 
 const meta = preview.meta({
   title: "Components/Navigation Bar",
@@ -201,16 +204,17 @@ Scroll up and down in this story to see the effect in action (Chrome/Edge only).
 
 export const ToggleMenu = meta.story({
   play: async ({ canvasElement }) => {
+    const user = userEvent.setup();
     const canvas = within(canvasElement);
     const toggleButton = canvas.getAllByRole("button")[0];
     await expect(toggleButton).toBeInTheDocument();
 
-    await userEvent.click(toggleButton);
+    await user.click(toggleButton);
     await expect(
       canvas.getByRole("link", { name: /Donate/i }),
     ).toBeInTheDocument();
 
-    await userEvent.click(toggleButton);
+    await user.click(toggleButton);
     await expect(
       canvas.queryByRole("link", { name: /Donate/i }),
     ).not.toBeInTheDocument();

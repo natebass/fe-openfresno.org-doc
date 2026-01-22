@@ -1,3 +1,4 @@
+ 
 import preview from "#.storybook/preview";
 import GeneralSection from "@/components/ui/GeneralSection";
 import { titleCase } from "@/utility/string";
@@ -23,6 +24,7 @@ export const Default = meta.story({
         <Story />
         {["light", "dark", "gray", "primary", "secondary"].map((type) => (
           <GeneralSection
+            key={type}
             sectionType={type}
             heading="Type"
             subHeading={titleCase(type)}
@@ -34,6 +36,7 @@ export const Default = meta.story({
           .map((it) => it + "-split")
           .map((type) => (
             <GeneralSection
+              key={type}
               sectionType={type}
               heading="Type"
               subHeading={titleCase(type)}

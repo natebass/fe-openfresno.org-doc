@@ -1,3 +1,4 @@
+ 
 import preview from "#.storybook/preview";
 import PageContainer from "@/components/ui/PageContainer";
 import { titleCase } from "@/utility/string";
@@ -16,12 +17,16 @@ export const Default = meta.story({
       <div>
         <Story />
         {["light", "dark", "gray", "primary", "secondary"].map((type) => (
-          <PageContainer sectionType={type}>{titleCase(type)}</PageContainer>
+          <PageContainer key={type} sectionType={type}>
+            {titleCase(type)}
+          </PageContainer>
         ))}
         {["light", "dark"]
           .map((it) => it + "-split")
           .map((type) => (
-            <PageContainer sectionType={type}>{titleCase(type)}</PageContainer>
+            <PageContainer key={type} sectionType={type}>
+              {titleCase(type)}
+            </PageContainer>
           ))}
       </div>
     ),

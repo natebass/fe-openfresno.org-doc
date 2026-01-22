@@ -21,7 +21,7 @@
  */
 export default function getBasePath(
   repositoryCustomDomain = false,
-  repositoryName = "openfresno/openfresno.org",
+  repositoryName = "openfresno/fe-openfresno.org-doc",
 ) {
   const isGitHubActions = process.env.GITHUB_ACTIONS === "true";
   const isMainRepo = process.env.GITHUB_REPOSITORY === repositoryName;
@@ -29,7 +29,6 @@ export default function getBasePath(
     if (isMainRepo && repositoryCustomDomain) {
       return "";
     } else {
-      // Use the actual GITHUB_REPOSITORY for the basePath, not the hardcoded repositoryName
       return `/${process.env.GITHUB_REPOSITORY.split("/")[1]}`;
     }
   } else {

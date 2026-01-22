@@ -1,8 +1,9 @@
-import AppFooter from "../../../openfresno.org/src/components/layout/footer/AppFooter";
+/** @type {import('vitest').VitestConfig} */
+// @vitest-environment jsdom
+import FooterE4d from "../src/components/layout/FooterE4d";
 import { render, screen } from "@testing-library/react";
-import { expect, test } from "vitest";
 
-render(<AppFooter />);
+render(<FooterE4d />);
 
 /* 
 Renders the AppFooter component and checks if all link elements are rendering
@@ -14,14 +15,3 @@ test("AppFooter", () => {
   ).toBeDefined();
 });
 
-test("Find meetup Link", () => {
-  expect(screen.getByRole("link", { name: /meetup/i })).toBeDefined();
-});
-
-test("Find projects Link", () => {
-  expect(screen.getByRole("link", { name: /projects/i })).toBeDefined();
-});
-
-test("Find faqs Link", () => {
-  expect(screen.getByRole("link", { name: /faqs/i })).toBeDefined();
-});

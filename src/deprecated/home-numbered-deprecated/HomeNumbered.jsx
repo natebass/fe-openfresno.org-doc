@@ -1,5 +1,6 @@
 import "./home-numbered.css";
 import Button from "@/components/ui/Button";
+import Image from "next/image";
 
 export default function HomeNumbered() {
   return (

@@ -188,22 +188,6 @@ export default function HomePage() {
                   height={469}
                 />
               </div>
-              <div className="keen-slider__slide">
-                <div>
-                  <h2 className="heading-medium">Open Budget Sac</h2>
-                  <p className="mt-4">
-                    Fiscal transparency and visualization web app for the City
-                    of Fresno.
-                  </p>
-                </div>
-                <Image
-                  src="https://raw.githubusercontent.com/openfresno/openfresno.org/main/openfresno.png"
-                  alt="Open Budget Sac"
-                  className="home-project-image object-cover"
-                  width={918}
-                  height={469}
-                />
-              </div>
             </Slider>
           </div>
         </section>

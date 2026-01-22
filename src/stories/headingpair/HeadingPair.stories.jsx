@@ -1,3 +1,4 @@
+ 
 import preview from "#.storybook/preview";
 import HeadingPair from "@/components/ui/HeadingPair";
 import PageContainer from "@/components/ui/PageContainer";
@@ -24,7 +25,7 @@ export const Default = meta.story({
           <Story />
         </PageContainer>
         {["light", "dark", "gray", "primary", "secondary"].map((type) => (
-          <PageContainer>
+          <PageContainer key={type}>
             <HeadingPair
               sectionType={type}
               heading="Type"
