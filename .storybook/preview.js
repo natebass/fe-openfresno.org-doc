@@ -11,9 +11,10 @@ import { definePreview } from "@storybook/nextjs-vite";
  * - 'todo' - show a11y violations in the test UI only.
  * - 'error' - fail CI on a11y violations.
  * - 'off' - skip a11y checks entirely.
+ * @type {import('@storybook/nextjs-vite').Preview}
  * @type {ReturnType<typeof definePreview>}
  */
-const preview = definePreview({
+export default definePreview({
   addons: [addonA11y(), addonDocs()],
   parameters: {
     options: {
@@ -31,8 +32,9 @@ const preview = definePreview({
     a11y: {
       test: "todo",
     },
+    docs: {
+      codePanel: true,
+    },
   },
   tags: ["autodocs"],
 });
-
-export default preview;

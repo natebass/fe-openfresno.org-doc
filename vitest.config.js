@@ -1,5 +1,6 @@
 import path from "node:path";
 import { storybookTest } from "@storybook/addon-vitest/vitest-plugin";
+import { playwright } from "@vitest/browser-playwright";
 import { defineConfig, defineProject } from "vitest/config";
 
 /** @type {import('vitest/config').UserConfig} */
@@ -44,7 +45,7 @@ export default defineConfig({
           browser: {
             enabled: true,
             headless: true,
-            provider: "playwright",
+            provider: playwright(),
             instances: [{ browser: "chromium" }],
           },
         },

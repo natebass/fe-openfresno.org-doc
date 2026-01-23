@@ -10,4 +10,7 @@ export default defineMain({
     "@storybook/addon-vitest",
   ],
   staticDirs: ["../public"],
+  features: {
+    experimentalTestSyntax: true,
+  },
 });
