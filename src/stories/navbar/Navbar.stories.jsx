@@ -1,9 +1,6 @@
- 
 import preview from "#.storybook/preview";
 import NavbarE7e from "../../components/layout/NavbarE7e";
-import { within } from "@testing-library/dom";
-import userEvent from "@testing-library/user-event";
-import { expect } from "vitest";
+import { expect } from "storybook/test";
 
 const meta = preview.meta({
   title: "Components/Navigation Bar",
@@ -203,22 +200,7 @@ Scroll up and down in this story to see the effect in action (Chrome/Edge only).
 });
 
 export const ToggleMenu = meta.story({
-  play: async ({ canvasElement }) => {
-    const user = userEvent.setup();
-    const canvas = within(canvasElement);
-    const toggleButton = canvas.getAllByRole("button")[0];
-    await expect(toggleButton).toBeInTheDocument();
-
-    await user.click(toggleButton);
-    await expect(
-      canvas.getByRole("link", { name: /Donate/i }),
-    ).toBeInTheDocument();
-
-    await user.click(toggleButton);
-    await expect(
-      canvas.queryByRole("link", { name: /Donate/i }),
-    ).not.toBeInTheDocument();
-  },
+  tags: ["test"],
   decorators: [
     (Story) => (
       <div>
@@ -250,4 +232,19 @@ export const ToggleMenu = meta.story({
       </div>
     ),
   ],
+  play: async ({ canvas, userEvent }) => {
+    const toggleButton = await canvas.findByRole("button", {
+      name: /Get Involved/i,
+    });
+
+    await userEvent.click(toggleButton);
+    await expect(
+      canvas.getByRole("region", { name: /Extended navigation/i }),
+    ).toBeInTheDocument();
+
+    await userEvent.click(toggleButton);
+    await expect(
+      canvas.queryByRole("region", { name: /Extended navigation/i }),
+    ).not.toBeInTheDocument();
+  },
 });

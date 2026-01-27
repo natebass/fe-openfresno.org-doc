@@ -9,6 +9,9 @@ export default defineMain({
     "@storybook/addon-vitest",
   ],
   staticDirs: ["../public"],
+  tags: {
+    test: { defaultFilterSelection: "exclude" },
+  },
   features: {
     experimentalTestSyntax: true,
   },
