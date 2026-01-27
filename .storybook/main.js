@@ -3,6 +3,12 @@ import getBasePath from "../src/integrations/gh-pages/getBasePath.mjs";
 
 const basePath = getBasePath();
 
+if (typeof window !== "undefined") {
+  window.__NEXT_DATA__ = {
+    basePath: basePath,
+  };
+}
+
 /**
  * The main storybook config file.
  * Inject the basePath into Storybook's environment variables and tell Vite to use the base path for assets.
