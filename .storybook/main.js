@@ -6,6 +6,8 @@ const basePath = getBasePath();
 /**
  * The main storybook config file.
  * Inject the basePath into Storybook's environment variables and tell Vite to use the base path for assets.
+ * Mock the Next.js internal state so <Image /> knows the prefix.
+ * Ensure it looks like "/repo-name/" not "/repo-name".
  */
 export default defineMain({
   framework: "@storybook/nextjs-vite",
@@ -31,7 +33,7 @@ export default defineMain({
   }),
   viteFinal: async (config) => {
     if (process.env.GITHUB_ACTIONS === "true") {
-      config.base = `${basePath}/`;
+      config.base = basePath.endsWith('/') ? basePath : `${basePath}/`;
     }
     return config;
   },
