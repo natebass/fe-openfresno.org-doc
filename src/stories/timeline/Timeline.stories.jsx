@@ -1,4 +1,3 @@
- 
 import preview from "#.storybook/preview";
 import Timeline from "../../components/ui/timeline/Timeline";
 

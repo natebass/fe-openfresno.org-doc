@@ -121,10 +121,11 @@ import Link from "next/link";
 <div className="sb-container">
   ## Format
 
-  npm i -D prettier prettier-plugin-tailwindcss prettier-plugin-css-order @trivago/prettier-plugin-sort-imports
+npm i -D prettier prettier-plugin-tailwindcss prettier-plugin-css-order @trivago/prettier-plugin-sort-imports
 
-  "format": "prettier --write .",
-  "format:check": "prettier --check .",
+"format": "prettier --write .",
+"format:check": "prettier --check .",
+
   <Source
     language="json"
     code={`{
@@ -148,10 +149,11 @@ import Link from "next/link";
 <div className="sb-container">
   ## Lint
 
-  pnpm i -D eslint eslint-config-next eslint-config-prettier eslint-plugin-mdx eslint-plugin-react
+pnpm i -D eslint eslint-config-next eslint-config-prettier eslint-plugin-mdx eslint-plugin-react
 
-  "lint": "eslint .",
-  "lint:fix": "eslint . --fix",
+"lint": "eslint .",
+"lint:fix": "eslint . --fix",
+
   <Source
     language="js"
     code={`import nextVitals from "eslint-config-next/core-web-vitals";
@@ -160,63 +162,64 @@ import * as mdx from "eslint-plugin-mdx";
 import reactPlugin from "eslint-plugin-react";
 import { defineConfig } from "eslint/config";
 
-/**
- * ESLint Flat Configuration
- * 1. Inherits Next.js web vitals rules.
- * 2. Enables MDX v2/v3 support via the Remark processor.
- * 3. Configures specific rules for .mdx files and their internal virtual code blocks.
- * 4. Integrates Prettier via eslint-config-prettier to disable conflicting formatting rules.
- * * @type {import("eslint").Linter.Config[]}
- */
-export default defineConfig([
-  ...nextVitals,
-  {
+/\*\*
+
+- ESLint Flat Configuration
+- 1.  Inherits Next.js web vitals rules.
+- 2.  Enables MDX v2/v3 support via the Remark processor.
+- 3.  Configures specific rules for .mdx files and their internal virtual code blocks.
+- 4.  Integrates Prettier via eslint-config-prettier to disable conflicting formatting rules.
+- - @type {import("eslint").Linter.Config[]}
+    _/
+    export default defineConfig([
+    ...nextVitals,
+    {
     ignores: [
-      "storybook-static/",
-      "src/app/",
-      "src/components/",
-      "src/utility/",
+    "storybook-static/",
+    "src/app/",
+    "src/components/",
+    "src/utility/",
     ],
-  },
-  {
+    },
+    {
     ...mdx.flat,
     processor: mdx.processors.remark,
-  },
-  {
-    files: ["**/*.mdx"],
+    },
+    {
+    files: ["\*\*/_.mdx"],
     plugins: {
-      react: reactPlugin,
+    react: reactPlugin,
     },
     languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
+    ecmaVersion: "latest",
+    sourceType: "module",
     },
     rules: {
-      "no-unused-vars": "off",
-      "react/jsx-no-undef": "error",
-      "react/react-in-jsx-scope": "off",
+    "no-unused-vars": "off",
+    "react/jsx-no-undef": "error",
+    "react/react-in-jsx-scope": "off",
     },
-  },
-  {
+    },
+    {
     files: ["**/*.mdx/**"],
     rules: {
-      "no-var": "error",
-      "prefer-const": "error",
-      "no-console": "warn",
+    "no-var": "error",
+    "prefer-const": "error",
+    "no-console": "warn",
     },
-  },
-  {
+    },
+    {
     files: ["**/*.stories.{js,jsx,ts,tsx}"],
     rules: {
-      "no-unused-vars": "off",
-      "import/no-anonymous-default-export": "off",
+    "no-unused-vars": "off",
+    "import/no-anonymous-default-export": "off",
     },
-  },
-  prettierConfig,
-]);
-`}
-  />
-</div>
+    },
+    prettierConfig,
+    ]);
+    `}
+    />
+    </div>
 
 <div className="sb-container">
   ## Test
@@ -226,22 +229,21 @@ export default defineConfig([
     code={`import path from "node:path";
 import { defineConfig } from "vitest/config";
 
-/** @type {import('vitest/config').UserConfig} */
+/\*_ @type {import('vitest/config').UserConfig} _/
 export default defineConfig({
-  resolve: {
-    alias: {
-      "@": path.resolve(import.meta.dirname, "./src"),
-    },
-  },
-  test: {
-    coverage: { provider: "v8" },
-  },
+resolve: {
+alias: {
+"@": path.resolve(import.meta.dirname, "./src"),
+},
+},
+test: {
+coverage: { provider: "v8" },
+},
 });
 `}
-  />
+/>
+
 </div>
-
-
 
 <style>
   {`

@@ -6,9 +6,7 @@ export default function HomeNumbered2(className) {
     <div className={`timeline ${className}`}>
       <div className="mt-10 ps-8 pb-10 md:hidden">
         <h1 className="heading-main app-color--dark">Opportunities</h1>
-        <h2 className="h4-semi-bold mt-2.5">
-          Explore Our Volunteer Options
-        </h2>
+        <h2 className="h4-semi-bold mt-2.5">Explore Our Volunteer Options</h2>
       </div>
       <div className="timeline-item">
         <div className="timeline-blue-circle">1</div>

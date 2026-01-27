@@ -14,4 +14,3 @@ test("AppFooter", () => {
     screen.getByRole("heading", { level: 2, name: /Get Involved/i }),
   ).toBeDefined();
 });
-

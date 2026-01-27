@@ -4,7 +4,9 @@ import { vi } from "vitest";
 
 // Mock next/image to avoid jsdom hanging
 vi.mock("next/image", () => ({
-  default: ({ src, alt, ...props }) => <img src={src?.src || src} alt={alt} {...props} />,
+  default: ({ src, alt, ...props }) => (
+    <img src={src?.src || src} alt={alt} {...props} />
+  ),
 }));
 
 // Mock next/link to avoid router issues
