@@ -1,5 +1,5 @@
 import { defineMain } from "@storybook/nextjs-vite/node";
-import getBasePath from "@/integrations/gh-pages/getBasePath.mjs";
+import getBasePath from "../src/integrations/gh-pages/getBasePath.mjs";
 
 const basePath = getBasePath();
 
