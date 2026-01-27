@@ -1,10 +1,14 @@
-import meta from "./Timeline.stories";
-import { Meta } from "@storybook/addon-docs/blocks";
+import preview from "#.storybook/preview.js";
+import Timeline from "../components/ui/timeline/Timeline.jsx";
 
-<Meta of={meta} />
-
-# Timeline
-
+const meta = preview.meta({
+  title: "Components/Timeline",
+  component: Timeline,
+  parameters: {
+    layout: "fullscreen",
+    docs: {
+      description: {
+        component: `
 A responsive, multistep timeline component for displaying a list of opportunities. This component renders a vertical timeline that transitions from a single-column layout on mobile to an alternating two-column layout on desktop. The styling and layout logic are fully described in the associated CSS file's comments.
 
 ### Experimental Features ⚠️
@@ -15,9 +19,9 @@ This effect uses CSS scroll-driven animations. **It is not supported by older br
 
 ## Props
 
-- **props \{object\}** - All properties.
+- **props \\{object\\}** - All properties.
   <br />
-- **className \{string\}** - Optional CSS classes to apply to the root div element.
+- **className \\{string\\}** - Optional CSS classes to apply to the root div element.
   <br />
 
 # Timeline Item
@@ -30,25 +34,25 @@ CSS file's comments.
 
 ## Props
 
-- **props \{object\}** – All properties. <br />
+- **props \\{object\\}** – All properties. <br />
 
-- **number \{integer\}** – The number to display. <br />
+- **number \\{integer\\}** – The number to display. <br />
 
-- **heading \{string\}** – The heading text to display. <br />
+- **heading \\{string\\}** – The heading text to display. <br />
 
-- **buttons \{SimpleButton[]\}** – A list of buttons to display, with adaptive rendering for single buttons and pairs of buttons. <br />
+- **buttons \\{SimpleButton[]\\}** – A list of buttons to display, with adaptive rendering for single buttons and pairs of buttons. <br />
 
-- **updateTimelineNumbers \{(number: integer, boundingRect: DOMRect) => null \}** – A callback function from the parent to get the position of the timeline number for animation purposes. <br />
+- **updateTimelineNumbers \\{(number: integer, boundingRect: DOMRect) => null \\}** – A callback function from the parent to get the position of the timeline number for animation purposes. <br />
 
-- **sectionType \{SectionType\}** – The SectionType to modify display styling. <br />
+- **sectionType \\{SectionType\\}** – The SectionType to modify display styling. <br />
 
-- **children \{JSX.Element\}** – The text to display within the timeline column. Inserted using `<TimelineItem ...props> ...children</TimelineItem>`. <br />
+- **children \\{JSX.Element\\}** – The text to display within the timeline column. Inserted using \`<TimelineItem ...props> ...children</TimelineItem>\`. <br />
 
 # Responsive Timeline Layout Specification
 
 This needs to be updated.
 
-This document details the structure and CSS methodology for creating a mobile-first, responsive vertical timeline. The layout adjusts significantly based on the viewport width (at the `768px` breakpoint).
+This document details the structure and CSS methodology for creating a mobile-first, responsive vertical timeline. The layout adjusts significantly based on the viewport width (at the \`768px\` breakpoint).
 
 ## Mobile Layout (≤768px)
 
@@ -118,7 +122,7 @@ On mobile devices, the timeline collapses into a single-column stack. All conten
 
 ### CSS Flex Orientation
 
-- The `.timeline-item` container is **column-oriented**.
+- The \`.timeline-item\` container is **column-oriented**.
 
 - All items stack vertically, and the alternating (odd/even) alignment is not applicable.
 
@@ -179,13 +183,13 @@ On desktop viewports, the vertical line moves to the center, and content alterna
 
 ### Item Alternation Logic
 
-The `.timeline-item` container is **row-oriented** and uses flex justification to position content blocks:
+The \`.timeline-item\` container is **row-oriented** and uses flex justification to position content blocks:
 
-- **Odd Items:** Content is placed on the **right side** of the line (use `justify-content: flex-end` on the container).
+- **Odd Items:** Content is placed on the **right side** of the line (use \`justify-content: flex-end\` on the container).
 
-- **Even Items:** Content is placed on the **left side** of the line (use `justify-content: flex-start` on the container).
+- **Even Items:** Content is placed on the **left side** of the line (use \`justify-content: flex-start\` on the container).
 
-- The `.timeline-number` (`5rem` circle) sits near the center line, using margins to align correctly on both sides.
+- The \`.timeline-number\` (\`5rem\` circle) sits near the center line, using margins to align correctly on both sides.
 
 ## Key CSS Selectors and Counter Logic
 
@@ -247,24 +251,41 @@ The item numbering (#1,#2, …) is handled using CSS counters:
 
 1. **Initialize the Counter (on the parent container):**
 
-```
+\`\`\`
 .timeline {
   counter-reset: timeline-counter;
 }
-```
+\`\`\`
 
 2. **Increment the Counter (on each item):**
 
-```
+\`\`\`
 .timeline-item {
   counter-increment: timeline-counter;
 }
-```
+\`\`\`
 
 3. **Apply Content Width Calculation (Desktop):**
 
-```
+\`\`\`
 .timeline-item-content {
-  width: calc(50\% - 128px); /* 128px leaves room for the number circle + margins */
+  width: calc(50\\% - 128px); /* 128px leaves room for the number circle + margins */
 }
-```
+\`\`\`
+        `,
+      },
+    },
+  },
+});
+
+export default meta;
+
+export const Default = meta.story({
+  decorators: [
+    (Story) => (
+      <div>
+        <Story />
+      </div>
+    ),
+  ],
+});

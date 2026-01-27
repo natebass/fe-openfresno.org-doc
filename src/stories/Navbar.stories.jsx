@@ -1,5 +1,5 @@
-import preview from "#.storybook/preview";
-import NavbarE7e from "../../components/layout/NavbarE7e";
+import preview from "#.storybook/preview.js";
+import NavbarE7e from "../components/layout/NavbarE7e.jsx";
 import { expect } from "storybook/test";
 
 const meta = preview.meta({
@@ -10,24 +10,36 @@ const meta = preview.meta({
     docs: {
       description: {
         component: `
-# Navigation Bar Component
+The default navigation bar for the application. It includes an extended menu that expands to show more text underneath the navbar.
 
-The Navigation Bar component for the Open Fresno website features an optional fade effect that uses modern CSS scroll-driven animations.
+### Experimental Features ⚠️
 
-## Fade Effect Implementation
+**Fade on Scroll:**
 
-The navbar fade effect is implemented using **CSS Scroll-Driven Animations**, a modern native CSS feature that allows animations to be controlled by scroll progress rather than time.
+This effect uses CSS scroll-driven animations. **It is not supported by older browsers** (e.g., Chrome < 115, Firefox, Safari). On unsupported platforms, it functions the same as if fade were set to false.
 
-### Browser Support ⚠️
+**Sliding Underline:**
 
-**Currently only works reliably in Chrome/Edge browsers.** Other browsers have limited or no support:
+The desktop links have a sliding underline animation when the page navigates.
 
-- ✅ **Chrome/Edge 115+**: Full support
-- ⚠️ **Safari 26.0+**: Recently added support
-- ❌ **Firefox**: Still behind a flag (as of v146)
-- ❌ **Older browsers**: No support
+## Props
 
-For the latest browser support, see [Can I Use](https://caniuse.com/mdn-css_properties_animation-timeline_scroll).
+- fade \\{boolean\\} - Whether to enable the fade effect on scroll.
+  <br />
+
+# ExtendedNavBar
+
+A responsive component that extends the main application navbar with additional navigation menus.
+
+Features:
+
+- Mobile View: Toggles between two distinct navigation menus.
+- Desktop View: Displays multiple sections with descriptive text and call-to-action links.
+
+## Props
+
+- className \\{string\\} - Optional additional CSS class names applied to the root container for layout or styling overrides.
+- Returns - A responsive extended navbar with mobile toggle menus and desktop sections containing navigation links and descriptions.
 
 ### How CSS Scroll-Driven Animations Work
 
