@@ -5,6 +5,8 @@ const meta = preview.meta({
   title: "Components/Timeline",
   component: Timeline,
   parameters: {
+    componentSubtitle:
+      "Responsive vertical timeline for displaying opportunities",
     layout: "fullscreen",
     docs: {
       description: {

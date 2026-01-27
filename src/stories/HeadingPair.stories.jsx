@@ -6,10 +6,12 @@ import { titleCase } from "@/utility/string.js";
 const meta = preview.meta({
   title: "Components/HeadingPair",
   component: HeadingPair,
-  docs: {
-    description: {
-      component: `
-      A simple reusable element, for displaying a heading, subheading pair
+  parameters: {
+    componentSubtitle: "Reusable heading and subheading display component",
+    docs: {
+      description: {
+        component: `
+A simple reusable element, for displaying a heading, subheading pair
 
 ## Props
 
@@ -32,8 +34,8 @@ A heading pair with a dark color pallet.
 \`\`\`
 <HeadingPair heading="Heading" subHeading="Sub Heading" sectionType={SectionType.dark}/>
 \`\`\`
-
-      `,
+        `,
+      },
     },
   },
 });

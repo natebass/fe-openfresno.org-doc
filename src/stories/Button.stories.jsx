@@ -10,10 +10,13 @@ const meta = preview.meta({
   title: "Components/Button",
   component: BaseButton,
   args: { onClick: fn() },
-  docs: {
-    description: {
-      component: `
-      A flexible, multipurpose component for rendering a styled button or link.
+  parameters: {
+    componentSubtitle:
+      "Flexible button and link component with multiple style variants",
+    docs: {
+      description: {
+        component: `
+A flexible, multipurpose component for rendering a styled button or link.
 
 This component acts as a smart wrapper, rendering either a Next.js \`<Link>\` or a native \`<button>\` element based on whether the \`href\` prop is provided.
 
@@ -51,7 +54,8 @@ A button with the alternate styles.
   Submit
 </Button>
 \`\`\`
-      `,
+        `,
+      },
     },
   },
 });

@@ -5,10 +5,12 @@ import { titleCase } from "@/utility/string.js";
 const meta = preview.meta({
   title: "Components/PageContainer",
   component: PageContainer,
-  docs: {
-    description: {
-      component: `
-      A flexible, multipurpose component for rendering a section. The element spans the width of its container with a
+  parameters: {
+    componentSubtitle: "Themed content container with flexible layout options",
+    docs: {
+      description: {
+        component: `
+A flexible, multipurpose component for rendering a section. The element spans the width of its container with a
 background color based upon the provided SectionType, defaulting to a light background with dark text. Child elements
 are padded within the Page Container to match the design style.
 
@@ -56,6 +58,7 @@ A page container with no padding.
 <PageContainer noPadding>Learn More</PageContainer>
 \`\`\`
 `,
+      },
     },
   },
 });

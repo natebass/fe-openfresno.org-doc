@@ -5,20 +5,12 @@ import { titleCase } from "@/utility/string.js";
 const meta = preview.meta({
   title: "Components/GeneralSection",
   component: GeneralSection,
-});
-
-export default meta;
-
-export const Default = meta.story({
-  args: {
-    sectionType: "dark",
-    children: "[Displayed Elements Here]",
-    heading: "Heading",
-    subHeading: "Sub Heading",
+  parameters: {
+    componentSubtitle: "Full-width themed section with heading and content",
     docs: {
       description: {
-        story: `
-        A flexible, multipurpose component for rendering a section. The element spans the width of its container with a
+        component: `
+A flexible, multipurpose component for rendering a section. The element spans the width of its container with a
 background color based upon the provided SectionType, defaulting to a light background with dark text. Child elements
 are padded within the Page Container to match the design style.
 
@@ -28,10 +20,10 @@ of the element, and "divClassName" for layout, with a default display mode of fl
 
 ## Props
 
-- heading \{string\} - The heading to display.
-- subHeading \{JSX.Element\} - The subheading to display. Can be a string or a React element.
-- sectionType \{string\} - The SectionType to color the element. Default values is "SectionType.light".
-- children \{JSX.Element\} - The content to be rendered inside the button or link (e.g., text, icons, other components).
+- heading \\{string\\} - The heading to display.
+- subHeading \\{JSX.Element\\} - The subheading to display. Can be a string or a React element.
+- sectionType \\{string\\} - The SectionType to color the element. Default values is "SectionType.light".
+- children \\{JSX.Element\\} - The content to be rendered inside the button or link (e.g., text, icons, other components).
 
 ## Examples
 
@@ -46,10 +38,20 @@ A General Section with a dark color pallet.
 \`\`\`
 <GeneralSection heading="Heading" subHeading="Sub Heading" sectionType={SectionType.dark}>Learn More</GeneralSection>
 \`\`\`
-
         `,
       },
     },
+  },
+});
+
+export default meta;
+
+export const Default = meta.story({
+  args: {
+    sectionType: "dark",
+    children: "[Displayed Elements Here]",
+    heading: "Heading",
+    subHeading: "Sub Heading",
   },
   name: "GeneralSection",
   decorators: [
