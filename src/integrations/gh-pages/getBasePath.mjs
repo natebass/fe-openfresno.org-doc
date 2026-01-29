@@ -29,7 +29,7 @@ export default function getBasePath(
     if (isMainRepo && repositoryCustomDomain) {
       return "";
     } else {
-      return `/${repositoryName.split("/")[1]}`;
+      return `/${process.env.GITHUB_REPOSITORY.split("/")[1]}`;
     }
   } else {
     return "";

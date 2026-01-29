@@ -1,18 +1,20 @@
-import BasePathImage from "@/integrations/gh-pages/BasePathImage";
+import Image from "next/image";
 
 export default function AboutSectionTeamMember({
-  src = "",
+  src,
   name = (Math.random() > 0.5 ? "John" : "Jane") + " Doe",
   title = "",
 }) {
   return (
     <div
-      className={`flex flex-col gap-2 border border-[#eaecf0] w-full mb-6 max-lg:mx-auto `}
+      className={`mb-6 flex w-full flex-col gap-2 border border-[#eaecf0] max-lg:mx-auto`}
     >
-      <BasePathImage
-        className={`aspect-1/1`}
+      <Image
+        className="aspect-1/1 object-cover"
         src={src}
-        alt={`Team Member Name: ${name}`}
+        alt={`Team member: ${name}`}
+        width={300}
+        height={300}
       />
       <div className={`member-info-container`}>
         <div className={`member-name-container`}>

@@ -1,10 +1,8 @@
 import LinedSection from "@/components/ui/LinedSection";
-import { titleCase } from "@/utility/string";
 import { SectionType } from "@/utility/constants/theme";
+import { titleCase } from "@/utility/string";
 
 /**
- *
- * @component
  * @param {object} props
  * @param {object} [props.obj] An object with special properties "title" for titling and "description" to describe the object.
  * @param {string} [props.title] The title to display. Defaults to [obj.title]

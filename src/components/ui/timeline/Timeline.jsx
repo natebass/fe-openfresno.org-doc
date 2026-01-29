@@ -1,20 +1,18 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
 import { SimpleButton, TimelineItem } from "./TimelineItem";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 /**
  * a responsive, multi-step timeline component for displaying a list of opportunities.
  *
  * this component renders a vertical timeline that transitions from a single-column
  * layout on mobile to an alternating two-column layout on desktop. the styling
- * and layout logic are fully described in the associated css file's comments.
- *
- * @component
+ * and layout logic are fully described in the associated CSS file's comments.
  * @param {object} props
- * @param {string} [props.className] optional css classes to apply to the root div element.
+ * @param {string} [props.className] optional CSS classes to apply to the root div element.
  */
 
-export default function Timeline({ className }) {
+export default function Timeline({ className = "" }) {
   const refContainer = useRef();
   const [timelineNumbers, setTimelineNumbers] = useState([]);
   const [clientRect, setClientRect] = useState();
@@ -32,11 +30,12 @@ export default function Timeline({ className }) {
     };
   }, []);
 
-  function updateTimelineNumbers(timelineNumber, bounds) {
+  const updateTimelineNumbers = useCallback((timelineNumber, bounds) => {
     setTimelineNumbers((previousTimelineNumbers) => {
-      if (timelineNumbers[timelineNumber]) {
-        return previousTimelineNumbers.map((_, i) => {
+      if (previousTimelineNumbers[timelineNumber]) {
+        return previousTimelineNumbers.map((item, i) => {
           if (i === timelineNumber) return bounds;
+          return item;
         });
       } else {
         let copy = [...previousTimelineNumbers];
@@ -44,7 +43,7 @@ export default function Timeline({ className }) {
         return copy;
       }
     });
-  }
+  }, []);
 
   return (
     <div className={`timeline ${className}`} ref={refContainer}>
@@ -100,7 +99,7 @@ export default function Timeline({ className }) {
         Discover Root Access on Van Ness Ave in the Tower District, just a block
         south of Fresno City College. From advanced 3D printers and a cozy
         lounge to laser cutting, workshops, and an electronics haven,{" "}
-        <b>explore what awaits you at our partner's space!</b>
+        <b>explore what awaits you at our partner&apos;s space!</b>
       </TimelineItem>
       <style>
         {((_timelineNumbers, _clientRect) => {

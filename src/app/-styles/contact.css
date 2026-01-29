@@ -1,0 +1,214 @@
+/* Contact form styles - MUI-like appearance using CSS variables */
+
+.form-field {
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-field-half {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .form-field-half {
+    width: 45%;
+  }
+
+  .form-field-half:first-child {
+    margin-right: 10%;
+  }
+}
+
+.form-label {
+  position: absolute;
+  top: -0.5rem;
+  left: 0;
+  transition: all 0.2s ease;
+  pointer-events: none;
+  color: var(--neutral-50);
+  font-size: 0.75rem;
+}
+
+.form-input-field {
+  transition: border-color 0.2s ease;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--neutral-50);
+  background: transparent;
+  padding: 1rem 0 0.5rem 0;
+  width: 100%;
+  color: var(--neutral-50);
+  font-size: 1rem;
+}
+
+.form-textarea {
+  min-height: 2rem;
+  resize: vertical;
+}
+
+/* Outlined form controls (MUI-like) */
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.form-control-label {
+  margin-bottom: 0.25rem;
+  color: var(--neutral-600);
+  font-size: 0.875rem;
+}
+
+.form-outlined-input {
+  display: flex;
+  align-items: center;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  outline: none;
+  border: 1px solid var(--neutral-300);
+  border-radius: 4px;
+  background: var(--neutral-50);
+  padding: 0.875rem 0.875rem;
+  width: 100%;
+  color: var(--neutral-900);
+  font-size: 1rem;
+}
+
+.form-outlined-input:focus,
+.form-outlined-input:focus-within {
+  box-shadow: 0 0 0 2px rgba(0, 52, 174, 0.1);
+  border-color: var(--primary-600);
+}
+
+.form-outlined-input::placeholder {
+  color: var(--neutral-400);
+}
+
+.form-search-wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+
+.form-search-wrapper .form-outlined-input {
+  padding-right: 3rem;
+}
+
+.form-search-btn {
+  display: flex;
+  position: absolute;
+  right: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  padding: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.form-search-btn:hover {
+  background: var(--neutral-100);
+}
+
+.form-select {
+  appearance: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid var(--neutral-300);
+  border-radius: 4px;
+  background: var(--neutral-50)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2372727e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")
+    no-repeat right 0.75rem center;
+  background-size: 1rem;
+  padding: 0.875rem 2.5rem 0.875rem 0.875rem;
+  width: 100%;
+  color: var(--neutral-900);
+  font-size: 1rem;
+}
+
+.form-select:focus {
+  box-shadow: 0 0 0 2px rgba(0, 52, 174, 0.1);
+  border-color: var(--primary-600);
+}
+
+.form-helper-text {
+  margin-top: 0.25rem;
+  color: var(--neutral-500);
+  font-size: 0.75rem;
+}
+
+/* Dialog styles (MUI-like) */
+.dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  box-shadow:
+    0 11px 15px -7px rgba(0, 0, 0, 0.2),
+    0 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0 9px 46px 8px rgba(0, 0, 0, 0.12);
+  border: none;
+  border-radius: 4px;
+  background: var(--neutral-50);
+  padding: 0;
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.dialog[open] {
+  display: block;
+}
+
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--neutral-200);
+  padding: 1rem;
+}
+
+.dialog-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.dialog-close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  color: var(--neutral-500);
+}
+
+.dialog-close-btn:hover {
+  background: var(--neutral-100);
+}
+
+.dialog-content {
+  padding: 1rem;
+}

@@ -1,20 +1,28 @@
-import BasePathImage from "@/integrations/gh-pages/BasePathImage";
+import Image from "next/image";
 
 export default function CenteredInImage({
-  src = "/img/about/rectangle.png",
+  src,
   alt = "rectangle",
   float = "left",
+  width = 400,
+  height = 300,
   children = <></>,
 }) {
   return (
     <div
-      className={`w-fit relative ${float === "center" ? "mx-auto" : `float-${float}`}`}
+      className={`relative w-fit ${float === "center" ? "mx-auto" : `float-${float}`}`}
     >
-      <BasePathImage src={src} alt={alt} />
+      <Image
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className="object-cover"
+      />
       {/*used to place the text over the image*/}
-      <div className={`w-full h-full absolute bottom-0`}>
+      <div className={`absolute bottom-0 h-full w-full`}>
         {/*used to vertically center the text over the image*/}
-        <div className={`w-full h-full flex justify-center items-center `}>
+        <div className={`flex h-full w-full items-center justify-center`}>
           {/*used to horizontally center the text over the image*/}
           {children}
         </div>

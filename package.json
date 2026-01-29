@@ -1,22 +1,40 @@
 {
   "name": "fe-openfresno.org-doc",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Storybook documentation for the Open Fresno website.",
+  "type": "module",
   "private": false,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "lint": "eslint .",
+    "build": "next build",
+    "build:storybook": "storybook build",
     "test": "vitest",
+    "test:unit": "vitest --project=unit",
+    "test:sb": "vitest --project=storybook",
+    "test:ui": "vitest --ui",
+    "test:debug": "playwright test --project=chromium --headed --debug",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook:ci": "storybook dev --no-open -p 6006",
+    "storybook:doctor": "storybook doctor --package-manager pnpm"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/openfresno/fe-openfresno.org-doc.git"
   },
-  "keywords": [],
+  "keywords": [
+    "documentation",
+    "nextjs",
+    "storybook",
+    "tailwind",
+    "playwright",
+    "vitest",
+    "meetup",
+    "civic",
+    "nextjs",
+    "california",
+    "fresno"
+  ],
   "author": {
     "name": "Open Fresno",
     "email": "hello@openfresno.org",
@@ -28,38 +46,41 @@
   },
   "homepage": "https://github.com/openfresno/fe-openfresno.org-doc#readme",
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.1",
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
-    "@mui/material": "^7.3.5",
-    "@next/mdx": "^16.0.3",
+    "@next/mdx": "^16.1.6",
     "@types/mdx": "^2.0.13",
     "keen-slider": "^6.8.6",
     "moment": "^2.30.1",
-    "next": "^16.0.3",
+    "next": "^16.1.6",
     "next-mdx-remote": "^5.0.0",
-    "prop-types": "^15.8.1",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "swr": "^2.3.6",
-    "yaml": "^2.8.1"
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "swr": "^2.3.8",
+    "yaml": "^2.8.2"
   },
   "devDependencies": {
-    "@chromatic-com/storybook": "^4.1.2",
-    "@storybook/addon-a11y": "^10.0.7",
-    "@storybook/addon-docs": "^10.0.7",
-    "@storybook/addon-vitest": "^10.0.7",
-    "@storybook/nextjs-vite": "^10.0.7",
-    "@tailwindcss/postcss": "^4.1.17",
+    "@playwright/test": "^1.58.0",
+    "@storybook/addon-a11y": "^10.2.1",
+    "@storybook/addon-docs": "^10.2.1",
+    "@storybook/addon-vitest": "^10.2.1",
+    "@storybook/nextjs-vite": "^10.2.1",
+    "@tailwindcss/postcss": "^4.1.18",
     "@tailwindcss/typography": "^0.5.19",
-    "@vitest/browser-playwright": "^4.0.8",
-    "@vitest/coverage-v8": "^4.0.8",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@vitest/browser-playwright": "^4.0.18",
+    "@vitest/coverage-v8": "^4.0.18",
     "babel-plugin-react-compiler": "1.0.0",
-    "playwright": "^1.56.1",
-    "storybook": "^10.0.7",
-    "tailwindcss": "^4.1.17",
-    "vitest": "^4.0.8"
+    "jsdom": "^27.4.0",
+    "playwright": "^1.58.0",
+    "storybook": "^10.2.1",
+    "tailwindcss": "^4.1.18",
+    "vitest": "^4.0.18"
   },
-  "packageManager": "pnpm@10.22.0"
+  "packageManager": "pnpm@10.28.2",
+  "imports": {
+    "#.storybook/*": "./.storybook/*"
+  }
 }

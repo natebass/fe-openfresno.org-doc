@@ -1,5 +1,8 @@
+import facebookIcon from "@/../public/img/socialmedia/facebook.svg";
+import twitterIcon from "@/../public/img/socialmedia/twitter.svg";
+import youtubeIcon from "@/../public/img/socialmedia/youtube.svg";
+import Image from "next/image";
 import Link from "next/link";
-import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
 /**
  * The default footer for the application.
@@ -20,10 +23,10 @@ export default function FooterE4d() {
             Open Fresno is a tax-deductible civic-tech community dedicated to
             using technology and open data for positive civic change in Fresno.
             Open Fresno is fiscally sponsored by{" "}
-            <Link href="https://www.dbaarts.org/">DBA Arts</Link>.
+            <Link href="https://rootaccess.org/">Root Access</Link>.
           </p>
         </section>
-        <section className="grid auto-rows-min gap-y-8">
+        <section className="grid auto-rows-min gap-y-8 md:pl-8">
           <p>
             Join us for our weekly meetings on{" "}
             <Link
@@ -58,11 +61,12 @@ export default function FooterE4d() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BasePathImage
-              src="/img/socialmedia/facebook.svg"
+            <Image
+              src={facebookIcon}
               alt="Facebook"
               width={46}
               height={46}
+              className="object-cover"
             />
           </Link>
           <Link
@@ -70,11 +74,12 @@ export default function FooterE4d() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BasePathImage
-              src="/img/socialmedia/twitter.svg"
+            <Image
+              src={twitterIcon}
               alt="X"
               width={46}
               height={46}
+              className="object-cover"
             />
           </Link>
           <Link
@@ -82,11 +87,12 @@ export default function FooterE4d() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <BasePathImage
-              src="/img/socialmedia/youtube.svg"
+            <Image
+              src={youtubeIcon}
               alt="Youtube"
               width={46}
               height={46}
+              className="object-cover"
             />
           </Link>
         </section>

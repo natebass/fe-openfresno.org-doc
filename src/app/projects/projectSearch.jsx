@@ -1,15 +1,6 @@
-import {
-  FormHelperText,
-  IconButton,
-  InputAdornment,
-  InputLabel,
-  MenuItem,
-  OutlinedInput,
-  Select,
-} from "@mui/material";
-
+import searchIcon from "@/../public/img/form-element/search.svg";
+import Image from "next/image";
 import Link from "next/link";
-import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 import { useState } from "react";
 
 /**
@@ -24,7 +15,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
   const [ascending, setAscending] = useState(true);
 
   /**
-   * Allows for easily accessing any level of a nested objects.
+   * Allows for easily accessing any level of a nested object.
    * Usage: data.meta.obj1.obj2 is accessed with browseObject(data, ["meta", "obj1", "obj2"])
    *  or, the intended use for this function, is browseObject(data, selectInput.split(,))
    * @param {object} [obj] The object to browse.
@@ -100,7 +91,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
   };
 
   const handleSortClick = (e) => {
-    if (e.target.dataset.value === sortBy) {
+    if (e.target.value === sortBy) {
       updateProjectsData(search, filter, sortBy, !ascending);
       setAscending(!ascending);
     }
@@ -108,82 +99,91 @@ const ProjectSearch = ({ data, setProjectsData }) => {
 
   return (
     <section
-      className={`mx-auto max-w-[calc(var(--screen-xxl)_+_80px)] mb-8 px-4 lg:px-8`}
+      className={`mx-auto mb-4 max-w-[calc(var(--screen-xxl)+80px)] px-4 lg:px-8`}
     >
       <form
-        className={`w-full flex flex-col lg:flex-row gap-4 lg:gap-8`}
+        className={`flex w-full flex-col gap-4 lg:flex-row lg:gap-8`}
         action={() => {}}
       >
-        <div className={`max-lg:w-full grow-3 basis-0`}>
-          <InputLabel
+        <div className={`form-control grow-3 basis-0 max-lg:w-full`}>
+          <label
             id="project-search-label"
-            className="min-w-px min-h-[1.4375em]"
+            htmlFor="project-search"
+            className="form-control-label min-h-7 min-w-px"
           >
             {" "}
-          </InputLabel>
-          <OutlinedInput
-            className={`w-full`}
-            name="project-search"
-            type="search"
-            placeholder="Search"
-            value={search}
-            onChange={handleChange}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="search"
-                  type="submit"
-                  onClick={() => {}}
-                >
-                  <BasePathImage
-                    src="/img/form-element/search.svg"
-                    alt="Search icon."
-                  />
-                </IconButton>
-              </InputAdornment>
-            }
-          />
-          <Link href="" className="relative inline-block -left-7"></Link>
+          </label>
+          <div className="form-search-wrapper">
+            <input
+              id="project-search"
+              className="form-outlined-input"
+              name="project-search"
+              type="search"
+              placeholder="Search"
+              value={search}
+              onChange={handleChange}
+            />
+            <button
+              className="form-search-btn"
+              aria-label="search"
+              type="submit"
+              onClick={(e) => e.preventDefault()}
+            >
+              <Image
+                src={searchIcon}
+                alt="Search icon"
+                width={24}
+                height={24}
+                className="object-cover"
+              />
+            </button>
+          </div>
+          <Link href="" className="relative -left-7 inline-block"></Link>
         </div>
-        <div className={`max-lg:w-full form-row grow-1 basis-0`}>
-          <InputLabel id="project-filter-label">Filter</InputLabel>
-          <Select
-            variant="outlined"
-            className="w-full"
+        <div className={`form-control grow basis-0 max-lg:w-full`}>
+          <label
+            id="project-filter-label"
+            htmlFor="project-filter"
+            className="form-control-label"
+          >
+            Filter
+          </label>
+          <select
+            className="form-select"
+            id="project-filter"
             name="project-filter"
-            label="Filter"
             defaultValue="all"
-            native={false}
             onChange={handleChange}
           >
-            <MenuItem value="all">All</MenuItem>
-            <MenuItem value="active">Active</MenuItem>
-          </Select>
+            <option value="all">All</option>
+            <option value="active">Active</option>
+          </select>
         </div>
-        <div className={`max-lg:w-full form-row grow-1 basis-0`}>
-          <InputLabel id="project-sort-by-label">Sort By</InputLabel>
-          <Select
-            variant="outlined"
-            className="w-full"
-            name="project-sort-by"
-            label={"Sort By"}
-            defaultValue="created_at"
-            native={false}
-            onChange={handleChange}
+        <div className={`form-control grow basis-0 max-lg:w-full`}>
+          <label
+            id="project-sort-by-label"
+            htmlFor="project-sort-by"
+            className="form-control-label"
           >
-            <MenuItem value="created_at" onClick={handleSortClick}>
-              Creation Date
-            </MenuItem>
-            <MenuItem value="updated_at" onClick={handleSortClick}>
-              Last Updated
-            </MenuItem>
-            <MenuItem value="meta,title" onClick={handleSortClick}>
-              Name
-            </MenuItem>
-          </Select>
-          <FormHelperText>
+            Sort By
+          </label>
+          <select
+            className="form-select"
+            id="project-sort-by"
+            name="project-sort-by"
+            defaultValue="created_at"
+            onChange={(e) => {
+              handleChange(e);
+              handleSortClick(e);
+            }}
+          >
+            <option value="created_at">Creation Date</option>
+            <option value="updated_at">Last Updated</option>
+            <option value="meta,title">Name</option>
+          </select>
+          <span className="form-helper-text">
             {ascending ? "Ascending" : "Descending"}
-          </FormHelperText>
+          </span>
         </div>
       </form>
     </section>

@@ -1,26 +1,26 @@
-import React from "react";
 import { SectionType } from "@/utility/constants/theme";
+import { forwardRef } from "react";
 
 /**
- *
- * @component
+ * Component for displaying a number in a circle.
  * @param {Object} props
  * @param {number} [props.number] The number to display
  * @param {SectionType} [props.sectionType] The SectionType to modify display styling
+ * @param {React.Ref} ref - Optional ref forwarded to the root element
  * @returns {React.JSX.Element}
- * @constructor
  */
-export default function CircledNumber({
-  number,
-  sectionType = SectionType.light,
-}) {
+const CircledNumber = forwardRef(function CircledNumber(
+  { number, sectionType = SectionType.light },
+  ref,
+) {
   return (
-    <div className="w-[2.5rem] h-[2.5rem] lg:w-[5rem] lg:h-[5rem]">
-      <div
-        className={`circled-number app-color--${SectionType.toColor(sectionType)}`}
-      >
-        {number}
-      </div>
+    <div
+      ref={ref}
+      className={`circled-number app-color--${SectionType.toColor(sectionType)}`}
+    >
+      {number}
     </div>
   );
-}
+});
+
+export default CircledNumber;

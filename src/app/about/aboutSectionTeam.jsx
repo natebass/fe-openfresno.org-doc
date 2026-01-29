@@ -1,8 +1,11 @@
-import { SectionType } from "@/utility/constants/theme";
+import danFey from "@/../public/img/about/dan_fey.jpg";
+import maryFeyNorris from "@/../public/img/about/mary_fey_norris.jpg";
+import nateBass from "@/../public/img/about/nate_bass.jpg";
 import AboutSectionTeamMember from "@/app/about/components/aboutSectionTeamMember";
+import { SectionType } from "@/utility/constants/theme";
 
 /**
- * About team section.
+ * About the team section.
  * @returns {JSX.Element}
  */
 export default function AboutSectionTeam({ sectionType = SectionType.light }) {
@@ -20,7 +23,7 @@ export default function AboutSectionTeam({ sectionType = SectionType.light }) {
               Meet the Heartbeat of Open Fresno
             </h2>
           </div>
-          <p className={`mb-16 team-paragraph`}>
+          <p className={`team-paragraph mb-16`}>
             Open Fresno is powered by a volunteer Core Team that orchestrates
             events, fosters strategic partnerships, and ensures seamless
             communication among cross-functional project teams. Our dedicated
@@ -31,20 +34,20 @@ export default function AboutSectionTeam({ sectionType = SectionType.light }) {
 
         <div className={`team-members-container`}>
           <div
-            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4`}
+            className={`grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4`}
           >
             <AboutSectionTeamMember
-              src={"/img/about/mary_fey_norris.jpg"}
+              src={maryFeyNorris}
               name="Mary Fey Norris"
               title="Executive Director, Open Fresno"
             />
             <AboutSectionTeamMember
-              src={"/img/about/dan_fey.jpg"}
+              src={danFey}
               name="Dan Fey"
               title="Executive Director, Open Fresno"
             />
             <AboutSectionTeamMember
-              src="/img/about/nate_bass.jpg"
+              src={nateBass}
               name="Nate Bass"
               title="Senior Director, Product"
             />

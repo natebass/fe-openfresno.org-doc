@@ -1,79 +1,108 @@
 /*
-  Styles for the extended dropdown menu in the navigation bar.
+  Extended dropdown menu styles for the navigation bar.
   - Mobile view: Toggles between two distinct navigation menus.
-  - Desktop view: Displays multiple sections with descriptive text and
-  call-to-action links.
+  - Desktop view: Displays multiple sections with descriptive text and CTAs.
+
+  BROWSER SUPPORT: Chrome 117+ (uses @starting-style for entry animations)
 */
-.navbar-extended-container {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-top: 1px solid #ebeae5;
-  background: var(--secondary-50);
-  padding: 1.75rem 0 0.75rem 0;
-  width: 100%;
-}
 
-.navbar-extended-mobile-container {
-  gap: 1.75rem;
-  margin: auto;
-  padding: 0 0.5rem;
-  @media (min-width: 992px) {
-    display: none;
+@layer navbar-menu {
+  /* ===== Container ===== */
+  .navbar-extended-container {
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+    border-top: 1px solid #ebeae5;
+    background: var(--secondary-50);
+    padding: 1.75rem 0 0.75rem;
+    width: 100%;
   }
 
-  a {
-    padding: 1rem;
-  }
-}
+  /* ===== Mobile Navigation ===== */
+  .navbar-extended-mobile-container {
+    gap: 1.75rem;
+    margin: auto;
+    padding-inline: 0.5rem;
 
-.navbar-extended-desktop-container {
-  display: none;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 2rem;
-  row-gap: 3rem;
-  margin-top: 1.25rem;
-  margin-bottom: 3rem;
-  height: 100%;
+    @media (min-width: 992px) {
+      display: none;
+    }
 
-  > *:last-child {
-    grid-column: span 2 / span 2;
-  }
+    /* Link styles */
 
-  @media (min-width: 992px) {
-    display: grid;
-  }
-  @media (min-width: 1400px) {
-    grid-template-columns: 18.75rem 18.75rem 18.75rem 1fr;
-    > *:last-child {
-      grid-column: auto;
+    a {
+      display: block;
+      transition: color 150ms ease;
+      padding: 1rem;
+
+      &:hover {
+        color: var(--primary-600, #0066cc);
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--primary-600, #0066cc);
+        outline-offset: 2px;
+        border-radius: 4px;
+      }
     }
   }
-}
 
-.navbar-extended-desktop-section {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  height: 100%;
-}
+  /* ===== Desktop Navigation ===== */
+  .navbar-extended-desktop-container {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4rem;
+    row-gap: 3rem;
+    margin: auto;
+    padding: 1.25rem 1.5rem 1rem 1.5rem;
+    max-width: calc(var(--screen-xxl) + 80px);
+    height: 100%;
 
-.navbar-extended-header {
-  position: relative;
-  cursor: pointer;
-  width: fit-content;
-  max-width: 13.75rem;
-  white-space: nowrap;
+    /* Last item (Quick Links) spans all columns on medium screens to overflow 1-column boundary */
 
-  &::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: var(--main-black);
-    width: 0;
-    height: 2px;
-    content: "";
+    .navbar-extended-quick-links {
+      grid-column: 1 / -1;
+
+      @media (min-width: 992px) and (max-width: 1400px) {
+        display: flex;
+        flex-direction: row;
+        align-items: top;
+        gap: 3rem;
+
+        /* Remove Tailwind's space-y margin when in flex-row */
+        > * {
+          margin-top: 0 !important;
+          max-width: 300px;
+        }
+      }
+    }
+
+    @media (min-width: 992px) {
+      display: grid;
+      padding: 1.25rem 2.5rem 1rem 2.5rem;
+    }
+
+    @media (min-width: 1400px) {
+      grid-template-columns: 18.75rem 18.75rem 18.75rem 1fr;
+
+      .navbar-extended-quick-links {
+        grid-column: auto;
+      }
+    }
   }
 
-  &:hover::after {
-    width: 100%;
+  /* ===== Desktop Section Cards ===== */
+  .navbar-extended-desktop-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    height: 100%;
+  }
+
+  /* Section Header with Hover Underline */
+  .navbar-extended-header {
+    position: relative;
+    cursor: pointer;
+    width: fit-content;
+    max-width: 13.75rem;
+    white-space: nowrap;
   }
 }

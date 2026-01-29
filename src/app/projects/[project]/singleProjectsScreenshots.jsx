@@ -1,41 +1,43 @@
-import { Slider } from "@/components/ui";
-import BasePathImage from "@/integrations/gh-pages/BasePathImage";
+import Slider from "@/components/Slider";
 import SimpleDialog from "@/components/ui/SimpleDialog";
-import { useEffect, useState } from "react";
 import { SectionType } from "@/utility/constants/theme";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function SingleProjectsScreenshots({
   data,
   sectionType = SectionType.light,
 }) {
   const [showDialog, setShowDialog] = useState(false);
-  const [sliderState, setSliderState] = useState(0);
-  const [windowState, setWindowState] = useState(window);
-  useEffect(() => {
-    setWindowState(window);
-  });
+  const [startingSlide, setStartingSlide] = useState(0);
   let shownImages = data.meta.screenshots.map((screenshot, i) => (
-    <BasePathImage
+    <Image
       key={data.full_name.concat(screenshot)}
       onClick={() => {
-        if (windowState && windowState.innerWidth > 992 && !showDialog) {
+        if (
+          typeof window !== "undefined" &&
+          window.innerWidth > 992 &&
+          !showDialog
+        ) {
           setShowDialog(true);
-          setSliderState(i);
+          setStartingSlide(i);
         }
       }}
-      className={`keen-slider__slide aspect-7/4 sharpen @container ${showDialog ? "" : "lg:cursor-pointer"}`}
-      imgClassName={`@max-lg:border @max-lg:rounded-xl`}
+      className={`keen-slider__slide sharpen @container aspect-7/4 @max-lg:border @max-lg:rounded-xl object-cover ${showDialog ? "" : "lg:cursor-pointer"}`}
       src={`https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/screenshots/${screenshot}`}
+      alt={`${data.meta.title} screenshot ${i + 1}`}
+      width={700}
+      height={400}
     />
   ));
   for (let i = shownImages.length; i < 6; i++) {
     shownImages.push(
       <div
-        className={`keen-slider__slide aspect-7/4 @container`}
+        className={`keen-slider__slide @container aspect-7/4`}
         key={data.full_name + i}
       >
         <div
-          className={`size-full bg-neutral-400 @max-lg:border @max-lg:rounded-xl`}
+          className={`size-full bg-neutral-400 @max-lg:rounded-xl @max-lg:border`}
         />
       </div>,
     );
@@ -66,10 +68,7 @@ export default function SingleProjectsScreenshots({
           fullWidth={true}
           maxWidth={"lg"}
         >
-          <Slider
-            className={"w-full aspect-7/4"}
-            sliderState={[sliderState, setSliderState]}
-          >
+          <Slider className={"aspect-7/4 w-full"} startingSlide={startingSlide}>
             {shownImages}
           </Slider>
         </SimpleDialog>

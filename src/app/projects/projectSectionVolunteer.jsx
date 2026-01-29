@@ -1,8 +1,9 @@
+import rectangleImage from "@/../public/img/about/rectangle.png";
+import Image from "next/image";
 import Link from "next/link";
-import BasePathImage from "@/integrations/gh-pages/BasePathImage";
 
 /**
- * Instructions for project page.
+ * Instructions for the project page.
  * Not implemented yet. Styles are only available for mobile on Figma.
  * @returns {JSX.Element}
  */
@@ -23,10 +24,12 @@ export default function projectSectionVolunteer() {
         </p>
       </div>
       <div className={`project-volunteer-image-container`}>
-        <BasePathImage
-          className={`project-volunteer-image`}
-          src="/img/about/rectangle.png"
-          alt="rectangle"
+        <Image
+          className="project-volunteer-image object-cover"
+          src={rectangleImage}
+          alt="Volunteer with Open Fresno"
+          width={400}
+          height={300}
         />
         <p className={`project-volunteer-anchor`}>
           Not a volunteer yet?

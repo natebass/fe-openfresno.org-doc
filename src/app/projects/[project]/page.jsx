@@ -1,6 +1,6 @@
-import { githubOwner } from "@/utility/constants/app-data";
 import SingleProject from "./singleProject";
 import LayoutE53 from "@/components/layout/LayoutE53";
+import { githubOwner } from "@/utility/constants/app-data";
 import { SectionType } from "@/utility/constants/theme";
 
 // See https://nextjs.org/docs/app/api-reference/functions/generate-static-params

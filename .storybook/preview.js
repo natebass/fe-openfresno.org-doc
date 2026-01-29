@@ -1,0 +1,45 @@
+import "../src/app/global.css";
+import addonA11y from "@storybook/addon-a11y";
+import addonDocs from "@storybook/addon-docs";
+import { definePreview } from "@storybook/nextjs-vite";
+import DocsTemplate from "./DocsTemplate.jsx";
+
+/**
+ * Use the control sort parameter 'alpha' to sort Args/Controls table in the Docs and Controls panels alphabetically by the control name.
+ * Since we are not using TypeScript, Storybook can't infer prop order from the TS interface.
+ * Other options are the default 'none' or 'requiredFirst'.
+ * a11y options are
+ * - 'todo' - show a11y violations in the test UI only.
+ * - 'error' - fail CI on a11y violations.
+ * - 'off' - skip a11y checks entirely.
+ * @type {import('@storybook/nextjs-vite').Preview}
+ * @type {ReturnType<typeof definePreview>}
+ */
+export default definePreview({
+  addons: [addonA11y(), addonDocs()],
+  parameters: {
+    options: {
+      storySort: {
+        order: ["Project", ["Design", "Develop", "Test"], "*"],
+      },
+    },
+    controls: {
+      sort: "alpha",
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/i,
+      },
+    },
+    a11y: {
+      test: "todo",
+    },
+    docs: {
+      page: DocsTemplate,
+      codePanel: true,
+      argTypes: {
+        sort: "alpha",
+      },
+    },
+  },
+  tags: ["autodocs"],
+});

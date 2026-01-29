@@ -1,24 +1,6 @@
+import { StorybookArrow } from "./components/StorybookArrow";
 import { Meta } from "@storybook/addon-docs/blocks";
 import Link from "next/link";
-import BasePathImage from "../integrations/gh-pages/BasePathImage";
-
-export const RightArrow = () => (
-  <svg
-    viewBox="0 0 14 14"
-    width="8px"
-    height="14px"
-    style={{
-      marginLeft: "4px",
-      display: "inline-block",
-      shapeRendering: "inherit",
-      verticalAlign: "middle",
-      fill: "currentColor",
-      "path fill": "currentColor",
-    }}
-  >
-    <path d="m11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z" />
-  </svg>
-);
 
 <Meta title="Get Started" />
 
@@ -27,108 +9,51 @@ export const RightArrow = () => (
     # Open Fresno website
     Welcome to the Open Fresno website documentation.
   </div>
-  <div className="sb-section">
-    <div className="sb-section-item">
-      <BasePathImage
-        src="/storybook-assets/styling.png"
-        alt="Open Fresno design system with Tailwind CSS and custom styling"
-        width={0}
-        height={0}
-        style={{ width: "100%", height: "auto" }}
-      />
-      <h4 className="sb-section-item-heading">Design System & Styling</h4>
-      <p className="sb-section-item-paragraph">Our components use Tailwind CSS and custom vanilla styles.</p>
-      <Link
-        href="https://openfresno.org/get-started"
-        target="_blank"
-      >Style Guide Contributing<RightArrow /></Link>
-    </div>
-    <div className="sb-section-item">
-      <BasePathImage
-        width={0}
-        height={0}
-        style={{ width: "100%", height: "auto" }}
-        src="/storybook-assets/context.png"
-        alt="Testing civic tech components with proper context and mock data"
-      />
-      <h4 className="sb-section-item-heading">Component Testing & Mocking</h4>
-      <p className="sb-section-item-paragraph">Our components use React and Next.js. Tests are written in
-        Playwright.</p>
-      <Link
-        href="https://github.com/openfresno/fe-openfresno.org-doc"
-        target="_blank"
-      >View Repository<RightArrow /></Link>
-    </div>
-    <div className="sb-section-item">
-      <BasePathImage
-        width={0}
-        height={0}
-        style={{ width: "100%", height: "auto" }}
-        src="/storybook-assets/assets.png"
-        alt="Open Fresno brand assets, icons, and civic imagery"
-      />
-      <div>
-        <h4 className="sb-section-item-heading">Brand Assets & Resources</h4>
-        <p className="sb-section-item-paragraph">Access Open Fresno's logos, civic imagery, and brand guidelines.</p>
-        <Link
-          href="https://openfresno.org/about"
-          target="_blank"
-        >Website Assets</Link>
-      </div>
-    </div>
-  </div>
 </div>
 <div className="sb-container">
   <div className="sb-section-title">
-    # Features
+    # Open-source collaboration
   </div>
 
   <div className="sb-section">
     <div className="sb-features-grid">
       <div className="sb-grid-item">
-        <BasePathImage
-          width={0}
-          height={0}
-          style={{ width: "100%", height: "auto" }}
-          src="/storybook-assets/share.png"
+        <img
+          src="./storybook-extra/meetup.png"
           alt="Open Fresno volunteers collaborating on civic tech projects"
         />
-        <h4 className="sb-section-item-heading">Projects</h4>
-        <p className="sb-section-item-paragraph">Explore Open Fresno open-source projects.</p>
+        <h4 className="sb-section-item-heading">Community Action Nights</h4>
+        <p className="sb-section-item-paragraph">We meet virtually using <a href="https://zep.us">Zep</a>. View our <a href="https://openfresno.org/code-of-conduct">Code of conduct.</a></p>
         <Link
           href="https://www.meetup.com/openfresno/"
           target="_blank"
-        >Join Meetup<RightArrow /></Link>
+        >Join Meetup<StorybookArrow /></Link>
       </div>
       <div className="sb-grid-item">
-        <BasePathImage
-          width={0}
-          height={0}
-          style={{ width: "100%", height: "auto" }}
-          src="/storybook-assets/figma-plugin.png"
+        <img
+          src="./storybook-extra/open-website.png"
           alt="Open Fresno design collaboration and civic tech design systems"
         />
         <h4 className="sb-section-item-heading">Design Collaboration</h4>
-        <p className="sb-section-item-paragraph">We welcome designers to help create accessible, user-friendly interfaces for our civic engagement platforms and community tools.</p>
+        <p className="sb-section-item-paragraph">We welcome designers to help create accessible, user-friendly
+          interfaces for our civic engagement platforms and community tools.</p>
         <Link
           href="https://openfresno.org/get-started"
           target="_blank"
-        >Volunteer as Designer<RightArrow /></Link>
+        >Volunteer as Designer<StorybookArrow /></Link>
       </div>
       <div className="sb-grid-item">
-        <BasePathImage
-          width={0}
-          height={0}
-          style={{ width: "100%", height: "auto" }}
-          src="/storybook-assets/testing.png"
+        <img
+          src="./storybook-extra/github.png"
           alt="Testing Open Fresno civic tech components for reliability"
         />
         <h4 className="sb-section-item-heading">Quality Assurance</h4>
-        <p className="sb-section-item-paragraph">Help ensure our civic tech tools are reliable and accessible by contributing to testing, code reviews, and quality assurance efforts.</p>
+        <p className="sb-section-item-paragraph">Help ensure our civic tech tools are reliable and accessible by
+          contributing to testing, code reviews, and quality assurance efforts.</p>
         <Link
-          href="https://github.com/openfresno/fe-openfresno.org-doc/issues"
+          href="https://github.com/openfresno/fe-openfresno.org-doc/discussions"
           target="_blank"
-        >View Issues<RightArrow /></Link>
+        >View Discussions<StorybookArrow /></Link>
       </div>
     </div>
   </div>
@@ -141,49 +66,43 @@ export const RightArrow = () => (
   <div className="sb-section">
     <div className="sb-features-grid">
       <div className="sb-grid-item">
-        <BasePathImage
-          width={0}
-          height={0}
-          style={{width: "100%", height: "auto"}}
-          src="/storybook-assets/docs.png"
+        <img
+          src="./screenshots/home.png"
           alt="Open Fresno component documentation and development guides"
         />
-        <h4 className="sb-section-item-heading">Documentation with Storybook</h4>
+        <h4 className="sb-section-item-heading">Develop features for the website</h4>
         <p className="sb-section-item-paragraph">A separate website for in-depth documentation and UX testing.</p>
         <Link
-          href="https://openfresno.org/projects"
+          href="https://openfresno.org"
           target="_blank"
-        >View Projects<RightArrow/></Link>
+        >View the website<StorybookArrow /></Link>
       </div>
       <div className="sb-grid-item">
-        <BasePathImage
-          width={0}
-          height={0}
-          style={{ width: "100%", height: "auto" }}
-          src="/storybook-assets/accessibility.png"
+        <img
+          src="./storybook-extra/accessibility.png"
           alt="Making civic tech accessible to all community members"
         />
         <h4 className="sb-section-item-heading">Accessibility</h4>
-        <p className="sb-section-item-paragraph">We're committed to making civic engagement accessible to everyone. Help us ensure our components meet WCAG standards for all community members.</p>
+        <p className="sb-section-item-paragraph">Documentation with Storybook. We're committed to making civic
+          engagement accessible to everyone. Help us ensure our components meet WCAG standards for all community
+          members.</p>
         <Link
-          href="https://openfresno.org/code-of-conduct"
+          href="https://openfresno.github.io/fe-openfresno.org-doc//?path=/story/components-button--default"
           target="_blank"
-        >Code of Conduct<RightArrow /></Link>
+        >Test a button<StorybookArrow /></Link>
       </div>
       <div className="sb-grid-item">
-        <BasePathImage
-          width={0}
-          height={0}
-          style={{ width: "100%", height: "auto" }}
-          src="/storybook-assets/theming.png"
+        <img
+          src="./storybook-extra/design.png"
           alt="Open Fresno brand themes and civic tech styling"
         />
         <h4 className="sb-section-item-heading">Brand & Theming</h4>
-        <p className="sb-section-item-paragraph">Our design system reflects Open Fresno's commitment to transparency, community engagement, and accessible civic technology.</p>
+        <p className="sb-section-item-paragraph">Our design system reflects Open Fresno's commitment to transparency,
+          community engagement, and accessible civic technology.</p>
         <Link
-          href="https://openfresno.org/about"
+          href="https://www.figma.com/design/attWQWKwed1XSaaaMuzM5m/Open-Websites"
           target="_blank"
-        >Our Mission<RightArrow /></Link>
+        >View on Figma<StorybookArrow /></Link>
       </div>
     </div>
   </div>
@@ -191,17 +110,16 @@ export const RightArrow = () => (
 <div className="sb-addon">
   <div className="sb-addon-text">
     <h4>Civic Tech Projects</h4>
-    <p className="sb-section-item-paragraph">Explore our active projects like Learning Blocks, TrashAI, and Open Budget Sac that address real civic challenges in Fresno and the Central Valley.</p>
+    <p className="sb-section-item-paragraph">Explore our active projects like Learning Blocks, TrashAI, and Open Budget
+      Sac that address real civic challenges in Fresno and the Central Valley.</p>
     <Link
       href="https://openfresno.org/projects"
       target="_blank"
-    >Explore Projects<RightArrow /></Link>
+    >Explore Projects<StorybookArrow /></Link>
   </div>
   <div className="sb-addon-img">
-    <BasePathImage
-      width={650}
-      height={347}
-      src="/storybook-assets/addon-library.png"
+    <img
+      src="./storybook-extra/project.png"
       alt="Open Fresno civic tech projects making a difference in the community."
     />
   </div>
@@ -209,66 +127,54 @@ export const RightArrow = () => (
 
 <div className="sb-section sb-socials">
   <div className="sb-section-item">
-    <BasePathImage
-      width={32}
-      height={32}
-      layout="fixed"
-      src="/storybook-assets/github.svg"
+    <img
+      src="./storybook-default/github.svg"
       alt="Github logo"
       className="sb-explore-image"
     />
     Contribute to open-source civic tech projects that make a difference.
 
-    <Link href="https://github.com/openfresno" target="_blank">Star on GitHub<RightArrow /></Link>
+    <Link href="https://github.com/openfresno" target="_blank">Star on GitHub<StorybookArrow /></Link>
 
   </div>
   <div className="sb-section-item">
-    <BasePathImage
-      width={33}
-      height={32}
-      layout="fixed"
-      src="/storybook-assets/discord.svg"
+    <img
+      src="./storybook-extra/slack.svg"
       alt="Slack logo"
-      className="sb-explore-image"
     />
     <div>
       Connect with our community of civic-minded technologists.
 
-      <Link href="https://forms.gle/JA3jAV9wE1645i9LA" target="_blank">Join Our Slack<RightArrow /></Link>
+      <Link href="https://forms.gle/JA3jAV9wE1645i9LA" target="_blank">Join Our Slack<StorybookArrow /></Link>
     </div>
 
   </div>
   <div className="sb-section-item">
-    <BasePathImage
-      width={32}
-      height={32}
-      layout="fixed"
-      src="/storybook-assets/youtube.svg"
+    <img
+      src="./storybook-default/youtube.svg"
       alt="Youtube logo"
       className="sb-explore-image"
     />
     <div>
       Watch our community events and civic tech presentations.
 
-      <Link href="https://www.youtube.com/@openfresno" target="_blank">Watch on YouTube<RightArrow /></Link>
+      <Link href="https://www.youtube.com/@openfresno" target="_blank">Watch on YouTube<StorybookArrow /></Link>
     </div>
 
   </div>
   <div className="sb-section-item">
-    <BasePathImage
-      width={33}
-      height={32}
-      layout="fixed"
-      src="/storybook-assets/tutorials.svg"
+    <img
+      src="./storybook-default/tutorials.svg"
       alt="FAQ icon"
       className="sb-explore-image"
     />
     <p>Find answers to common questions about volunteering and contributing.</p>
-    
+
     <Link
       href="https://openfresno.org/faq"
       target="_blank"
-    >View FAQ<RightArrow /></Link>
+    >View FAQ<StorybookArrow /></Link>
+
   </div>
 </div>
 
@@ -278,154 +184,154 @@ export const RightArrow = () => (
     margin-bottom: 48px;
   }
 
-  .sb-section {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  img {
-    object-fit: cover;
-  }
-
-  .sb-section-title {
-    margin-bottom: 32px;
-  }
-
-  .sb-section a:not(h1 a, h2 a, h3 a) {
-    font-size: 14px;
-  }
-
-  .sb-section-item, .sb-grid-item {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .sb-section-item-heading {
-    padding-top: 20px !important;
-    padding-bottom: 5px !important;
-    margin: 0 !important;
-  }
-  .sb-section-item-paragraph {
-    margin: 0;
-    padding-bottom: 10px;
-  }
-
-  .sb-chevron {
-    margin-left: 5px;
-  }
-
-  .sb-features-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 32px 20px;
-  }
-
-  .sb-socials {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .sb-socials p {
-    margin-bottom: 10px;
-  }
-
-  .sb-explore-image {
-    max-height: 32px;
-    align-self: flex-start;
-  }
-
-  .sb-addon {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    position: relative;
-    background-color: #EEF3F8;
-    border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    background: #EEF3F8;
-    height: 180px;
-    margin-bottom: 48px;
-    overflow: hidden;
-  }
-
-  .sb-addon-text {
-    padding-left: 48px;
-    max-width: 240px;
-  }
-
-  .sb-addon-text h4 {
-    padding-top: 0px;
-  }
-
-  .sb-addon-img {
-    position: absolute;
-    left: 345px;
-    top: 0;
-    height: 100%;
-    width: 200%;
-    overflow: hidden;
-  }
-
-  .sb-addon-img img {
-    width: 650px;
-    transform: rotate(-15deg);
-    margin-left: 40px;
-    margin-top: -72px;
-    box-shadow: 0 0 1px rgba(255, 255, 255, 0);
-    backface-visibility: hidden;
-  }
-
-  @media screen and (max-width: 800px) {
-    .sb-addon-img {
-      left: 300px;
-    }
-  }
-
-  @media screen and (max-width: 600px) {
     .sb-section {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    img {
+      object-fit: cover;
+    }
+
+    .sb-section-title {
+      margin-bottom: 32px;
+    }
+
+    .sb-section a:not(h1 a, h2 a, h3 a) {
+      font-size: 14px;
+    }
+
+    .sb-section-item, .sb-grid-item {
+      flex: 1;
+      display: flex;
       flex-direction: column;
     }
 
+    .sb-section-item-heading {
+      padding-top: 20px !important;
+      padding-bottom: 5px !important;
+      margin: 0 !important;
+    }
+    .sb-section-item-paragraph {
+      margin: 0;
+      padding-bottom: 10px;
+    }
+
+    .sb-chevron {
+      margin-left: 5px;
+    }
+
     .sb-features-grid {
-      grid-template-columns: repeat(1, 1fr);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 32px 20px;
     }
 
     .sb-socials {
-      grid-template-columns: repeat(2, 1fr);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .sb-socials p {
+      margin-bottom: 10px;
+    }
+
+    .sb-explore-image {
+      max-height: 32px;
+      align-self: flex-start;
     }
 
     .sb-addon {
-      height: 280px;
-      align-items: flex-start;
-      padding-top: 32px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      background-color: #EEF3F8;
+      border-radius: 5px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      background: #EEF3F8;
+      height: 180px;
+      margin-bottom: 48px;
       overflow: hidden;
     }
 
     .sb-addon-text {
-      padding-left: 24px;
+      padding-left: 48px;
+      max-width: 240px;
+    }
+
+    .sb-addon-text h4 {
+      padding-top: 0px;
     }
 
     .sb-addon-img {
-      right: 0;
-      left: 0;
-      top: 130px;
-      bottom: 0;
+      position: absolute;
+      left: 345px;
+      top: 0;
+      height: 100%;
+      width: 200%;
       overflow: hidden;
-      height: auto;
-      width: 124%;
     }
 
     .sb-addon-img img {
-      width: 1200px;
-      transform: rotate(-12deg);
-      margin-left: 0;
-      margin-top: 48px;
-      margin-bottom: -40px;
-      margin-left: -24px;
+      width: 650px;
+      transform: rotate(-15deg);
+      margin-left: 40px;
+      margin-top: -72px;
+      box-shadow: 0 0 1px rgba(255, 255, 255, 0);
+      backface-visibility: hidden;
     }
-  }
-  `}
+
+    @media screen and (max-width: 800px) {
+      .sb-addon-img {
+        left: 300px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .sb-section {
+        flex-direction: column;
+      }
+
+      .sb-features-grid {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .sb-socials {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sb-addon {
+        height: 280px;
+        align-items: flex-start;
+        padding-top: 32px;
+        overflow: hidden;
+      }
+
+      .sb-addon-text {
+        padding-left: 24px;
+      }
+
+      .sb-addon-img {
+        right: 0;
+        left: 0;
+        top: 130px;
+        bottom: 0;
+        overflow: hidden;
+        height: auto;
+        width: 124%;
+      }
+
+      .sb-addon-img img {
+        width: 1200px;
+        transform: rotate(-12deg);
+        margin-left: 0;
+        margin-top: 48px;
+        margin-bottom: -40px;
+        margin-left: -24px;
+      }
+    }
+`}
 </style>

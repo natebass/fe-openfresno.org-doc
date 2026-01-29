@@ -1,10 +1,11 @@
-import Link from "next/link";
+import rectangleBlue from "@/../public/img/about/rectangle-blue.png";
 import CenteredInImage from "@/components/ui/CenteredInImage";
+import HeaderUnderline from "@/components/ui/HeaderUnderline";
 import { SectionType } from "@/utility/constants/theme";
-import { HeaderUnderline } from "@/components/ui";
+import Link from "next/link";
 
 /**
- * Instructions for project page.
+ * Instructions for the project page.
  * @returns {JSX.Element}
  */
 export default function SingleProjectsVolunteer({
@@ -32,13 +33,9 @@ export default function SingleProjectsVolunteer({
             </span>
           </HeaderUnderline>
         </div>
-        <div className={`get-started-bottom grow-1 basis-0`}>
-          <CenteredInImage
-            src="/img/about/rectangle-blue.png"
-            alt="rectangle"
-            float="center"
-          >
-            <div className="w-fit mx-auto text-xl sm:text-3xl font-bold">
+        <div className={`get-started-bottom grow basis-0`}>
+          <CenteredInImage src={rectangleBlue} alt="rectangle" float="center">
+            <div className="mx-auto w-fit text-xl font-bold sm:text-3xl">
               <span className={`app-text--${SectionType.invert(sectionType)}`}>
                 Not a volunteer yet?
               </span>

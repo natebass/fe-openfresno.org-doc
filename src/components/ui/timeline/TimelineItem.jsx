@@ -1,7 +1,8 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import { Button } from "../../ui";
+import Button from "../../ui/button/Button";
+import CircledNumber from "@/components/ui/CircledNumber";
 import { SectionType } from "@/utility/constants/theme";
+import React, { useEffect, useRef } from "react";
 
 export class SimpleButton {
   constructor(text = "", href = "") {
@@ -13,13 +14,11 @@ export class SimpleButton {
 /**
  * A responsive component for displaying a single volunteer opportunity.
  *
- * This component renders single slice of a vertical timeline that transitions
+ * This component renders a single slice of a vertical timeline that transitions
  * from a single-column layout on mobile to an alternating two-column layout on
  * desktop. The styling and layout logic are fully described in the associated
  * CSS file's comments.
  *
- * @component
- * @param {object} [props]
  * @param {integer} [props.number] The number to display
  * @param {string} [props.heading] The heading text to display
  * @param {SimpleButton[]} [props.buttons] A list of buttons to display, with
@@ -54,15 +53,14 @@ export function TimelineItem({
     return () => {
       window.removeEventListener("resize", updateContainerRect);
     };
-  }, []);
+  }, [number, updateTimelineNumbers]);
   return (
     <div className="timeline-item">
-      <div
-        className={`circled-number app-color--${SectionType.toColor(sectionType)}`}
+      <CircledNumber
+        number={number}
+        sectionType={sectionType}
         ref={refContainer}
-      >
-        {number}
-      </div>
+      />
       <div className="timeline-item-content">
         <h2 className="heading-small">{heading}</h2>
         <p>{children}</p>
