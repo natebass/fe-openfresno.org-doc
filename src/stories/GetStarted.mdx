@@ -2,6 +2,18 @@ import { StorybookArrow } from "./components/StorybookArrow";
 import { Meta } from "@storybook/addon-docs/blocks";
 import Link from "next/link";
 
+import meetupImg from "/storybook-extra/meetup.png";
+import openWebsiteImg from "/storybook-extra/open-website.png";
+import githubExtraImg from "/storybook-extra/github.png";
+import screenshotHomeImg from "/screenshots/home.png";
+import accessibilityExtraImg from "/storybook-extra/accessibility.png";
+import designImg from "/storybook-extra/design.png";
+import projectImg from "/storybook-extra/project.png";
+import githubSvg from "/storybook-default/github.svg";
+import slackSvg from "/storybook-extra/slack.svg";
+import youtubeSvg from "/storybook-default/youtube.svg";
+import tutorialsSvg from "/storybook-default/tutorials.svg";
+
 <Meta title="Get Started" />
 
 <div className="sb-container">
@@ -19,7 +31,7 @@ import Link from "next/link";
     <div className="sb-features-grid">
       <div className="sb-grid-item">
         <img
-          src="/storybook-extra/meetup.png"
+          src={meetupImg}
           alt="Open Fresno volunteers collaborating on civic tech projects"
         />
         <h4 className="sb-section-item-heading">Community Action Nights</h4>
@@ -31,7 +43,7 @@ import Link from "next/link";
       </div>
       <div className="sb-grid-item">
         <img
-          src="/storybook-extra/open-website.png"
+          src={openWebsiteImg}
           alt="Open Fresno design collaboration and civic tech design systems"
         />
         <h4 className="sb-section-item-heading">Design Collaboration</h4>
@@ -44,7 +56,7 @@ import Link from "next/link";
       </div>
       <div className="sb-grid-item">
         <img
-          src="/storybook-extra/github.png"
+          src={githubExtraImg}
           alt="Testing Open Fresno civic tech components for reliability"
         />
         <h4 className="sb-section-item-heading">Quality Assurance</h4>
@@ -67,7 +79,7 @@ import Link from "next/link";
     <div className="sb-features-grid">
       <div className="sb-grid-item">
         <img
-          src="/screenshots/home.png"
+          src={screenshotHomeImg}
           alt="Open Fresno component documentation and development guides"
         />
         <h4 className="sb-section-item-heading">Develop features for the website</h4>
@@ -79,7 +91,7 @@ import Link from "next/link";
       </div>
       <div className="sb-grid-item">
         <img
-          src="/storybook-extra/accessibility.png"
+          src={accessibilityExtraImg}
           alt="Making civic tech accessible to all community members"
         />
         <h4 className="sb-section-item-heading">Accessibility</h4>
@@ -93,7 +105,7 @@ import Link from "next/link";
       </div>
       <div className="sb-grid-item">
         <img
-          src="/storybook-extra/design.png"
+          src={designImg}
           alt="Open Fresno brand themes and civic tech styling"
         />
         <h4 className="sb-section-item-heading">Brand & Theming</h4>
@@ -119,7 +131,7 @@ import Link from "next/link";
   </div>
   <div className="sb-addon-img">
     <img
-      src="/storybook-extra/project.png"
+      src={projectImg}
       alt="Open Fresno civic tech projects making a difference in the community."
     />
   </div>
@@ -128,7 +140,7 @@ import Link from "next/link";
 <div className="sb-section sb-socials">
   <div className="sb-section-item">
     <img
-      src="/storybook-default/github.svg"
+      src={githubSvg}
       alt="Github logo"
       className="sb-explore-image"
     />
@@ -139,7 +151,7 @@ import Link from "next/link";
   </div>
   <div className="sb-section-item">
     <img
-      src="/storybook-extra/slack.svg"
+      src={slackSvg}
       alt="Slack logo"
     />
     <div>
@@ -151,7 +163,7 @@ import Link from "next/link";
   </div>
   <div className="sb-section-item">
     <img
-      src="/storybook-default/youtube.svg"
+      src={youtubeSvg}
       alt="Youtube logo"
       className="sb-explore-image"
     />
@@ -164,7 +176,7 @@ import Link from "next/link";
   </div>
   <div className="sb-section-item">
     <img
-      src="/storybook-default/tutorials.svg"
+      src={tutorialsSvg}
       alt="FAQ icon"
       className="sb-explore-image"
     />
