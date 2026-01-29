@@ -29,9 +29,10 @@ export default defineMain({
     NEXT_PUBLIC_BASE_PATH: basePath,
   }),
   viteFinal: async (config) => {
-    if (process.env.GITHUB_ACTIONS === "true") {
-      config.base = basePath.endsWith('/') ? basePath : `${basePath}/`;
-    }
+    // if (process.env.GITHUB_ACTIONS === "true") {
+    //   config.base = basePath.endsWith('/') ? basePath : `${basePath}/`;
+    // }
+    config.base = "./"; // critical for GitHub Pages return config;
     return config;
   },
 });

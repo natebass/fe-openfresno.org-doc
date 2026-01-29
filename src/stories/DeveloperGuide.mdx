@@ -2,10 +2,6 @@ import { StorybookArrow } from "./components/StorybookArrow.jsx";
 import { Meta, Source } from "@storybook/addon-docs/blocks";
 import Link from "next/link";
 
-import stylingImg from "../../public/storybook-default/styling.png";
-import contextImg from "../../public/storybook-default/context.png";
-import assetsImg from "../../public/storybook-default/assets.png";
-
 <Meta title="Project/Develop/Developer Guide" />
 
 <div className="sb-container">
@@ -13,7 +9,7 @@ import assetsImg from "../../public/storybook-default/assets.png";
   <div className="sb-section">
     <div className="sb-section-item">
       <img
-        src={stylingImg}
+        src="/storybook-default/styling.png"
         alt="Open Fresno design system with Tailwind CSS and custom styling"
         style={{ width: "100%", height: "auto" }}
       />
@@ -30,7 +26,7 @@ import assetsImg from "../../public/storybook-default/assets.png";
     </div>
     <div className="sb-section-item">
       <img
-        src={contextImg}
+        src="/storybook-default/context.png"
         alt="Testing civic tech components with proper context and mock data"
         style={{ width: "100%", height: "auto" }}
       />
@@ -49,7 +45,7 @@ import assetsImg from "../../public/storybook-default/assets.png";
     </div>
     <div className="sb-section-item">
       <img
-        src={assetsImg}
+        src="/storybook-default/assets.png"
         alt="Open Fresno brand assets, icons, and civic imagery"
         style={{ width: "100%", height: "auto" }}
       />
