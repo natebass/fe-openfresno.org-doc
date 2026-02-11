@@ -20,6 +20,8 @@ const ProjectsCardsContainer = ({
             projectStatus="."
             projectTitle="Loading..."
             projectText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Proin euismod aliquet ligula, eu efficitur quam accumsan nec. Maecenas lobortis, justo eget commodo vehicula."
+			pageUrl="#"
+			githubUrl="#"
             tags={["loading"]}
             lastUpdatedTimestamp={moment("2024-05-02T03:07:22Z")}
           />

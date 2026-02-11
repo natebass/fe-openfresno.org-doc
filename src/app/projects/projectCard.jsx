@@ -21,7 +21,7 @@ export default function ProjectCard({
 
   return (
     <div className={`flex flex-col app-color--${sectionType}`}>
-      <Link className="project-card-img-container" src={pageUrl}>
+      <Link className="project-card-img-container" href={pageUrl}>
         <div
           className={`project-card-status-badge app-color--gray ${isLoading && "project-card-loading"}`}
         >
