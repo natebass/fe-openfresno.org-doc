@@ -27,7 +27,7 @@ import Image from "next/image";
  <BasePathImage src="/logo.png" alt="Logo" width={200} height={100} />
  // Resolves to: "/my-repo/logo.png"
  */
-export default function BasePathImage({
+export default function BasePathImageDeprecated({
   src,
   alt,
   className = "",

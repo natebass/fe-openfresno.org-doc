@@ -56,15 +56,15 @@
     "next-mdx-remote": "^5.0.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "swr": "^2.3.8",
+    "swr": "^2.4.0",
     "yaml": "^2.8.2"
   },
   "devDependencies": {
-    "@playwright/test": "^1.58.0",
-    "@storybook/addon-a11y": "^10.2.1",
-    "@storybook/addon-docs": "^10.2.1",
-    "@storybook/addon-vitest": "^10.2.1",
-    "@storybook/nextjs-vite": "^10.2.1",
+    "@playwright/test": "^1.58.2",
+    "@storybook/addon-a11y": "^10.2.8",
+    "@storybook/addon-docs": "^10.2.8",
+    "@storybook/addon-vitest": "^10.2.8",
+    "@storybook/nextjs-vite": "^10.2.8",
     "@tailwindcss/postcss": "^4.1.18",
     "@tailwindcss/typography": "^0.5.19",
     "@testing-library/dom": "^10.4.1",
@@ -74,12 +74,12 @@
     "@vitest/coverage-v8": "^4.0.18",
     "babel-plugin-react-compiler": "1.0.0",
     "jsdom": "^27.4.0",
-    "playwright": "^1.58.0",
-    "storybook": "^10.2.1",
+    "playwright": "^1.58.2",
+    "storybook": "^10.2.8",
     "tailwindcss": "^4.1.18",
     "vitest": "^4.0.18"
   },
-  "packageManager": "pnpm@10.28.2",
+  "packageManager": "pnpm@10.29.2+sha512.bef43fa759d91fd2da4b319a5a0d13ef7a45bb985a3d7342058470f9d2051a3ba8674e629672654686ef9443ad13a82da2beb9eeb3e0221c87b8154fff9d74b8",
   "imports": {
     "#.storybook/*": "./.storybook/*"
   }
