@@ -1,10 +1,10 @@
 import About from "./about";
-import LayoutE53 from "@/components/layout/LayoutE53";
+import Layout from "@/components/layout/layout";
 
 export default function AboutPage() {
   return (
-    <LayoutE53>
+    <Layout>
       <About></About>
-    </LayoutE53>
+    </Layout>
   );
 }

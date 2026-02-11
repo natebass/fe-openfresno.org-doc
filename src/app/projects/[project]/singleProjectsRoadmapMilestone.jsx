@@ -42,7 +42,7 @@ export default function SingleProjectsRoadmapMilestone({
       </div>
       {!isLastIndex && (
         <Image
-          className="project-roadmap-icon-line h-8 w-[2px] origin-bottom-left inline-block relative left-3.5 -top-3 object-cover"
+          className="project-roadmap-icon-line relative -top-3 left-3.5 inline-block h-8 w-[2px] origin-bottom-left object-cover"
           src={
             data.meta.roadmap[milestone].status === "completed" ? line4 : line5
           }

@@ -71,7 +71,6 @@ BROWSER SUPPORT: Chrome 125+ (uses CSS Anchor Positioning)
     display: none;
     position: relative;
     anchor-name: --nav-container;
-    gap: 0;
     height: 100%;
 
     @media screen and (min-width: 992px) {

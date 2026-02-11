@@ -1,6 +1,6 @@
 import HeaderUnderline from "../../components/ui/HeaderUnderline";
 import SidebarSection from "../../components/ui/steps/SidebarSection";
-import LayoutE53 from "@/components/layout/LayoutE53";
+import Layout from "@/components/layout/layout";
 import { SectionType } from "@/utility/constants/theme";
 import Link from "next/link";
 
@@ -10,7 +10,7 @@ import Link from "next/link";
  */
 export default function CommunitySupportStatementPage() {
   return (
-    <LayoutE53>
+    <Layout>
       <SidebarSection sectionType={SectionType.light}>
         <div className="flex flex-col gap-6">
           <HeaderUnderline
@@ -106,6 +106,6 @@ export default function CommunitySupportStatementPage() {
           </p>
         </div>
       </SidebarSection>
-    </LayoutE53>
+    </Layout>
   );
 }

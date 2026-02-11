@@ -18,7 +18,7 @@ export default function ProjectsSectionStart({
   return (
     // TODO fix styling classes to represent the projects page?
     <section
-      className={`mx-auto flex max-w-[calc(var(--screen-xxl)+80px)] py-12 max-lg:flex-col px-6 lg:px-10 lg:py-24 app-color--${sectionType}`}
+      className={`mx-auto flex max-w-[calc(var(--screen-xxl)+80px)] px-6 py-12 max-lg:flex-col lg:px-10 lg:py-24 app-color--${sectionType}`}
     >
       <div className={`projects-section-text-container w-full grow-3 basis-0`}>
         <HeaderUnderline

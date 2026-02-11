@@ -1,11 +1,11 @@
 import Projects from "./projects";
-import LayoutE53 from "@/components/layout/LayoutE53";
+import Layout from "@/components/layout/layout";
 import { githubOwner } from "@/utility/constants/app-data";
 
 export default function Page() {
   return (
-    <LayoutE53>
+    <Layout>
       <Projects githubOwner={githubOwner}></Projects>
-    </LayoutE53>
+    </Layout>
   );
 }

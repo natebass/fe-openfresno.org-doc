@@ -28,7 +28,7 @@ export default function ImageSection({
             alt={alt}
             width={728}
             height={577}
-            className="home-split-image translate-x-6 lg:translate-x-10 object-cover"
+            className="home-split-image translate-x-6 object-cover lg:translate-x-10"
             src={src}
           />
         </div>

@@ -1,5 +1,4 @@
-import Slider from "../../components/Slider";
-import LayoutE53 from "../../components/layout/LayoutE53";
+import Layout from "../../components/layout/layout";
 import Button from "../../components/ui/button/Button";
 import Timeline from "../../components/ui/timeline/Timeline";
 import logoBlue from "@/../public/assets/logo/logo-blue.svg";
@@ -12,8 +11,11 @@ import rootAccess from "@/../public/img/partnership-icons/root-access-white-tran
 import GeneralSection from "@/components/ui/GeneralSection";
 import ImageSection from "@/components/ui/ImageSection";
 import { SectionType } from "@/utility/constants/theme";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
+
+const Slider = dynamic(() => import("../../components/Slider"));
 
 /**
  * Open Fresno's Home page
@@ -21,7 +23,7 @@ import Link from "next/link";
  */
 export default function HomePage() {
   return (
-    <LayoutE53 fadeNavbar={true}>
+    <Layout fadeNavbar={true}>
       <main>
         <header className="home-landing-container">
           <div className="space-y-10">
@@ -74,7 +76,8 @@ export default function HomePage() {
             civic-minded individuals{" "}
           </b>
           who come together to use technology and open data to address civic
-          challenges and improve public services in the Central California.
+          challenges and improve public services in the Central Valley of
+          California.
           <br />
           <br />
           We are passionate about fostering civic innovation and creating
@@ -94,7 +97,7 @@ export default function HomePage() {
           <b>
             Our mission is done by uniting programmers, designers, and other
             talents, we transform ideas into tangible solutions that impact
-            lives throughout Central California.
+            lives throughout the Central Valley.
           </b>{" "}
           Together, we drive innovation forward, building a future where open
           source technology empowers citizens and uplifts Fresno and the
@@ -269,6 +272,6 @@ export default function HomePage() {
           </div>
         </section>
       </main>
-    </LayoutE53>
+    </Layout>
   );
 }

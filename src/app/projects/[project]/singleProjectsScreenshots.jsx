@@ -23,7 +23,7 @@ export default function SingleProjectsScreenshots({
           setStartingSlide(i);
         }
       }}
-      className={`keen-slider__slide sharpen @container aspect-7/4 @max-lg:border @max-lg:rounded-xl object-cover ${showDialog ? "" : "lg:cursor-pointer"}`}
+      className={`keen-slider__slide sharpen @container aspect-7/4 object-cover @max-lg:rounded-xl @max-lg:border ${showDialog ? "" : "lg:cursor-pointer"}`}
       src={`https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/screenshots/${screenshot}`}
       alt={`${data.meta.title} screenshot ${i + 1}`}
       width={700}

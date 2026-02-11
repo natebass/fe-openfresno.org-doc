@@ -1,10 +1,10 @@
 import preview from "#.storybook/preview.js";
-import NavbarE7e from "../components/layout/NavbarE7e.jsx";
+import Navbar from "../components/layout/navbar.jsx";
 import { expect } from "storybook/test";
 
 const meta = preview.meta({
   title: "Components/Navigation Bar",
-  component: NavbarE7e,
+  component: Navbar,
   parameters: {
     componentSubtitle:
       "Application navigation bar with extended menu and scroll animations",

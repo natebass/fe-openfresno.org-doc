@@ -13,7 +13,7 @@ import Link from "next/link";
  * for getting started, learning about the team, and viewing the code of conduct.
  * @returns {JSX.Element} The rendered footer component.
  */
-export default function FooterE4d() {
+export default function Footer() {
   return (
     <footer>
       <div className="footer-top-content p2-regular">
@@ -97,7 +97,7 @@ export default function FooterE4d() {
           </Link>
         </section>
       </div>
-      <div className="border-t-1">
+      <div className="border-t border-(--neutral-300)">
         <div className="footer-bottom-content">
           <div className="caption-footer">Open Fresno</div>
           <div className="caption-regular-uppercase space-x-10">

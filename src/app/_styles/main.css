@@ -2,7 +2,7 @@
 @import "./layout.css";
 @import "./general.css";
 @import "./about.css";
-@import "./faq.css";
+@import "../faq/faq.css";
 @import "./contact.css";
 @import "../../components/layout/footer.css";
 @import "../../components/layout/navbar.css";

@@ -1,10 +1,10 @@
 import NameChange from "./nameChange";
-import LayoutE53 from "@/components/layout/LayoutE53";
+import Layout from "@/components/layout/layout";
 
 export default function NameChangePage() {
   return (
-    <LayoutE53>
+    <Layout>
       <NameChange />
-    </LayoutE53>
+    </Layout>
   );
 }

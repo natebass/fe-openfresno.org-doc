@@ -45,6 +45,9 @@ const DESKTOP_SECTIONS = [
   },
 ];
 
+// Persists across mount/unmount so the menu remembers its last position.
+let lastNav = "primary";
+
 /**
  * Extended navbar menu below the main navigation bar.
  * - **Mobile view**: Toggles between two distinct navigation menus.
@@ -53,18 +56,26 @@ const DESKTOP_SECTIONS = [
  * @param {string} className - Optional additional CSS class names
  * @returns {JSX.Element}
  */
-export default function NavbarMenuE87({ className = "" }) {
-  const [showSecondaryNav, setShowSecondaryNav] = useState(false);
+export default function NavbarMenu({ className = "" }) {
+  const [nav, setNav] = useState(lastNav);
+
+  const toggleNav = (showSecondary) => {
+    const next = showSecondary ? "secondary" : "primary";
+    lastNav = next;
+    setNav(next);
+  };
 
   return (
     <div
       className={`navbar-extended-container p2-regular ${className}`}
+      data-nav={nav}
       role="region"
       aria-label="Extended navigation"
     >
       {/* Mobile Navigation - Primary */}
       <ul
-        className={`navbar-extended-mobile-container nav-semi-bold ${showSecondaryNav ? "hidden" : "grid"}`}
+        className="navbar-extended-mobile-container nav-semi-bold"
+        data-panel="primary"
         role="menu"
         aria-label="Primary navigation"
       >
@@ -76,14 +87,15 @@ export default function NavbarMenuE87({ className = "" }) {
           </li>
         ))}
         <NavExtendedToggle
-          mobileNavPosition={showSecondaryNav}
-          toggleMobileNavPosition={setShowSecondaryNav}
+          mobileNavPosition={nav === "secondary"}
+          toggleMobileNavPosition={toggleNav}
         />
       </ul>
 
       {/* Mobile Navigation - Secondary */}
       <ul
-        className={`navbar-extended-mobile-container nav-semi-bold ${showSecondaryNav ? "grid" : "hidden"}`}
+        className="navbar-extended-mobile-container nav-semi-bold"
+        data-panel="secondary"
         role="menu"
         aria-label="Secondary navigation"
       >
@@ -102,8 +114,8 @@ export default function NavbarMenuE87({ className = "" }) {
           </li>
         ))}
         <NavExtendedToggle
-          mobileNavPosition={showSecondaryNav}
-          toggleMobileNavPosition={setShowSecondaryNav}
+          mobileNavPosition={nav === "secondary"}
+          toggleMobileNavPosition={toggleNav}
         />
       </ul>
 
@@ -117,7 +129,7 @@ export default function NavbarMenuE87({ className = "" }) {
             <h4 className="navbar-extended-header h4-semi-bold">
               {section.title}
             </h4>
-            <p className="grow p1-regular">{section.description}</p>
+            <p className="p1-regular grow">{section.description}</p>
             <Button href={section.href} className="btn-small">
               {section.buttonText}
             </Button>
@@ -125,7 +137,7 @@ export default function NavbarMenuE87({ className = "" }) {
         ))}
 
         {/* Quick Links */}
-        <section className="navbar-extended-quick-links p3-regular [@media(min-width:1400px)]:space-y-8 gap-4 self-center [@media(min-width:992px)_and_(max-width:1400px)]:flex">
+        <section className="navbar-extended-quick-links p3-regular gap-4 self-center [@media(min-width:1400px)]:space-y-8 [@media(min-width:992px)_and_(max-width:1400px)]:flex">
           <p>
             Join us for our weekly meetings on{" "}
             <Link

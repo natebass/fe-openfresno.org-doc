@@ -1,3 +1,16 @@
+/* Sticky table-of-contents bar with horizontal scroll overflow */
+.faq-nav {
+  position: sticky;
+  top: var(--navbar-height);
+  z-index: 10;
+  overflow-x: auto;
+
+  nav {
+    white-space: nowrap;
+  }
+}
+
+/* FAQ accordion summary — custom expand/collapse marker */
 .faq-summary {
   position: relative;
   cursor: pointer;
@@ -8,26 +21,21 @@
 
   &::before,
   &::after {
-    /* Anchor the shape to the summary */
     position: absolute;
-    top: 2rem;
-
-    /* Positions the lines */
     inset-block-start: 50%;
     inset-inline-end: 0;
     border-radius: 3px;
     background-color: var(--neutral-900);
     width: 1rem;
     height: 0.2rem;
-    /* Custom marker dimensions */
     content: "";
+
     @media (width >= 992px) {
       right: 1rem;
     }
   }
 
-  /* Rotate just the ::after line to create a "+"" shape */
-
+  /* Rotate the ::after line to create a "+" shape */
   &::after {
     transform: rotate(90deg);
     transform-origin: 50%;

@@ -142,6 +142,14 @@
   }
 }
 
+.navbar-extended-toggle-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  color: var(--main-vivid-blue);
+}
+
 /* Deprecated */
 .btn-alt-gold {
   border: solid var(--main-vivid-blue) 1px;

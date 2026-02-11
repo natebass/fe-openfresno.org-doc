@@ -1,5 +1,5 @@
 import SingleProject from "./singleProject";
-import LayoutE53 from "@/components/layout/LayoutE53";
+import Layout from "@/components/layout/layout";
 import { githubOwner } from "@/utility/constants/app-data";
 import { SectionType } from "@/utility/constants/theme";
 
@@ -8,6 +8,11 @@ export async function generateStaticParams() {
   const ghResponses = await fetch(
     `https://api.github.com/orgs/${githubOwner}/repos?per_page=21&sort=updated&direction=desc`,
   ).then((res) => res.json());
+
+  if (!Array.isArray(ghResponses)) {
+    console.error("GitHub API error:", ghResponses);
+    return [];
+  }
 
   return ghResponses.map((ghResponse) => ({
     project: ghResponse.name,
@@ -23,11 +28,11 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }) {
   return (
-    <LayoutE53>
+    <Layout>
       <SingleProject
         githubFullName={`${githubOwner}/${(await params).project}`}
         sectionType={SectionType.light}
       ></SingleProject>
-    </LayoutE53>
+    </Layout>
   );
 }

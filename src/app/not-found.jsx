@@ -1,4 +1,4 @@
-import LayoutE53 from "@/components/layout/LayoutE53";
+import Layout from "@/components/layout/layout";
 import Link from "next/link";
 
 /**
@@ -8,7 +8,7 @@ import Link from "next/link";
  */
 export default function notFound() {
   return (
-    <LayoutE53>
+    <Layout>
       <section className="not-found-container py-12 text-center lg:py-24">
         <div className="flex flex-col justify-center gap-4">
           <h1 className="not-found-content-title-large text-4xl font-bold">
@@ -35,6 +35,6 @@ export default function notFound() {
           </p>
         </div>
       </section>
-    </LayoutE53>
+    </Layout>
   );
 }

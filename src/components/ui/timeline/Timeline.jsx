@@ -91,8 +91,8 @@ export default function Timeline({ className = "" }) {
         number={4}
         heading="Explore On-Site Opportunities with Root Access"
         buttons={[
-          new SimpleButton("Check it Out"),
-          new SimpleButton("Explore Calendar"),
+          new SimpleButton("Check it Out", "https://rootaccess.org"),
+          new SimpleButton("Explore Calendar", "https://rootaccess.org/calendar"),
         ]}
         updateTimelineNumbers={updateTimelineNumbers}
       >

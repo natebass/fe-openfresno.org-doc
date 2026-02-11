@@ -23,7 +23,7 @@ export default function SingleProjectsSectionStart({
         <div className={`w-fit lg:ml-8 lg:min-w-[60%]`}>
           <Image
             alt={data.meta.title}
-            className="border rounded-xl object-cover"
+            className="rounded-xl border object-cover"
             src={
               data.meta.image_url
                 ? `https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/${data.meta.image_url}`
