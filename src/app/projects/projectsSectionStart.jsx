@@ -20,7 +20,7 @@ export default function ProjectsSectionStart({
     <section
       className={`mx-auto flex max-w-[calc(var(--screen-xxl)+80px)] px-6 py-12 max-lg:flex-col lg:px-10 lg:py-24 app-color--${sectionType}`}
     >
-      <div className={`projects-section-text-container w-full grow-3 basis-0`}>
+      <div className="projects-section-text-container">
         <HeaderUnderline
           title="Projects"
           description={
@@ -38,58 +38,52 @@ export default function ProjectsSectionStart({
           impact on our community through innovative solutions.
         </HeaderUnderline>
       </div>
-      <div
-        className={`flex grow-2 basis-0 items-center max-lg:mt-4 lg:ml-[10%]`}
-      >
-        <div className={`border border-neutral-500 lg:rounded-3xl`}>
-          <div className={`px-8 py-4`}>
-            <span className={`font-semibold`}>
+      <div className="projects-section-card-container">
+        <div className="projects-meeting-card">
+          <div className="px-8 py-4">
+            <span className="font-semibold">
               Keep an eye on our Meetup calendar for upcoming events.
             </span>
           </div>
-          <div
-            className={`flex flex-col gap-4 border-t border-neutral-500 p-8`}
-          >
+          <div className="projects-meeting-card-body">
             <div>
               <Image
-                className="mr-4 inline-block object-cover"
+                className="projects-meeting-card-icon"
                 src={calendarIcon}
                 alt="Calendar"
                 width={24}
                 height={24}
               />
-              <span className={`meeting-card-list-item-text`}>
+              <span className="meeting-card-list-item-text">
                 {getWednesday()}
               </span>
             </div>
             <div>
               <Image
-                className="mr-4 inline-block object-cover"
+                className="projects-meeting-card-icon"
                 src={clockIcon}
                 alt="Clock"
                 width={24}
                 height={24}
               />
-              <span className={`meeting-card-list-item-text`}>6:30pm PST</span>
+              <span className="meeting-card-list-item-text">6:30pm PST</span>
             </div>
             <div>
               <Image
-                className="mr-4 inline-block object-cover"
+                className="projects-meeting-card-icon"
                 src={documentIcon}
                 alt="Document"
                 width={24}
                 height={24}
               />
-              <span className={`meeting-card-list-item-text`}>
+              <span className="meeting-card-list-item-text">
                 Community Action Night (Virtual)
               </span>
             </div>
           </div>
-          <div
-            className={`meeting-card-content border-t border-neutral-500 px-8 py-4`}
-          >
+          <div className="projects-meeting-card-footer">
             <Link
-              className={`meeting-card-link`}
+              className="meeting-card-link"
               href="https://www.meetup.com/openfresno/"
               target="_blank"
               rel="noopener noreferrer"
@@ -97,7 +91,7 @@ export default function ProjectsSectionStart({
             >
               <span>Go to meetup</span>
               <Image
-                className="-mt-0.5 ml-2 inline-block object-cover"
+                className="projects-meeting-card-link-icon"
                 src={arrowRightIcon}
                 alt="Arrow right"
                 width={16}

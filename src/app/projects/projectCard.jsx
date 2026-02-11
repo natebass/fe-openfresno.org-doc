@@ -1,7 +1,9 @@
 import Button from "@/components/ui/button/Button";
 import { SectionType } from "@/utility/constants/theme";
+import { useDragScroll } from "@/app/_hooks/useDragScroll.js";
 import { titleCase } from "@/utility/string";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProjectCard({
   isLoading = true,
@@ -15,52 +17,52 @@ export default function ProjectCard({
   lastUpdatedTimestamp,
   sectionType = SectionType.light,
 }) {
+  const tagsRef = useDragScroll();
+
   return (
     <div className={`flex flex-col app-color--${sectionType}`}>
-      <div className="project-card-img-container relative w-full">
+      <Link className="project-card-img-container" src={pageUrl}>
         <div
-          className={`app-color--gray absolute top-3 left-6 w-fit rounded-md px-1.5 font-semibold ${isLoading && "project-card-loading"}`}
+          className={`project-card-status-badge app-color--gray ${isLoading && "project-card-loading"}`}
         >
           {titleCase(projectStatus)}
         </div>
         <Image
-          className="aspect-7/4 w-full rounded-xl object-cover"
+          className="project-card-image"
           src={imgUrl}
           alt={projectTitle || "Project image"}
           width={350}
           height={200}
         />
-      </div>
-      <ul
-        className={`project-card-tags flex flex-row gap-2 overflow-x-auto py-4 lg:min-h-[75px]`}
-      >
+      </Link>
+      <ul ref={tagsRef} className="project-card-tags">
         {tags.map((tag) => (
           <div
             key={projectTitle + tag}
-            className={`project-card-tag app-color--primary h-min w-min rounded-md px-1 ${isLoading && "project-card-loading"}`}
+            className={`project-card-tag app-color--primary ${isLoading && "project-card-loading"}`}
           >
             {tag}
           </div>
         ))}
       </ul>
       <h2
-        className={`project-card-heading mb-1 text-2xl font-bold ${isLoading && "project-card-loading"}`}
+        className={`project-card-heading ${isLoading && "project-card-loading"}`}
       >
         {projectTitle}
       </h2>
-      <div className={`project-card-description-container`}>
+      <div className="project-card-description-container">
         <p
-          className={`text-ellipses line-clamp-3 text-sm font-normal ${isLoading && "project-card-loading"}`}
+          className={`project-card-text ${isLoading && "project-card-loading"}`}
         >
           {projectText}
         </p>
       </div>
       <div
-        className={`my-3 text-sm font-normal text-neutral-700 ${isLoading && "project-card-loading"}`}
+        className={`project-card-updated ${isLoading && "project-card-loading"}`}
       >
         Last Updated: {lastUpdatedTimestamp.format("ddd MMM D, Y, h:mma")}
       </div>
-      <div className={`flex flex-row flex-wrap gap-2`}>
+      <div className="project-card-buttons">
         <Button
           className={`btn btn-blue ${isLoading && "project-card-loading"}`}
           href={pageUrl}

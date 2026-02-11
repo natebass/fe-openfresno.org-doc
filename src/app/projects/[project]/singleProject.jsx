@@ -50,7 +50,7 @@ export default function SingleProject({
       <SingleProjectsLinks sectionType={sectionType} />
       <SingleProjectsBrief sectionType={sectionType} data={data} />
       <PageContainer noFlex noPadding sectionType={sectionType}>
-        <hr className={`mt-6 mb-2 h-px border-0 bg-neutral-400 lg:my-6`} />
+        <hr className="single-project-divider" />
       </PageContainer>
       {data.meta.screenshots ? (
         <SingleProjectsScreenshots sectionType={sectionType} data={data} />

@@ -35,17 +35,17 @@ export default function SingleProjectsRoadmap({ data, sectionType }) {
 
   return (
     <section className={`py-12 app-color--${sectionType}`}>
-      <div className={`page-container flex flex-col`}>
-        <h2 className={`sub-heading-main`}>Roadmap</h2>
+      <div className="page-container flex flex-col">
+        <h2 className="sub-heading-main">Roadmap</h2>
         <div
           className={`my-2 h-1 w-10 app-fill--${SectionType.invert(sectionType)}`}
         />
-        <p className={`paragraph-large project-paragraph-large mb-8 lg:mb-18`}>
+        <p className="single-project-roadmap-subtitle paragraph-large project-paragraph-large">
           Know about the current progress, scope, and stage of project
         </p>
-        <div className={`flex flex-col lg:my-6 lg:flex-row lg:gap-70`}>
-          <div className={`grow basis-0`}>
-            <div className={`lg:ml-[15%]`}>
+        <div className="single-project-roadmap-layout">
+          <div className="grow basis-0">
+            <div className="lg:ml-[15%]">
               {milestones.map((milestone, index) => {
                 return (
                   <SingleProjectsRoadmapMilestone
@@ -59,19 +59,19 @@ export default function SingleProjectsRoadmap({ data, sectionType }) {
               })}
             </div>
           </div>
-          <div className="project-roadmap-details-container grow basis-0 max-lg:mt-12">
+          <div className="project-roadmap-details-container">
             <div>
-              <h4 className={`project-roadmap-info-label-two`}>Objective</h4>
+              <h4 className="project-roadmap-info-label-two">Objective</h4>
               <hr className="project-info-line my-2" />
               <p className="project-paragraph-alt mb-8">
                 {data.meta.roadmap.objective}
               </p>
-              <h4 className={`project-roadmap-info-label-two`}>Comments</h4>
+              <h4 className="project-roadmap-info-label-two">Comments</h4>
               <hr className="project-info-line my-2" />
               <p className="project-paragraph-alt mb-8">
                 {data.meta.roadmap.comments}
               </p>
-              <h4 className={`project-roadmap-info-label-two`}>Outcome</h4>
+              <h4 className="project-roadmap-info-label-two">Outcome</h4>
               <hr className="project-info-line my-2" />
               <p className="project-paragraph-alt">
                 {data.meta.roadmap.outcome}

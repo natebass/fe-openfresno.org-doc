@@ -11,18 +11,18 @@ export default function SingleProjectsContribute({
 }) {
   return (
     <PageContainer sectionType={sectionType}>
-      <h2 className={`sub-heading-main`}>How to Contribute</h2>
+      <h2 className="sub-heading-main">How to Contribute</h2>
       <div
         className={`my-2 h-1 w-10 app-fill--${SectionType.invert(sectionType)}`}
       />
-      <p className={`project-paragraph my-4 lg:w-[50%]`}>
+      <p className="single-project-contribute-text project-paragraph">
         Open Fresno is run by volunteers. We are always looking for help.
         Explore the various ways you can make a difference.
       </p>
-      <h4 className={`project-info-label mb-2 font-semibold`}>
+      <h4 className="single-project-contribute-label project-info-label">
         Get Involved As
       </h4>
-      <div className={`flex flex-wrap gap-4`}>
+      <div className="single-project-contribute-buttons">
         {Object.keys(data.meta.contributing).map((role, i) => (
           <Button
             key={role + i}

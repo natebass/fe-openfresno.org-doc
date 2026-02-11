@@ -20,6 +20,8 @@ export default function SimpleDialog({
   openState = false,
   handleClose = () => {},
   sectionType = SectionType.light,
+  fullWidth,
+  maxWidth,
   ...props
 }) {
   const dialogRef = useRef(null);

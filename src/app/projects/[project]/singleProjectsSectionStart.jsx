@@ -19,11 +19,11 @@ export default function SingleProjectsSectionStart({
       id="project-section-start"
       className={`py-12 lg:py-24 app-color--${sectionType}`}
     >
-      <div className={`page-container flex flex-col lg:flex-row-reverse`}>
-        <div className={`w-fit lg:ml-8 lg:min-w-[60%]`}>
+      <div className="page-container single-project-start-layout">
+        <div className="single-project-start-image-container">
           <Image
             alt={data.meta.title}
-            className="rounded-xl border object-cover"
+            className="single-project-start-image"
             src={
               data.meta.image_url
                 ? `https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/${data.meta.image_url}`
@@ -35,30 +35,30 @@ export default function SingleProjectsSectionStart({
             height={457}
           />
         </div>
-        <div className={`max-lg:mt-6`}>
+        <div className="max-lg:mt-6">
           <HeadingPair
             heading={data.meta.project_type}
             subHeading={data.meta.title}
           />
-          <div className={`btn-alt my-4 w-fit rounded-md border p-1`}>
+          <div className="single-project-status-badge btn-alt">
             Project Status: {titleCase(data.meta.project_status)}
           </div>
-          <p className={`project-paragraph`}>{data.meta.description}</p>
-          <p className={`project-paragraph app-text--gray my-4`}>
+          <p className="project-paragraph">{data.meta.description}</p>
+          <p className="single-project-updated-text project-paragraph app-text--gray">
             Last Updated:{" "}
             {`${moment(data.updated_at).format("ddd MMM D, H:mma")}`}
           </p>
-          <div className={`flex flex-wrap gap-4`}>
+          <div className="single-project-buttons">
             <Button
-              className={"btn"}
+              className="btn"
               href={data.html_url}
-              target={"_blank"}
-              textContent={"View Source Code"}
+              target="_blank"
+              textContent="View Source Code"
             />
             <Button
-              className={"btn"}
-              href={"/get-started"}
-              textContent={"Get Started"}
+              className="btn"
+              href="/get-started"
+              textContent="Get Started"
             />
           </div>
         </div>

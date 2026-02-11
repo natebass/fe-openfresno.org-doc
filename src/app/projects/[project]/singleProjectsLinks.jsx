@@ -2,26 +2,24 @@ import Link from "next/link";
 
 const SingleProjectsLinks = () => {
   return (
-    <section className={`app-color--primary px-6 py-6`}>
-      <div
-        className={`mx-auto flex max-w-[calc(var(--screen-xxl)+80px)] flex-col max-lg:gap-4 lg:flex-row lg:justify-between`}
-      >
-        <Link className={`underline`} href="#project-brief">
+    <section className="single-project-links app-color--primary">
+      <div className="single-project-links-container">
+        <Link className="underline" href="#project-brief">
           Project Brief
         </Link>
-        <Link className={`underline`} href="#screenshots">
+        <Link className="underline" href="#screenshots">
           Screenshots
         </Link>
-        <Link className={`underline`} href="#roadmap">
+        <Link className="underline" href="#roadmap">
           Roadmap
         </Link>
-        <Link className={`underline`} href="#how-to-contribute">
+        <Link className="underline" href="#how-to-contribute">
           How to Contribute
         </Link>
-        <Link className={`underline`} href="#resources">
+        <Link className="underline" href="#resources">
           Resources
         </Link>
-        <Link className={`underline`} href="#how-to-volunteer">
+        <Link className="underline" href="#how-to-volunteer">
           How to Volunteer
         </Link>
       </div>

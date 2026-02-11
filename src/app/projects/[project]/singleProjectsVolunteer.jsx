@@ -14,18 +14,16 @@ export default function SingleProjectsVolunteer({
   return (
     <section
       id="project-section-start"
-      className={`mt-8 py-6 app-color--${sectionType}`}
+      className={`mt-8 py-24 app-color--${sectionType}`}
     >
-      <div className={`page-container flex flex-col lg:flex-row lg:gap-[20%]`}>
-        <div
-          className={`project-volunteer-info-container grow-2 basis-0 max-lg:mb-12`}
-        >
+      <div className="page-container single-project-volunteer-layout">
+        <div className="single-project-volunteer-info">
           <HeaderUnderline
-            title={"Volunteer"}
-            description={"Why Join Open Fresno?"}
+            title="Volunteer"
+            description="Why Join Open Fresno?"
             sectionType={sectionType}
           >
-            <span className={`text-md`}>
+            <span className="text-md">
               Join us at Open Fresno to collaborate on impactful civic tech
               projects and connect with a diverse community of like-minded
               individuals. It&apos;s a rewarding way to make a meaningful
@@ -33,9 +31,9 @@ export default function SingleProjectsVolunteer({
             </span>
           </HeaderUnderline>
         </div>
-        <div className={`get-started-bottom grow basis-0`}>
+        <div className="single-project-volunteer-cta">
           <CenteredInImage src={rectangleBlue} alt="rectangle" float="center">
-            <div className="mx-auto w-fit text-xl font-bold sm:text-3xl">
+            <div className="single-project-volunteer-cta-text">
               <span className={`app-text--${SectionType.invert(sectionType)}`}>
                 Not a volunteer yet?
               </span>

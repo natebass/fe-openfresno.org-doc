@@ -98,14 +98,9 @@ const ProjectSearch = ({ data, setProjectsData }) => {
   };
 
   return (
-    <section
-      className={`mx-auto mb-4 max-w-[calc(var(--screen-xxl)+80px)] px-4 lg:px-8`}
-    >
-      <form
-        className={`flex w-full flex-col gap-4 lg:flex-row lg:gap-8`}
-        action={() => {}}
-      >
-        <div className={`form-control grow-3 basis-0 max-lg:w-full`}>
+    <section className="project-search-section">
+      <form className="project-search-form" action={() => {}}>
+        <div className="form-control project-search-control">
           <label
             id="project-search-label"
             htmlFor="project-search"
@@ -140,7 +135,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
           </div>
           <Link href="" className="relative -left-7 inline-block"></Link>
         </div>
-        <div className={`form-control grow basis-0 max-lg:w-full`}>
+        <div className="form-control project-filter-control">
           <label
             id="project-filter-label"
             htmlFor="project-filter"
@@ -159,7 +154,7 @@ const ProjectSearch = ({ data, setProjectsData }) => {
             <option value="active">Active</option>
           </select>
         </div>
-        <div className={`form-control grow basis-0 max-lg:w-full`}>
+        <div className="form-control project-filter-control">
           <label
             id="project-sort-by-label"
             htmlFor="project-sort-by"

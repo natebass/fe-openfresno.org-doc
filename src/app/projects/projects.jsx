@@ -35,7 +35,7 @@ export default function Projects({ githubOwner }) {
   }
 
   return (
-    <div className={`projects-main`}>
+    <div className="projects-main">
       <ProjectsSectionStart sectionType={SectionType.light} />
       <ProjectSearch data={data} setProjectsData={setProjectsData} />
       <ProjectsCardsContainer

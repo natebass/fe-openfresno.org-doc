@@ -15,11 +15,9 @@ export default function SingleProjectsRoadmapMilestone({
 }) {
   return (
     <>
-      <div
-        className={`project-roadmap-info-container flex w-fit flex-row gap-4`}
-      >
+      <div className="project-roadmap-info-container">
         <Image
-          className="project-roadmap-icon aspect-1/1 object-cover"
+          className="project-roadmap-icon"
           src={
             data.meta.roadmap[milestone].status === "completed"
               ? checkCircle
@@ -31,8 +29,8 @@ export default function SingleProjectsRoadmapMilestone({
           width={32}
           height={32}
         />
-        <div className={`project-info-text-container`}>
-          <p className={`text-lg font-bold`}>{titleCase(milestone)}</p>
+        <div className="project-info-text-container">
+          <p className="text-lg font-bold">{titleCase(milestone)}</p>
           <p
             className={`text-base font-light ${sectionType === SectionType.dark && "text-neutral-300"}`}
           >
@@ -42,7 +40,7 @@ export default function SingleProjectsRoadmapMilestone({
       </div>
       {!isLastIndex && (
         <Image
-          className="project-roadmap-icon-line relative -top-3 left-3.5 inline-block h-8 w-[2px] origin-bottom-left object-cover"
+          className="project-roadmap-icon-line"
           src={
             data.meta.roadmap[milestone].status === "completed" ? line4 : line5
           }

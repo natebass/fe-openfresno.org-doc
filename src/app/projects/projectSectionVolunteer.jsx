@@ -9,21 +9,19 @@ import Link from "next/link";
  */
 export default function projectSectionVolunteer() {
   return (
-    <section id="how-to-volunteer" className={`project-volunteer-container`}>
-      <div className={`project-volunteer-info-container`}>
-        <p className={`project-type`}>Volunteer</p>
-        <div
-          className={`project-main-heading-container heading-underline underline-alt`}
-        >
-          <h2 className={`project-heading`}>Why Join Open Fresno?</h2>
+    <section id="how-to-volunteer" className="project-volunteer-container">
+      <div className="project-volunteer-info-container">
+        <p className="project-type">Volunteer</p>
+        <div className="project-main-heading-container heading-underline underline-alt">
+          <h2 className="project-heading">Why Join Open Fresno?</h2>
         </div>
-        <p className={`project-paragraph`}>
+        <p className="project-paragraph">
           Join us at Open Fresno to collaborate on impactful civic tech projects
           and connect with a diverse community of like-minded individuals.
           It&apos;s a rewarding way to make a meaningful difference in our city.
         </p>
       </div>
-      <div className={`project-volunteer-image-container`}>
+      <div className="project-volunteer-image-container">
         <Image
           className="project-volunteer-image object-cover"
           src={rectangleImage}
@@ -31,10 +29,10 @@ export default function projectSectionVolunteer() {
           width={400}
           height={300}
         />
-        <p className={`project-volunteer-anchor`}>
+        <p className="project-volunteer-anchor">
           Not a volunteer yet?
           <br />
-          <Link className={`project-volunteer-link`} href="/get-started">
+          <Link className="project-volunteer-link" href="/get-started">
             Get Started
           </Link>
         </p>

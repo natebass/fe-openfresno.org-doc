@@ -33,30 +33,28 @@ export default function SingleProjectsScreenshots({
   for (let i = shownImages.length; i < 6; i++) {
     shownImages.push(
       <div
-        className={`keen-slider__slide @container aspect-7/4`}
+        className="keen-slider__slide @container aspect-7/4"
         key={data.full_name + i}
       >
-        <div
-          className={`size-full bg-neutral-400 @max-lg:rounded-xl @max-lg:border`}
-        />
+        <div className="single-project-screenshot-placeholder @max-lg:rounded-xl @max-lg:border" />
       </div>,
     );
   }
   return (
     <section className={`py-12 app-color--${sectionType}`}>
-      <div className={`page-container flex flex-col`}>
-        <h2 className={`sub-heading-main`}>Screenshots</h2>
+      <div className="page-container flex flex-col">
+        <h2 className="sub-heading-main">Screenshots</h2>
         <div
           className={`my-2 h-1 w-10 app-color--${SectionType.invert(sectionType)}`}
         />
-        <p className={`paragraph-large project-paragraph lg:mb-16`}>
+        <p className="paragraph-large project-paragraph lg:mb-16">
           Explore our project through screenshots, providing visual insights
           into its design and functionality.
         </p>
-        <div className={`grid grid-cols-3 gap-4 max-lg:hidden`}>
+        <div className="single-project-screenshots-grid">
           {shownImages}
         </div>
-        <Slider className={"project-screenshots-slider-container lg:hidden"}>
+        <Slider className="project-screenshots-slider-container lg:hidden">
           {shownImages}
         </Slider>
         <SimpleDialog
@@ -66,9 +64,9 @@ export default function SingleProjectsScreenshots({
             setShowDialog(false);
           }}
           fullWidth={true}
-          maxWidth={"lg"}
+          maxWidth="lg"
         >
-          <Slider className={"aspect-7/4 w-full"} startingSlide={startingSlide}>
+          <Slider className="aspect-7/4 w-full" startingSlide={startingSlide}>
             {shownImages}
           </Slider>
         </SimpleDialog>
