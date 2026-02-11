@@ -51,9 +51,7 @@ export default function SingleProjectsScreenshots({
           Explore our project through screenshots, providing visual insights
           into its design and functionality.
         </p>
-        <div className="single-project-screenshots-grid">
-          {shownImages}
-        </div>
+        <div className="single-project-screenshots-grid">{shownImages}</div>
         <Slider className="project-screenshots-slider-container lg:hidden">
           {shownImages}
         </Slider>

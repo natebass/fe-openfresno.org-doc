@@ -1,6 +1,6 @@
 {
   "name": "fe-openfresno.org-doc",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Storybook documentation for the Open Fresno website.",
   "type": "module",
   "private": false,
