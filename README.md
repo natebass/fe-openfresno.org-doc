@@ -6,6 +6,7 @@ for building, documenting, and testing UI components in isolation before they ar
 > [!NOTE]
 > The Open Fresno website repository
 > is [github.com/openfresno/openfresno.org](https://github.com/openfresno/openfresno.org).
+> [!WARNING]
 > The code should be periodically kept up to date with the main repository by manually copy/pasting the `src/` folder.
 
 ## Prerequisites
