@@ -20,7 +20,7 @@ export default definePreview({
   parameters: {
     options: {
       storySort: {
-        order: ["Project", ["Design", "Develop", "Test"], "*"],
+        order: ["Get Started", "Project", ["Design", "Develop", "Test"], "*"],
       },
     },
     controls: {
