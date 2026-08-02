@@ -1,46 +1,51 @@
-# Open Fresno website documentation
+# Open Fresno documentation
 
-This repository hosts the **Storybook + Next.js testing environment** for the Open Fresno website. It provides a sandbox
-for building, documenting, and testing UI components in isolation before they are integrated into the main site.
+This repository is for documenting, testing, and experimenting with the Open Fresno website. It provides a sandbox
+for testing UI components in isolation before they are integrated into the main site.
 
 > [!NOTE]
-> The Open Fresno website repository
-> is [github.com/openfresno/openfresno.org](https://github.com/openfresno/openfresno.org).
-> [!WARNING]
-> The code should be periodically kept up to date with the main repository by manually copy/pasting the `src/` folder.
+> If you are looking for the Open Fresno website,
+> go [here](https://github.com/openfresno/openfresno.org).
 
-## Prerequisites
+## Requirements
 
-- PNPM. Get help installing
-  PNPM [here](https://openfresno.github.io/fe-openfresno.org-doc/?path=/docs/developer-guide--docs#install-pnpm)
+- Node.js 24.0.0 or higher
+
+## Prerequisite
+
+- Install PNPM. Get help installing
+  PNPM [here](https://openfresno.github.io/fe-openfresno.org-doc/?path=/docs/project-develop-developer-guide--docs)
   or https://pnpm.io/installation.
+- Install the Chromium [Playwright browser](https://playwright.dev/docs/browsers). `npx playwright install`
 
 ## Get Started
 
-1. Install the Node.js dependencies.
+### Start Storybook
 
-   ```
-   pnpm i
-   ```
+Open [http://localhost:6006](http://localhost:6006) with your browser to see the result. Storybook hosts the component
+stories and all markdown documentation.
 
-2. Start the Storybook development server.
+```sh
+pnpm storybook
+```
 
-   ```
-   pnpm storybook
-   ```
+### Start the website
 
-3. (Optional) Preview the regular Next.js website.
+The full website is included so you can run and experiment with it locally
+on [http://localhost:3000](http://localhost:3000).
 
-   ```
-   pnpm dev
-   ```
+```sh
+pnpm dev
+```
 
 ## Test
 
-Learn about testing https://openfresno.github.io/fe-openfresno.org-doc/.
+This website primarily uses Storybook. It is also a home for a bigger test suite using Vitest and Playwright. For more
+information see
+the [testing guide](https://openfresno.github.io/fe-openfresno.org-doc/?path=/docs/project-test--docs).
 
 > [!WARNING]
-> Critical tests should be included in the main website repository for use in CI/CD pipelines.
+> Critical tests should be included in the main website repository for use in the production website's CI/CD pipeline.
 
 ## Resources
 
