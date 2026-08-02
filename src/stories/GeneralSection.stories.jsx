@@ -59,12 +59,7 @@ export const Default = meta.story({
       <div>
         <Story />
         {["light", "dark", "gray", "primary", "secondary"].map((type) => (
-          <GeneralSection
-            key={type}
-            sectionType={type}
-            heading="Type"
-            subHeading={titleCase(type)}
-          >
+          <GeneralSection key={type} sectionType={type} heading="Type" subHeading={titleCase(type)}>
             {titleCase(type)}
           </GeneralSection>
         ))}

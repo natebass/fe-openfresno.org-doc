@@ -6,8 +6,7 @@ const meta = preview.meta({
   title: "Components/Navigation Bar",
   component: Navbar,
   parameters: {
-    componentSubtitle:
-      "Application navigation bar with extended menu and scroll animations",
+    componentSubtitle: "Application navigation bar with extended menu and scroll animations",
     layout: "fullscreen",
     docs: {
       description: {
@@ -103,9 +102,7 @@ export const Default = meta.story({
           }}
         >
           <div>
-            <h2 style={{ marginBottom: "1rem", marginTop: "8rem" }}>
-              Default fixed navbar
-            </h2>
+            <h2 style={{ marginBottom: "1rem", marginTop: "8rem" }}>Default fixed navbar</h2>
           </div>
         </div>
       </div>
@@ -151,13 +148,9 @@ Scroll up and down in this story to see the effect in action (Chrome/Edge only).
           }}
         >
           <div>
-            <h2 style={{ marginBottom: "1rem", marginTop: "8rem" }}>
-              Fade-effect navigation bar
-            </h2>
+            <h2 style={{ marginBottom: "1rem", marginTop: "8rem" }}>Fade-effect navigation bar</h2>
             <p>Scroll up and down to see the navbar fade in/out.</p>
-            <div
-              style={{ maxWidth: "600px", margin: "0 auto", lineHeight: 1.6 }}
-            >
+            <div style={{ maxWidth: "600px", margin: "0 auto", lineHeight: 1.6 }}>
               <p
                 style={{
                   marginBottom: "2rem",
@@ -165,8 +158,7 @@ Scroll up and down in this story to see the effect in action (Chrome/Edge only).
                   opacity: 0.8,
                 }}
               >
-                This uses modern CSS \`animation-timeline: scroll()\` - no
-                JavaScript required!
+                This uses modern CSS \`animation-timeline: scroll()\` - no JavaScript required!
               </p>
               <div
                 style={{
@@ -176,9 +168,7 @@ Scroll up and down in this story to see the effect in action (Chrome/Edge only).
                   marginBottom: "2rem",
                 }}
               >
-                <h3 style={{ marginBottom: "1rem" }}>
-                  Browser Support Status:
-                </h3>
+                <h3 style={{ marginBottom: "1rem" }}>Browser Support Status:</h3>
                 <p>✅ Chrome/Edge 115+</p>
                 <p>✅ Safari 26.0+</p>
                 <p>❌ Firefox (flag required)</p>
@@ -231,13 +221,9 @@ export const ToggleMenu = meta.story({
           }}
         >
           <div>
-            <h2 style={{ marginBottom: "1rem", marginTop: "8rem" }}>
-              Menu Toggle Test
-            </h2>
+            <h2 style={{ marginBottom: "1rem", marginTop: "8rem" }}>Menu Toggle Test</h2>
             <p>This story tests the mobile menu toggle functionality.</p>
-            <p>
-              The test automatically clicks the menu button to open/close it.
-            </p>
+            <p>The test automatically clicks the menu button to open/close it.</p>
             <p style={{ marginTop: "2rem", opacity: 0.7, fontSize: "1rem" }}>
               Resize window to mobile size to see hamburger menu
             </p>
@@ -252,9 +238,7 @@ export const ToggleMenu = meta.story({
     });
 
     await userEvent.click(toggleButton);
-    await expect(
-      canvas.getByRole("region", { name: /Extended navigation/i }),
-    ).toBeInTheDocument();
+    await expect(canvas.getByRole("region", { name: /Extended navigation/i })).toBeInTheDocument();
 
     await userEvent.click(toggleButton);
     await expect(

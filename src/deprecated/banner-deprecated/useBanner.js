@@ -46,8 +46,7 @@ function useLocalStorage(key, initialValue) {
 
   const setValue = (value) => {
     try {
-      const valueToStore =
-        value instanceof Function ? value(storedValue) : value;
+      const valueToStore = value instanceof Function ? value(storedValue) : value;
       setStoredValue(valueToStore);
 
       if (typeof window !== "undefined") {
@@ -69,10 +68,7 @@ function useLocalStorage(key, initialValue) {
  */
 export default function useBanner({ id }) {
   const storageKey = `banner_dismissed_${id}`;
-  const [isDismissed, setIsDismissed, isReady] = useLocalStorage(
-    storageKey,
-    false,
-  );
+  const [isDismissed, setIsDismissed, isReady] = useLocalStorage(storageKey, false);
 
   const dismissBanner = () => {
     setIsDismissed(true);
