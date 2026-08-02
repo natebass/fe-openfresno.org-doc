@@ -51,6 +51,10 @@ the [testing guide](https://openfresno.github.io/fe-openfresno.org-doc/?path=/do
 > [!WARNING]
 > Critical tests should be included in the main website repository for use in the CI/CD pipeline.
 
+## Deploy
+
+The Storybook documentation website is deployed to GitHub pages. See [deploy-gh-pages.yml](.github/workflows/deploy-gh-pages.yml).
+
 ## Resources
 
 - [Contributing guide](https://github.com/openfresno/openfresno.org/blob/main/CONTRIBUTING.md)
