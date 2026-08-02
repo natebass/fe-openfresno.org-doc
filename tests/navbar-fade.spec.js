@@ -4,7 +4,7 @@ import test, { expect } from "@playwright/test";
  * Scroll ~1/3 page (expect semi-transparent) and then scroll down the full page (expect fully solid).
  */
 test("navbar background fades in on scroll", async ({ page }) => {
-  await page.goto("http://localhost:3000");
+  await page.goto("/");
   const root = page.locator("nav");
   await expect(root).toHaveCSS("background-color", "rgba(0, 0, 0, 0)");
   await page.evaluate(() => window.scrollTo(0, window.innerHeight / 3));

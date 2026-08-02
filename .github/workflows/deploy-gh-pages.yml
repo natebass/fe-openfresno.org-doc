@@ -34,11 +34,11 @@ jobs:
         node-version: [24]
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v7.0.1
 
       # Use PNPM. Only npm and yarn are supported by default in actions/setup-node.
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6.0.9
 
       - name: Detect package manager
         id: detect-package-manager
@@ -64,7 +64,7 @@ jobs:
           fi
 
       - name: Setup Node.js
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@v6.5.0
         with:
           node-version: ${{ matrix.node-version }}
           # Enable caching for the detected package manager
@@ -72,7 +72,7 @@ jobs:
 
       # This is removed due to the MDX configuration failing in next.config.js. It can be renabled if MDX support is removed. This would simplify alot of the custom basepath logic.
       # - name: Setup Pages
-      #   uses: actions/configure-pages@v5
+      #   uses: actions/configure-pages@v6
       #   with:
       # Automatically inject basePath in your Next.js configuration file and disable
       # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
@@ -81,7 +81,7 @@ jobs:
       # static_site_generator: next
 
       - name: Restore/Save Dependencies Cache
-        uses: actions/cache@v4
+        uses: actions/cache@v6.1.0
         with:
           # Use the default cache path for the detected package manager
           path: |
@@ -107,7 +107,7 @@ jobs:
           ${{ steps.detect-package-manager.outputs.runner }} storybook build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: ./storybook-static
 
@@ -121,4 +121,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
