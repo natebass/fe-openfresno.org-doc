@@ -39,6 +39,8 @@ jobs:
       # Use PNPM. Only npm and yarn are supported by default in actions/setup-node.
       - name: Setup pnpm
         uses: pnpm/action-setup@v6.0.9
+        with:
+          version: 9
 
       - name: Detect package manager
         id: detect-package-manager
