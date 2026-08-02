@@ -1,9 +1,38 @@
 {
   "name": "fe-openfresno.org-doc",
   "version": "1.2.0",
-  "description": "Storybook documentation for the Open Fresno website.",
-  "type": "module",
   "private": false,
+  "description": "Storybook documentation for the Open Fresno website.",
+  "keywords": [
+    "California",
+    "Fresno",
+    "civic",
+    "documentation",
+    "meetup",
+    "nextjs",
+    "playwright",
+    "storybook",
+    "tailwind",
+    "vitest"
+  ],
+  "homepage": "https://github.com/openfresno/fe-openfresno.org-doc#readme",
+  "bugs": {
+    "url": "https://github.com/openfresno/fe-openfresno.org-doc/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Open Fresno",
+    "email": "hello@openfresno.org",
+    "url": "https://openfresno.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/openfresno/fe-openfresno.org-doc.git"
+  },
+  "type": "module",
+  "imports": {
+    "#.storybook/*": "./.storybook/*"
+  },
   "scripts": {
     "dev": "next dev",
     "start": "next start",
@@ -18,33 +47,6 @@
     "storybook:ci": "storybook dev --no-open -p 6006",
     "storybook:doctor": "storybook doctor --package-manager pnpm"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/openfresno/fe-openfresno.org-doc.git"
-  },
-  "keywords": [
-    "documentation",
-    "nextjs",
-    "storybook",
-    "tailwind",
-    "playwright",
-    "vitest",
-    "meetup",
-    "civic",
-    "nextjs",
-    "California",
-    "Fresno"
-  ],
-  "author": {
-    "name": "Open Fresno",
-    "email": "hello@openfresno.org",
-    "url": "https://openfresno.org"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/openfresno/fe-openfresno.org-doc/issues"
-  },
-  "homepage": "https://github.com/openfresno/fe-openfresno.org-doc#readme",
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
     "@mdx-js/react": "^3.1.1",
@@ -78,8 +80,5 @@
     "storybook": "^10.5.5",
     "tailwindcss": "^4.3.3",
     "vitest": "^4.1.10"
-  },
-  "imports": {
-    "#.storybook/*": "./.storybook/*"
   }
 }

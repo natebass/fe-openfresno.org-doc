@@ -37,10 +37,7 @@ export default function BasePathImageDeprecated({
   fill,
 }) {
   const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-  const finalSrc =
-    typeof src === "string" && !src.startsWith("http")
-      ? `${basePath}${src}`
-      : src;
+  const finalSrc = typeof src === "string" && !src.startsWith("http") ? `${basePath}${src}` : src;
 
   const useFill = fill || (width === undefined && height === undefined);
 
@@ -59,9 +56,7 @@ export default function BasePathImageDeprecated({
 
   if (needsWrapper) {
     return (
-      <div className={`${wrapperClassName || ""}${useFill ? " relative" : ""}`}>
-        {imageElement}
-      </div>
+      <div className={`${wrapperClassName || ""}${useFill ? " relative" : ""}`}>{imageElement}</div>
     );
   }
 

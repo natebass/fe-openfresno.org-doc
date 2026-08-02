@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 
 render(<NavbarE7e />);
 
-/* 
+/*
 Renders the AppNavbar component and checks if all link elements are rendering
 */
 

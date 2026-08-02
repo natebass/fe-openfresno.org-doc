@@ -1,9 +1,5 @@
 import preview from "#.storybook/preview.js";
-import {
-  BaseButton,
-  NavExtendedToggle,
-  NavToggle,
-} from "../components/ui/button/Button.jsx";
+import { BaseButton, NavExtendedToggle, NavToggle } from "../components/ui/button/Button.jsx";
 import { fn } from "storybook/test";
 
 const meta = preview.meta({
@@ -11,8 +7,7 @@ const meta = preview.meta({
   component: BaseButton,
   args: { onClick: fn() },
   parameters: {
-    componentSubtitle:
-      "Flexible button and link component with multiple style variants",
+    componentSubtitle: "Flexible button and link component with multiple style variants",
     docs: {
       description: {
         component: `
@@ -78,10 +73,7 @@ export const Default = meta.story({
           <BaseButton className="btn-small" onClick={args.onClick}>
             Small Button
           </BaseButton>
-          <BaseButton
-            className="btn btn-alt btn-alt--transition"
-            onClick={args.onClick}
-          >
+          <BaseButton className="btn btn-alt btn-alt--transition" onClick={args.onClick}>
             Fill Button
           </BaseButton>
           <NavExtendedToggle />

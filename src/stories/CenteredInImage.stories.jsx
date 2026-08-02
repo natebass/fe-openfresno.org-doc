@@ -7,8 +7,7 @@ const meta = preview.meta({
   title: "Components/CenteredInImage",
   component: CenteredInImage,
   parameters: {
-    componentSubtitle:
-      "Overlay centered content on top of a Next.js Image",
+    componentSubtitle: "Overlay centered content on top of a Next.js Image",
     docs: {
       description: {
         component: `
@@ -58,9 +57,7 @@ export default meta;
 export const Default = meta.story({
   name: "CenteredInImage",
   args: {
-    children: (
-      <div className="text-xl font-bold text-white">Overlay Text</div>
-    ),
+    children: <div className="text-xl font-bold text-white">Overlay Text</div>,
   },
   decorators: [
     (Story) => (
@@ -75,9 +72,7 @@ export const CenterAligned = meta.story({
   name: "Center Aligned",
   args: {
     float: "center",
-    children: (
-      <div className="text-2xl font-bold text-white">Centered Content</div>
-    ),
+    children: <div className="text-2xl font-bold text-white">Centered Content</div>,
   },
   decorators: [
     (Story) => (
@@ -124,8 +119,7 @@ export const AllFloatVariants = meta.story({
   parameters: {
     docs: {
       description: {
-        story:
-          "Shows all three float positions: left (default), center, and right.",
+        story: "Shows all three float positions: left (default), center, and right.",
       },
     },
   },

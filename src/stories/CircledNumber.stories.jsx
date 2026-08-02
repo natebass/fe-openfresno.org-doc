@@ -43,9 +43,7 @@ Uses \`forwardRef\` so parent components (e.g., Timeline) can read the element's
     },
     sectionType: {
       control: "select",
-      options: Object.values(SectionType).filter(
-        (v) => typeof v === "string",
-      ),
+      options: Object.values(SectionType).filter((v) => typeof v === "string"),
       description: "Theme variant for the circle accent color",
     },
   },
@@ -76,8 +74,7 @@ export const AllThemes = meta.story({
   parameters: {
     docs: {
       description: {
-        story:
-          "Demonstrates the CircledNumber across all available SectionType themes.",
+        story: "Demonstrates the CircledNumber across all available SectionType themes.",
       },
     },
   },

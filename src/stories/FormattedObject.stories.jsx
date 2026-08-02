@@ -16,8 +16,7 @@ const meta = preview.meta({
   title: "Components/FormattedObject",
   component: FormattedObject,
   parameters: {
-    componentSubtitle:
-      "Displays an object's properties as a titled, lined section",
+    componentSubtitle: "Displays an object's properties as a titled, lined section",
     docs: {
       description: {
         component: `
@@ -77,8 +76,7 @@ export const CustomTitle = meta.story({
   parameters: {
     docs: {
       description: {
-        story:
-          "Overrides the object's `title` property with a custom title passed as a prop.",
+        story: "Overrides the object's `title` property with a custom title passed as a prop.",
       },
     },
   },

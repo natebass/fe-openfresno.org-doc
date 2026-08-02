@@ -174,8 +174,7 @@ export const IconsOnDarkBackground = meta.story({
   parameters: {
     docs: {
       description: {
-        story:
-          "Icons displayed on a dark background to verify visibility and contrast.",
+        story: "Icons displayed on a dark background to verify visibility and contrast.",
       },
     },
   },

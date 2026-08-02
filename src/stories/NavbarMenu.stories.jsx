@@ -6,8 +6,7 @@ const meta = preview.meta({
   title: "Components/NavbarMenu",
   component: NavbarMenu,
   parameters: {
-    componentSubtitle:
-      "Extended navigation menu with mobile toggle and desktop sections",
+    componentSubtitle: "Extended navigation menu with mobile toggle and desktop sections",
     layout: "fullscreen",
     docs: {
       description: {
@@ -139,8 +138,7 @@ export const AccessibilityCheck = meta.story({
     a11y: { test: "error" },
     docs: {
       description: {
-        story:
-          "Verifies ARIA roles are correctly applied: region, menu, menuitem.",
+        story: "Verifies ARIA roles are correctly applied: region, menu, menuitem.",
       },
     },
   },
@@ -152,9 +150,7 @@ export const AccessibilityCheck = meta.story({
     ),
   ],
   play: async ({ canvas }) => {
-    await expect(
-      canvas.getByRole("region", { name: /Extended navigation/i }),
-    ).toBeInTheDocument();
+    await expect(canvas.getByRole("region", { name: /Extended navigation/i })).toBeInTheDocument();
 
     const primaryMenu = canvas.getByRole("menu", {
       name: /Primary navigation/i,

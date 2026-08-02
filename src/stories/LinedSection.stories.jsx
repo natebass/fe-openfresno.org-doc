@@ -1,15 +1,12 @@
 import preview from "#.storybook/preview.js";
-import LinedSection, {
-  SectionLine,
-} from "@/components/ui/LinedSection.jsx";
+import LinedSection, { SectionLine } from "@/components/ui/LinedSection.jsx";
 import { expect } from "storybook/test";
 
 const meta = preview.meta({
   title: "Components/LinedSection",
   component: LinedSection,
   parameters: {
-    componentSubtitle:
-      "Content section with a title, underline bar, and horizontal-ruled lines",
+    componentSubtitle: "Content section with a title, underline bar, and horizontal-ruled lines",
     docs: {
       description: {
         component: `

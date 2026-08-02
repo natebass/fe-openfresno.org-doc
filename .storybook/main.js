@@ -8,15 +8,8 @@ const basePath = getBasePath();
  */
 export default defineMain({
   framework: "@storybook/nextjs-vite",
-  stories: [
-    "../src/stories/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
-  ],
-  addons: [
-    "@storybook/addon-docs",
-    "@storybook/addon-a11y",
-    "@storybook/addon-vitest",
-  ],
+  stories: ["../src/stories/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
+  addons: ["@storybook/addon-docs", "@storybook/addon-a11y", "@storybook/addon-vitest"],
   staticDirs: ["../public"],
   tags: {
     test: { defaultFilterSelection: "exclude" },

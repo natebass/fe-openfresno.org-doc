@@ -57,11 +57,7 @@ export const Default = meta.story({
         </PageContainer>
         {["light", "dark", "gray", "primary", "secondary"].map((type) => (
           <PageContainer key={type}>
-            <HeadingPair
-              sectionType={type}
-              heading="Type"
-              subHeading={titleCase(type)}
-            />
+            <HeadingPair sectionType={type} heading="Type" subHeading={titleCase(type)} />
           </PageContainer>
         ))}
       </div>

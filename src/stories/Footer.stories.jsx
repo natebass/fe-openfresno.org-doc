@@ -6,8 +6,7 @@ const meta = preview.meta({
   title: "Components/Footer",
   component: Footer,
   parameters: {
-    componentSubtitle:
-      "Application footer with mission statement, links, and social media",
+    componentSubtitle: "Application footer with mission statement, links, and social media",
     layout: "fullscreen",
     docs: {
       description: {
@@ -52,9 +51,7 @@ export const RendersContent = meta.story({
     });
 
     await step("Verify mission text", async () => {
-      await expect(
-        canvas.getByText(/tax-deductible civic-tech community/i),
-      ).toBeInTheDocument();
+      await expect(canvas.getByText(/tax-deductible civic-tech community/i)).toBeInTheDocument();
     });
 
     await step("Verify action links", async () => {
@@ -90,15 +87,10 @@ export const AccessibilityCheck = meta.story({
     },
   },
   play: async ({ canvas }) => {
-    const externalLinks = [
-      canvas.getByLabelText("Link to Meetup."),
-    ];
+    const externalLinks = [canvas.getByLabelText("Link to Meetup.")];
     for (const link of externalLinks) {
       await expect(link).toHaveAttribute("target", "_blank");
-      await expect(link).toHaveAttribute(
-        "rel",
-        expect.stringContaining("noopener"),
-      );
+      await expect(link).toHaveAttribute("rel", expect.stringContaining("noopener"));
     }
   },
 });

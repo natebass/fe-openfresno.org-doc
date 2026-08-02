@@ -6,8 +6,7 @@ const meta = preview.meta({
   title: "Components/ImageSection",
   component: ImageSection,
   parameters: {
-    componentSubtitle:
-      "Full-width section with heading, text, and a side image",
+    componentSubtitle: "Full-width section with heading, text, and a side image",
     layout: "fullscreen",
     docs: {
       description: {
@@ -66,8 +65,7 @@ export const DarkTheme = meta.story({
     sectionType: "dark",
     src: "/img/home/learningblocks.jpg",
     alt: "Community volunteers",
-    children:
-      "Open Fresno uses technology and open data for positive civic change.",
+    children: "Open Fresno uses technology and open data for positive civic change.",
   },
 });
 
@@ -79,8 +77,7 @@ export const PrimaryTheme = meta.story({
     sectionType: "primary",
     src: "/img/open_data_day.jpg",
     alt: "Projects overview",
-    children:
-      "We build open-source tools that make government data accessible.",
+    children: "We build open-source tools that make government data accessible.",
   },
 });
 

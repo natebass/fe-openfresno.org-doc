@@ -25,8 +25,7 @@ const meta = preview.meta({
   title: "Components/Steps",
   component: Steps,
   parameters: {
-    componentSubtitle:
-      "Numbered instructional steps with circled numbers and content",
+    componentSubtitle: "Numbered instructional steps with circled numbers and content",
     docs: {
       description: {
         component: `

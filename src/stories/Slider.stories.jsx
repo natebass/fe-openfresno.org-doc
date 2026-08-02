@@ -7,8 +7,7 @@ const meta = preview.meta({
   title: "Components/Slider",
   component: Slider,
   parameters: {
-    componentSubtitle:
-      "Carousel slider powered by keen-slider with dot navigation",
+    componentSubtitle: "Carousel slider powered by keen-slider with dot navigation",
     docs: {
       description: {
         component: `
@@ -85,16 +84,10 @@ export const TwoSlides = meta.story({
   render: (args) => (
     <PageContainer>
       <Slider {...args}>
-        <div
-          className="keen-slider__slide"
-          style={{ ...slideStyle, backgroundColor: "#4A90D9" }}
-        >
+        <div className="keen-slider__slide" style={{ ...slideStyle, backgroundColor: "#4A90D9" }}>
           First
         </div>
-        <div
-          className="keen-slider__slide"
-          style={{ ...slideStyle, backgroundColor: "#50C878" }}
-        >
+        <div className="keen-slider__slide" style={{ ...slideStyle, backgroundColor: "#50C878" }}>
           Second
         </div>
       </Slider>
@@ -110,8 +103,7 @@ export const StartOnThird = meta.story({
   parameters: {
     docs: {
       description: {
-        story:
-          "Uses the `startingSlide` prop to begin on the third slide (index 2).",
+        story: "Uses the `startingSlide` prop to begin on the third slide (index 2).",
       },
     },
   },
@@ -137,8 +129,7 @@ export const WithRichContent = meta.story({
   parameters: {
     docs: {
       description: {
-        story:
-          "Slides containing structured content like cards, rather than simple text.",
+        story: "Slides containing structured content like cards, rather than simple text.",
       },
     },
   },
@@ -161,9 +152,7 @@ export const WithRichContent = meta.story({
             }}
           >
             <h3>{project.title}</h3>
-            <p style={{ fontSize: "1rem", fontWeight: "normal" }}>
-              {project.desc}
-            </p>
+            <p style={{ fontSize: "1rem", fontWeight: "normal" }}>{project.desc}</p>
           </div>
         ))}
       </Slider>

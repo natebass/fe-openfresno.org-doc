@@ -8,8 +8,7 @@ const meta = preview.meta({
   title: "Components/HeaderUnderline",
   component: HeaderUnderline,
   parameters: {
-    componentSubtitle:
-      "Section header with underline, description, and theme support",
+    componentSubtitle: "Section header with underline, description, and theme support",
     docs: {
       description: {
         component: `
@@ -75,8 +74,7 @@ export const WithChildren = meta.story({
   parameters: {
     docs: {
       description: {
-        story:
-          "Includes optional children content rendered as a paragraph below the heading pair.",
+        story: "Includes optional children content rendered as a paragraph below the heading pair.",
       },
     },
   },
@@ -127,8 +125,7 @@ export const AllThemes = meta.story({
   parameters: {
     docs: {
       description: {
-        story:
-          "Showcases HeaderUnderline across all SectionType themes side by side.",
+        story: "Showcases HeaderUnderline across all SectionType themes side by side.",
       },
     },
   },
@@ -140,11 +137,7 @@ export const AllThemes = meta.story({
         </PageContainer>
         {["light", "dark", "gray", "primary", "secondary"].map((type) => (
           <PageContainer key={type} sectionType={type}>
-            <HeaderUnderline
-              title="Theme"
-              description={`SectionType: ${type}`}
-              sectionType={type}
-            >
+            <HeaderUnderline title="Theme" description={`SectionType: ${type}`} sectionType={type}>
               Supporting paragraph for the {type} theme.
             </HeaderUnderline>
           </PageContainer>

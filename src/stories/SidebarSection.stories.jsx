@@ -8,8 +8,7 @@ const meta = preview.meta({
   title: "Components/SidebarSection",
   component: SidebarSection,
   parameters: {
-    componentSubtitle:
-      "Two-column layout with main content and a resource sidebar",
+    componentSubtitle: "Two-column layout with main content and a resource sidebar",
     docs: {
       description: {
         component: `
@@ -57,8 +56,8 @@ export const Default = meta.story({
       <div>
         <h2 className="text-2xl font-bold">Getting Started Guide</h2>
         <p className="mt-4">
-          Welcome to Open Fresno! Follow the steps below to get involved with
-          our civic tech community.
+          Welcome to Open Fresno! Follow the steps below to get involved with our civic tech
+          community.
         </p>
       </div>
     ),
@@ -123,8 +122,7 @@ export const DarkTheme = meta.story({
       <div>
         <h2 className="text-2xl font-bold">Resources</h2>
         <p className="mt-4">
-          Find all the resources you need to start contributing to Open Fresno
-          projects.
+          Find all the resources you need to start contributing to Open Fresno projects.
         </p>
       </div>
     ),
@@ -154,25 +152,17 @@ export const RendersSidebarLinks = meta.story({
   ],
   play: async ({ canvas, step }) => {
     await step("Verify main content renders", async () => {
-      await expect(
-        canvas.getByText("Main content area"),
-      ).toBeInTheDocument();
+      await expect(canvas.getByText("Main content area")).toBeInTheDocument();
     });
 
     await step("Verify CTA text renders", async () => {
-      await expect(
-        canvas.getByText(/Not a volunteer yet/i),
-      ).toBeInTheDocument();
+      await expect(canvas.getByText(/Not a volunteer yet/i)).toBeInTheDocument();
       await expect(canvas.getByText("Get Started")).toBeInTheDocument();
     });
 
     await step("Verify sidebar links render", async () => {
-      await expect(
-        canvas.getByText("Code of Conduct"),
-      ).toBeInTheDocument();
-      await expect(
-        canvas.getByText("New Member Form"),
-      ).toBeInTheDocument();
+      await expect(canvas.getByText("Code of Conduct")).toBeInTheDocument();
+      await expect(canvas.getByText("New Member Form")).toBeInTheDocument();
       await expect(canvas.getByText("Meeting Link")).toBeInTheDocument();
     });
   },
@@ -195,16 +185,10 @@ export const ExternalLinksCheck = meta.story({
   play: async ({ canvas }) => {
     const newMemberLink = canvas.getByLabelText("Link to new member form.");
     await expect(newMemberLink).toHaveAttribute("target", "_blank");
-    await expect(newMemberLink).toHaveAttribute(
-      "rel",
-      expect.stringContaining("noopener"),
-    );
+    await expect(newMemberLink).toHaveAttribute("rel", expect.stringContaining("noopener"));
 
     const meetingLink = canvas.getByLabelText("Link to Meetup.");
     await expect(meetingLink).toHaveAttribute("target", "_blank");
-    await expect(meetingLink).toHaveAttribute(
-      "rel",
-      expect.stringContaining("noopener"),
-    );
+    await expect(meetingLink).toHaveAttribute("rel", expect.stringContaining("noopener"));
   },
 });

@@ -1,8 +1,5 @@
 import preview from "#.storybook/preview.js";
-import {
-  TimelineItem,
-  SimpleButton,
-} from "@/components/ui/timeline/TimelineItem.jsx";
+import { TimelineItem, SimpleButton } from "@/components/ui/timeline/TimelineItem.jsx";
 import PageContainer from "@/components/ui/PageContainer.jsx";
 import { expect, fn } from "storybook/test";
 
@@ -10,8 +7,7 @@ const meta = preview.meta({
   title: "Components/TimelineItem",
   component: TimelineItem,
   parameters: {
-    componentSubtitle:
-      "Single timeline entry with number, heading, content, and buttons",
+    componentSubtitle: "Single timeline entry with number, heading, content, and buttons",
     docs: {
       description: {
         component: `
@@ -91,14 +87,12 @@ export const WithMultipleButtons = meta.story({
       new SimpleButton("Browse Projects", "/projects"),
       new SimpleButton("Pitch an Idea", "/pitch"),
     ],
-    children:
-      "Explore our active projects and find one that matches your skills and interests.",
+    children: "Explore our active projects and find one that matches your skills and interests.",
   },
   parameters: {
     docs: {
       description: {
-        story:
-          "When two or more buttons are provided, they render in a horizontal flex row.",
+        story: "When two or more buttons are provided, they render in a horizontal flex row.",
       },
     },
   },
@@ -118,8 +112,7 @@ export const DarkTheme = meta.story({
     heading: "Start Contributing",
     sectionType: "dark",
     buttons: [new SimpleButton("Contribute", "/get-started")],
-    children:
-      "Pick up a task, submit your first pull request, and start making an impact.",
+    children: "Pick up a task, submit your first pull request, and start making an impact.",
   },
   decorators: [
     (Story) => (
@@ -135,8 +128,7 @@ export const MultipleItems = meta.story({
   parameters: {
     docs: {
       description: {
-        story:
-          "Multiple TimelineItems stacked to show how they appear in sequence.",
+        story: "Multiple TimelineItems stacked to show how they appear in sequence.",
       },
     },
   },
@@ -234,9 +226,6 @@ export const CallsUpdateCallback = meta.story({
   play: async ({ args }) => {
     // The component calls updateTimelineNumbers on mount via useEffect
     await expect(args.updateTimelineNumbers).toHaveBeenCalled();
-    await expect(args.updateTimelineNumbers).toHaveBeenCalledWith(
-      1,
-      expect.any(Object),
-    );
+    await expect(args.updateTimelineNumbers).toHaveBeenCalledWith(1, expect.any(Object));
   },
 });

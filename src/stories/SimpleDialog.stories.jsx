@@ -110,8 +110,8 @@ export const WithRichContent = meta.story({
         </p>
         <hr />
         <p>
-          This project visualizes the City of Fresno&apos;s budget data, making
-          it accessible and understandable for residents.
+          This project visualizes the City of Fresno&apos;s budget data, making it accessible and
+          understandable for residents.
         </p>
       </div>
     ),
