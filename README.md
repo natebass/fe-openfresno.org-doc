@@ -18,7 +18,7 @@ for testing UI components in isolation before they are integrated into the main 
   or https://pnpm.io/installation.
 - Install the Chromium [Playwright browser](https://playwright.dev/docs/browsers). `npx playwright install`
 
-## Get Started
+## Quick start
 
 ### Start Storybook
 
@@ -37,6 +37,9 @@ on [http://localhost:3000](http://localhost:3000).
 ```sh
 pnpm dev
 ```
+
+> [!TIP]
+> The code should be periodically kept up to date with the main repository by manually copy/pasting the `src/` folder.
 
 ## Test
 
