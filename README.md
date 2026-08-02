@@ -40,6 +40,7 @@ pnpm dev
 
 > [!TIP]
 > The code should be periodically kept up to date with the main repository by manually copy/pasting the `src/` folder.
+> See the [sync guide](https://openfresno.github.io/fe-openfresno.org-doc/?path=/docs/project-develop-developer-guide--docs).
 
 ## Test
 
@@ -48,7 +49,7 @@ information see
 the [testing guide](https://openfresno.github.io/fe-openfresno.org-doc/?path=/docs/project-test--docs).
 
 > [!WARNING]
-> Critical tests should be included in the main website repository for use in the production website's CI/CD pipeline.
+> Critical tests should be included in the main website repository for use in the CI/CD pipeline.
 
 ## Resources
 
