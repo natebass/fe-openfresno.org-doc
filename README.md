@@ -58,6 +58,7 @@ The Storybook documentation website is deployed to GitHub pages. See [deploy-gh-
 ## Resources
 
 - [Contributing guide](https://github.com/openfresno/openfresno.org/blob/main/CONTRIBUTING.md)
+- [GitHub Discussions](https://github.com/openfresno/fe-openfresno.org-doc/discussions)
 - [Open Fresno's Code of Conduct](https://www.google.com/search?q=https://github.com/openfresno/fe-openfresno-doc/blob/main/CODE_OF_CONDUCT.md)
 - [Storybook documentation](https://storybook.js.org/docs)
 - [Next.js documentation](https://nextjs.org/docs)
