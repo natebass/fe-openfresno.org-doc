@@ -1,5 +1,5 @@
 {
-  "name": "fe-openfresno.org-doc",
+  "name": "fe-openfresno-doc",
   "version": "1.2.0",
   "private": false,
   "description": "Storybook documentation for the Open Fresno website.",
@@ -15,9 +15,9 @@
     "tailwind",
     "vitest"
   ],
-  "homepage": "https://github.com/openfresno/fe-openfresno.org-doc#readme",
+  "homepage": "https://github.com/openfresno/fe-openfresno-doc#readme",
   "bugs": {
-    "url": "https://github.com/openfresno/fe-openfresno.org-doc/issues"
+    "url": "https://github.com/openfresno/fe-openfresno-doc/issues"
   },
   "license": "MIT",
   "author": {
@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/openfresno/fe-openfresno.org-doc.git"
+    "url": "git+https://github.com/openfresno/fe-openfresno-doc.git"
   },
   "type": "module",
   "imports": {

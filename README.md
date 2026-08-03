@@ -14,7 +14,7 @@ for testing UI components in isolation before they are integrated into the main 
 ## Prerequisite
 
 - Install PNPM. Get help installing
-  PNPM [here](https://openfresno.github.io/fe-openfresno.org-doc/?path=/docs/project-develop-developer-guide--docs)
+  PNPM [here](https://openfresno.github.io/fe-openfresno-doc/?path=/docs/project-develop-developer-guide--docs)
   or https://pnpm.io/installation.
 - Install the Chromium [Playwright browser](https://playwright.dev/docs/browsers). `npx playwright install`
 
@@ -40,13 +40,13 @@ pnpm dev
 
 > [!TIP]
 > The code should be periodically kept up to date with the main repository by manually copy/pasting the `src/` folder.
-> See the [sync guide](https://openfresno.github.io/fe-openfresno.org-doc/?path=/docs/project-develop-developer-guide--docs).
+> See the [sync guide](https://openfresno.github.io/fe-openfresno-doc/?path=/docs/project-develop-developer-guide--docs).
 
 ## Test
 
 This website primarily uses Storybook. It is also a home for a bigger test suite using Vitest and Playwright. For more
 information see
-the [testing guide](https://openfresno.github.io/fe-openfresno.org-doc/?path=/docs/project-test--docs).
+the [testing guide](https://openfresno.github.io/fe-openfresno-doc/?path=/docs/project-test--docs).
 
 > [!WARNING]
 > Critical tests should be included in the main website repository for use in the CI/CD pipeline.
@@ -58,7 +58,7 @@ The Storybook documentation website is deployed to GitHub pages. See [deploy-gh-
 ## Resources
 
 - [Contributing guide](https://github.com/openfresno/openfresno.org/blob/main/CONTRIBUTING.md)
-- [GitHub Discussions](https://github.com/openfresno/fe-openfresno.org-doc/discussions)
+- [GitHub Discussions](https://github.com/openfresno/fe-openfresno-doc/discussions)
 - [Open Fresno's Code of Conduct](https://www.google.com/search?q=https://github.com/openfresno/fe-openfresno-doc/blob/main/CODE_OF_CONDUCT.md)
 - [Storybook documentation](https://storybook.js.org/docs)
 - [Next.js documentation](https://nextjs.org/docs)
