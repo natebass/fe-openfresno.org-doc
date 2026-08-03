@@ -4,7 +4,7 @@ import { create } from "storybook/theming";
 addons.setConfig({
   theme: create({
     brandTitle: "Open Fresno",
-    brandImage: "/assets/logo/logo-blue.svg",
+    brandImage: "/assets/logo/logo-blue-small.svg",
     brandTarget: "_self",
   }),
 });
