@@ -1,4 +1,4 @@
-import SingleProject from "./singleProject";
+import SingleProject from "./single-project.jsx";
 import Layout from "@/components/layout/layout";
 import { githubOwner } from "@/utility/constants/app-data";
 import { SectionType } from "@/utility/constants/theme";

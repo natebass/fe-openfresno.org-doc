@@ -1,11 +1,11 @@
 "use client";
-import ContactSectionLanding from "./contactSectionLanding";
-import ContactSectionMission from "./contactSectionMission";
+import ContactSectionLanding from "./contact-section-landing";
+import ContactSectionMission from "./contact-section-mission";
 import { SectionType } from "@/utility/constants/theme";
 
 /**
  * About page.
- * @returns {JSX.Element}
+ * @returns {React.JSX.Element}
  */
 export default function Contact() {
   return (

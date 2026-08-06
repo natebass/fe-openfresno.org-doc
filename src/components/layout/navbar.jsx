@@ -1,6 +1,6 @@
 "use client";
 
-import { NavToggle } from "../ui/button/Button";
+import { NavToggle } from "../ui/button/button.jsx";
 import NavbarMenu from "./navbar-menu";
 import { LogoTextBlack } from "@/components/ui/icon/logo-text-black";
 import Link from "next/link";
@@ -15,12 +15,10 @@ const NAV_LINKS = [
 ];
 
 /**
- * The default navigation bar for the application.
- * - Includes an extended menu that expands to show more text underneath the navbar.
- * - Desktop links have a sliding underline animation using CSS Anchor Positioning.
- * - Fade on-scroll effect uses CSS scroll-driven animations (Chrome 115+).
- * @param {boolean} fade - Whether to enable fade effect on scroll
- * @returns {JSX.Element}
+ * Renders the primary navigation and controls the extended navigation menu.
+ * @param {object} props - Component props.
+ * @param {boolean} [props.fade=false] - Enables the navbar's scroll fade treatment.
+ * @returns {React.JSX.Element} The primary navigation bar.
  */
 export default function Navbar({ fade = false }) {
   const [menuPathname, setMenuPathname] = useState(null);

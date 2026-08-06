@@ -2,7 +2,7 @@ import "../src/app/global.css";
 import addonA11y from "@storybook/addon-a11y";
 import addonDocs from "@storybook/addon-docs";
 import { definePreview } from "@storybook/nextjs-vite";
-import DocsTemplate from "./DocsTemplate.jsx";
+import DocsTemplate from "./docs-template.jsx";
 
 /**
  * Use the control sort parameter 'alpha' to sort Args/Controls table in the Docs and Controls panels alphabetically by the control name.

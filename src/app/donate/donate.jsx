@@ -1,10 +1,10 @@
 "use client";
-import DonateSectionLanding from "./donateSectionLanding";
+import DonateSectionLanding from "./donate-section-landing";
 import { SectionType } from "@/utility/constants/theme";
 
 /**
  * About page.
- * @returns {JSX.Element}
+ * @returns {React.JSX.Element}
  */
 export default function Donate() {
   return (

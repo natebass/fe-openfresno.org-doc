@@ -1,4 +1,4 @@
-import NameChange from "./nameChange";
+import NameChange from "./name-change";
 import Layout from "@/components/layout/layout";
 
 export default function NameChangePage() {

@@ -1,12 +1,12 @@
-import HeaderUnderline from "../../components/ui/HeaderUnderline";
-import SidebarSection from "../../components/ui/steps/SidebarSection";
+import HeaderUnderline from "../../components/ui/header-underline.jsx";
+import SidebarSection from "../../components/ui/steps/sidebar-section.jsx";
 import Layout from "@/components/layout/layout";
 import { SectionType } from "@/utility/constants/theme";
 import Link from "next/link";
 
 /**
  * Page for information about how to pitch a project.
- * @returns {JSX.Element}
+ * @returns {React.JSX.Element}
  */
 export default function CommunitySupportStatementPage() {
   return (

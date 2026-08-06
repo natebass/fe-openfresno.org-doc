@@ -1,8 +1,8 @@
 "use client";
 import { fetchGithubProjectData } from "./github";
-import ProjectSearch from "@/app/projects/projectSearch";
-import ProjectsCardsContainer from "@/app/projects/projectsCardsContainer";
-import ProjectsSectionStart from "@/app/projects/projectsSectionStart";
+import ProjectSearch from "@/app/projects/project-search";
+import ProjectsCardsContainer from "@/app/projects/projects-cards-container";
+import ProjectsSectionStart from "@/app/projects/projects-section-start.jsx";
 import { SectionType } from "@/utility/constants/theme";
 import { jsonResponse } from "@/utility/response";
 import { useState } from "react";
@@ -15,7 +15,7 @@ const fetcher = (...args) =>
 
 /**
  * Page for information about how to pitch a project.
- * @returns {JSX.Element}
+ * @returns {React.JSX.Element}
  */
 export default function Projects({ githubOwner }) {
   const [projectsData, setProjectsData] = useState([]);

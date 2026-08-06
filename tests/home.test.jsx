@@ -16,7 +16,7 @@ vi.mock("next/link", () => ({
 Renders the home element and checks if all components are rendering
 */
 
-test.skip("HomeSectionLandingImage Renders in Home", () => {
+test.skip("homeSectionLandingImage Renders in home", () => {
   render(<Home />);
   expect(screen.getByRole("heading", { level: 1, name: /welcome to open fresno/i })).toBeDefined();
 });

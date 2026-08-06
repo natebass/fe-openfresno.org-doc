@@ -1,6 +1,6 @@
 import MDXComponents from "./MDXComponents";
 import Layout from "@/components/layout/layout";
-import GeneralSection from "@/components/ui/GeneralSection";
+import GeneralSection from "@/components/general-section.jsx";
 import { SectionType } from "@/utility/constants/theme";
 import fs from "fs";
 import { MDXRemote } from "next-mdx-remote/rsc";

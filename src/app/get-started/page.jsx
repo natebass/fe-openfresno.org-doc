@@ -1,9 +1,9 @@
-import HeaderUnderline from "../../components/ui/HeaderUnderline";
-import SidebarSection from "../../components/ui/steps/SidebarSection";
-import Steps from "../../components/ui/steps/Steps";
+import HeaderUnderline from "../../components/ui/header-underline.jsx";
+import SidebarSection from "../../components/ui/steps/sidebar-section.jsx";
+import Steps from "../../components/ui/steps/steps.jsx";
 import instructionData from "./instructions.jsx";
 import Layout from "@/components/layout/layout";
-import GeneralSection from "@/components/ui/GeneralSection";
+import GeneralSection from "@/components/general-section.jsx";
 import { SectionType } from "@/utility/constants/theme";
 
 /**

@@ -1,9 +1,9 @@
-import Button, { NavExtendedToggle } from "../ui/button/Button";
+import Button, { NavExtendedToggle } from "../ui/button/button.jsx";
 import Link from "next/link";
 import { useState } from "react";
 
 const MOBILE_NAV_PRIMARY = [
-  { href: "/", label: "Home" },
+  { href: "/", label: "home" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
   { href: "/donate", label: "Donate" },
@@ -49,12 +49,10 @@ const DESKTOP_SECTIONS = [
 let lastNav = "primary";
 
 /**
- * Extended navbar menu below the main navigation bar.
- * - **Mobile view**: Toggles between two distinct navigation menus.
- * - **Desktop view**: Displays multiple sections with descriptive text and
- *   call-to-action links.
- * @param {string} className - Optional additional CSS class names
- * @returns {JSX.Element}
+ * Renders the expandable navigation panel with mobile and desktop layouts.
+ * @param {object} props - Component props.
+ * @param {string} [props.className=""] - Additional classes for the panel root.
+ * @returns {React.JSX.Element} The extended navigation panel.
  */
 export default function NavbarMenu({ className = "" }) {
   const [nav, setNav] = useState(lastNav);

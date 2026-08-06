@@ -5,13 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 
 /**
- * The default footer for the application.
- * - "Get Involved" message: Describes Open Fresno's mission and fiscal sponsorship.
- * - Action links: Provides quick links to the Open Fresno Meetup group, projects, and FAQs.
- * - Social media links: Includes icons that link to the organization's Facebook, X (formerly Twitter), and YouTube pages.
- * - Bottom section displays the "Open Fresno" title and additional links
- * for getting started, learning about the team, and viewing the code of conduct.
- * @returns {JSX.Element} The rendered footer component.
+ * Renders the site footer with organization information, navigation, and social links.
+ * @returns {React.JSX.Element} The application footer.
  */
 export default function Footer() {
   return (
@@ -62,7 +57,7 @@ export default function Footer() {
           >
             <Image
               src={facebookIcon}
-              alt="Facebook"
+              alt="facebook"
               width={46}
               height={46}
               className="object-cover"

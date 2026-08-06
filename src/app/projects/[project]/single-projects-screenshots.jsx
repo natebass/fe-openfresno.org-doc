@@ -1,0 +1,58 @@
+import Slider from "@/components/ui/slider.jsx";
+import SimpleDialog from "@/components/ui/simple-dialog.jsx";
+import { SectionType } from "@/utility/constants/theme";
+import Image from "next/image";
+import { useState } from "react";
+
+export default function SingleProjectsScreenshots({ data, sectionType = SectionType.light }) {
+  const [showDialog, setShowDialog] = useState(false);
+  const [startingSlide, setStartingSlide] = useState(0);
+  const shownImages = data.meta.screenshots.map((screenshot, i) => (
+    <Image
+      key={data.full_name.concat(screenshot)}
+      onClick={() => {
+        if (typeof window !== "undefined" && window.innerWidth > 992 && !showDialog) {
+          setShowDialog(true);
+          setStartingSlide(i);
+        }
+      }}
+      className={`keen-slider__slide sharpen @container aspect-7/4 object-cover @max-lg:rounded-xl @max-lg:border ${showDialog ? "" : "lg:cursor-pointer"}`}
+      src={`https://raw.githubusercontent.com/${data.full_name}/${data.default_branch}/screenshots/${screenshot}`}
+      alt={`${data.meta.title} screenshot ${i + 1}`}
+      width={700}
+      height={400}
+    />
+  ));
+  for (let i = shownImages.length; i < 6; i++) {
+    shownImages.push(
+      <div className="keen-slider__slide @container aspect-7/4" key={data.full_name + i}>
+        <div className="single-project-screenshot-placeholder @max-lg:rounded-xl @max-lg:border" />
+      </div>,
+    );
+  }
+  return (
+    <section className={`py-12 app-color--${sectionType}`}>
+      <div className="page-container flex flex-col">
+        <h2 className="sub-heading-main">Screenshots</h2>
+        <div className={`my-2 h-1 w-10 app-color--${SectionType.invert(sectionType)}`} />
+        <p className="paragraph-large project-paragraph lg:mb-16">
+          Explore our project through screenshots, providing visual insights into its design and
+          functionality.
+        </p>
+        <div className="single-project-screenshots-grid">{shownImages}</div>
+        <Slider className="project-screenshots-slider-container lg:hidden">{shownImages}</Slider>
+        <SimpleDialog
+          title="Screenshots"
+          openState={showDialog}
+          handleClose={() => {
+            setShowDialog(false);
+          }}
+        >
+          <Slider className="aspect-7/4 w-full" startingSlide={startingSlide}>
+            {shownImages}
+          </Slider>
+        </SimpleDialog>
+      </div>
+    </section>
+  );
+}

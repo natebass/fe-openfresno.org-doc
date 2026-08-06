@@ -1,6 +1,6 @@
 import Layout from "../../components/layout/layout";
-import Button from "../../components/ui/button/Button";
-import Timeline from "../../components/ui/timeline/Timeline";
+import Button from "../../components/ui/button/button.jsx";
+import Timeline from "../../components/ui/timeline/timeline.jsx";
 import logoBlue from "@/../public/assets/logo/logo-blue.svg";
 import trashAi from "@/../public/img/TrashAI2.png";
 import fresnoTowerCircle from "@/../public/img/fresno_tower_circle.png";
@@ -8,18 +8,18 @@ import homeImage from "@/../public/img/home/home3.png";
 import learningBlocks from "@/../public/img/home/learningblocks.jpg";
 import openSacramento from "@/../public/img/partnership-icons/open-sacramento-black-transparent.svg";
 import rootAccess from "@/../public/img/partnership-icons/root-access-white-transparent.svg";
-import GeneralSection from "@/components/ui/GeneralSection";
-import ImageSection from "@/components/ui/ImageSection";
+import GeneralSection from "@/components/general-section.jsx";
+import ImageSection from "@/components/image-section.jsx";
 import { SectionType } from "@/utility/constants/theme";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 
-const Slider = dynamic(() => import("../../components/Slider"));
+const Slider = dynamic(() => import("../../components/ui/slider.jsx"));
 
 /**
  * Open Fresno's Home page
- * @returns {JSX.Element}
+ * @returns {React.JSX.Element}
  */
 export default function HomePage() {
   return (

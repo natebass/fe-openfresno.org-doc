@@ -4,7 +4,7 @@ import Link from "next/link";
 /**
  * 404 not found page. This is a built-in Next.js function.
  * @see https://nextjs.org/docs/app/api-reference/functions/not-found
- * @returns {JSX.Element}
+ * @returns {React.JSX.Element}
  */
 export default function notFound() {
   return (

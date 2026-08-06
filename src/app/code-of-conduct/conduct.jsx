@@ -1,7 +1,7 @@
-import ConductSectionBullets from "./conductSectionBullets";
-import ConductSectionEmail from "./conductSectionEmail";
-import ConductSectionLanding from "./conductSectionLanding";
-import ConductSectionPolicies from "./conductSectionPolicies";
+import ConductSectionBullets from "./conduct-section-bullets";
+import ConductSectionEmail from "./conduct-section-email";
+import ConductSectionLanding from "./conduct-section-landing";
+import ConductSectionPolicies from "./conduct-section-policies";
 import { SectionType } from "@/utility/constants/theme";
 
 export default function Conduct() {

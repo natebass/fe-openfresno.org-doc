@@ -1,3 +1,11 @@
+/**
+ * Renders the Open Fresno wordmark as an inline SVG.
+ * @param {object} props - Component props.
+ * @param {number|string} [props.width=660] - Rendered SVG width.
+ * @param {number|string} [props.height=268] - Rendered SVG height.
+ * @param {string} [props.className=""] - Classes applied to the SVG.
+ * @returns {React.JSX.Element} The Open Fresno wordmark.
+ */
 export const LogoTextBlack = ({ width = 660, height = 268, className = "" }) => {
   return (
     <svg

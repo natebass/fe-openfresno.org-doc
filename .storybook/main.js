@@ -27,7 +27,7 @@ export default defineMain({
     config.resolve = {
       ...config.resolve,
       alias: {
-        ...(config.resolve?.alias ?? {}),
+        ...config.resolve?.alias,
         "@": srcPath,
       },
     };
